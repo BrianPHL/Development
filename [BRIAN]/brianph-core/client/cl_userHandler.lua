@@ -20,6 +20,6 @@
 
 RegisterCommand('1', function()
 
-    TriggerServerEvent('brianph-core:database:userCheckDatabase')
+
 
 end)

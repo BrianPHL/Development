@@ -2,8 +2,38 @@ RegisterServerEvent('brianph-core:database:userCheckDatabase')
 AddEventHandler('brianph-core:database:userCheckDatabase', function()
 
     local src     = source
-    local steam   
-    local license
+    local steam   = nil
+    local license = nil
+
+    local function GetPlayerIdentifiers()
+
+        for _, v in ipairs(GetPlayerIdentifiers(src)) do
+
+            if string.match(v, 'steam:') then
+                
+                steam = v
+                
+            end
+            
+            if string.match(v, 'license:') then
+            
+                license = v
+            
+            end
+                
+        end
+
+        if steam and license then
+
+            userCheckDatabase()
+
+        elseif not steam and not license then
+
+            return
+
+        end
+
+    end
 
     local function userCheckDatabase()
 
@@ -32,7 +62,7 @@ AddEventHandler('brianph-core:database:userCheckDatabase', function()
 
         local a = [[INSERT INTO core_users (steam, license) VALUES (@steam, @license)]]
         local b = {
-            ['@steam']   = steam,
+            ['@steam']   = steam
             ['@license'] = license
         }
 
@@ -40,32 +70,4 @@ AddEventHandler('brianph-core:database:userCheckDatabase', function()
     
     end
 
-    local function GetUserIdentifiers()
-
-        for _, v in ipairs(GetPlayerIdentifiers(src)) do
-
-            if string.match(v, 'steam:') then
-                
-                steam = v
-                
-            end
-            
-            if string.match(v, 'license:') then
-            
-                license = v
-            
-            end
-                
-        end
-
-        userCheckDatabase()
-
-    end
-
-    GetUserIdentifiers()
-
 end)
-
-    
-
-
