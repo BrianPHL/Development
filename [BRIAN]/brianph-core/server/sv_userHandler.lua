@@ -1,5 +1,5 @@
-RegisterServerEvent('brianph-core:database:userCheckDatabase')
-AddEventHandler('brianph-core:database:userCheckDatabase', function()
+RegisterServerEvent('brianph-core:userHandler:userCheckDatabase')
+AddEventHandler('brianph-core:userHandler:userCheckDatabase', function()
 
     local username
     local license
@@ -21,19 +21,58 @@ AddEventHandler('brianph-core:database:userCheckDatabase', function()
     
     end
 
+    local function userDropConnection()
+
+        DropPlayer(src, 'You have been banned! Please file a ticket in the Discord to appeal your ban.')
+
+    end
+
     local function userCheckDatabase()
 
-        local a = [[SELECT * FROM core_users WHERE steam = @steam]]
+        local a = [[SELECT * FROM core_users WHERE username = @username]]
         local b = {
-            ['@steam'] = steam
+            ['@username'] = username
         }
 
         MySQL.query(a, b, function(queryResult)
         
             if next(queryResult) ~= nil then
-            
-                print(username .. ' successfully joined the server with steam hex: ' .. steam)
-                -- TODO: Trigger character selection
+
+                local function userCheckStatus()
+
+                    local c = [[SELECT status FROM core_users WHERE username = @username]]
+                    local d = {
+
+                        ['@username'] = username
+
+                    }
+
+                    MySQL.query(c, d, function(queryResult2)
+                
+                        for _, v in pairs(queryResult2) do
+
+                            local status = v.status
+
+                            if status == 'banned' then
+
+                                userDropConnection()
+
+                            else
+
+                                -- TODO: Create a character creation / selection function
+
+                                print(username.. ' successfully logged in with steam identifier:' ..steam)
+                                userCharacterSelection()
+
+                            end
+
+                        end
+
+                    end)
+
+                end
+
+                userCheckStatus()
 
             elseif next(queryResult) == nil then
 
@@ -72,7 +111,3 @@ AddEventHandler('brianph-core:database:userCheckDatabase', function()
     GetUserIdentifiers()
 
 end)
-
-    
-
-

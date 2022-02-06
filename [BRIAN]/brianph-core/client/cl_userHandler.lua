@@ -1,19 +1,13 @@
--- AddEventHandler('playerSpawned', function(hasSpawned)
+AddEventHandler('playerSpawned', function(hasSpawned)
 
---     if not hasSpawned then
+    if not hasSpawned then
 
---         return
+        return
 
---     elseif hasSpawned then
+    elseif hasSpawned then
 
---         TriggerServerEvent('brianph-core:database:userCheckDatabase')
+        TriggerServerEvent('brianph-core:userHandler:userCheckDatabase')
 
---     end
-
--- end)
-
-RegisterCommand('1', function()
-
-    TriggerServerEvent('brianph-core:database:userCheckDatabase')
+    end
 
 end)
