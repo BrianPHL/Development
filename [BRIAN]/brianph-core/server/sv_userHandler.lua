@@ -1,9 +1,25 @@
 RegisterServerEvent('brianph-core:database:userCheckDatabase')
 AddEventHandler('brianph-core:database:userCheckDatabase', function()
 
-    local src     = source
-    local steam   
+    local username
     local license
+    local steam   
+    local src = source
+
+    local function userInsertDatabase()
+
+        local a = [[INSERT INTO core_users (username, steam, license) VALUES (@username, @steam, @license)]]
+        local b = {
+
+            ['@username'] = username,
+            ['@steam']    = steam,
+            ['@license']  = license
+
+        }
+
+        MySQL.insert(a, b)
+    
+    end
 
     local function userCheckDatabase()
 
@@ -16,6 +32,7 @@ AddEventHandler('brianph-core:database:userCheckDatabase', function()
         
             if next(queryResult) ~= nil then
             
+                print(username .. ' successfully joined the server with steam hex: ' .. steam)
                 -- TODO: Trigger character selection
 
             elseif next(queryResult) == nil then
@@ -28,19 +45,9 @@ AddEventHandler('brianph-core:database:userCheckDatabase', function()
 
     end
 
-    local function userInsertDatabase()
-
-        local a = [[INSERT INTO core_users (steam, license) VALUES (@steam, @license)]]
-        local b = {
-            ['@steam']   = steam,
-            ['@license'] = license
-        }
-
-        MySQL.insert(a, b)
-    
-    end
-
     local function GetUserIdentifiers()
+
+        username = GetPlayerName(src)
 
         for _, v in ipairs(GetPlayerIdentifiers(src)) do
 
