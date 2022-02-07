@@ -1,82 +1,46 @@
-RegisterServerEvent('brianph-core:userHandler:userCheckDatabase')
-AddEventHandler('brianph-core:userHandler:userCheckDatabase', function()
+BRIANPH = BRIANPH or {}
+BRIANPH.UserHandler = BRIANPH.userHandler or {}
+BRIANPH.UserHandler.Utilities = BRIANPH.UserHandler.Utilities or {}
 
-    local username
-    local license
-    local steam   
+RegisterServerEvent('brianph-core:userHandler:CheckDatabase')
+AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
+
     local src = source
 
-    local function userInsertDatabase()
-
-        local a = [[INSERT INTO core_users (username, steam, license) VALUES (@username, @steam, @license)]]
-        local b = {
-
-            ['@username'] = username,
-            ['@steam']    = steam,
-            ['@license']  = license
-
-        }
-
-        MySQL.insert(a, b)
-    
-    end
+    local userSteam   = BRIANPH.UserHandler.Utilities.GetSteamIdentifier(src)
+    local userLicense = BRIANPH.UserHandler.Utilities.GetLicenseIdentifier(src)
+    local userName    = BRIANPH.UserHandler.Utilities.GetNameIdentifier(src)
 
     local function userDropConnection()
 
-        DropPlayer(src, 'You have been banned! Please file a ticket in the Discord to appeal your ban.')
+        DropPlayer(src)
 
     end
 
-    local function userCheckDatabase()
+    local function userCheckStatus()
 
-        local a = [[SELECT * FROM core_users WHERE username = @username]]
+        local a = [[SELECT status FROM core_users WHERE username = @username]]
         local b = {
-            ['@username'] = username
+
+            ['@username'] = userName
+
         }
 
         MySQL.query(a, b, function(queryResult)
         
-            if next(queryResult) ~= nil then
+            for _, data in pairs(queryResult) do
 
-                local function userCheckStatus()
+                local status = data.status
 
-                    local c = [[SELECT status FROM core_users WHERE username = @username]]
-                    local d = {
+                if status ~= 'banned' then
 
-                        ['@username'] = username
+                    -- CharacterSelection()
 
-                    }
+                else
 
-                    MySQL.query(c, d, function(queryResult2)
-                
-                        for _, v in pairs(queryResult2) do
-
-                            local status = v.status
-
-                            if status == 'banned' then
-
-                                userDropConnection()
-
-                            else
-
-                                -- TODO: Create a character creation / selection function
-
-                                print(username.. ' successfully logged in with steam identifier:' ..steam)
-                                userCharacterSelection()
-
-                            end
-
-                        end
-
-                    end)
+                    userDropConnection()
 
                 end
-
-                userCheckStatus()
-
-            elseif next(queryResult) == nil then
-
-                userInsertDatabase()
 
             end
 
@@ -84,30 +48,51 @@ AddEventHandler('brianph-core:userHandler:userCheckDatabase', function()
 
     end
 
-    local function GetUserIdentifiers()
+    local function userInsertDatabase()
 
-        username = GetPlayerName(src)
+        local a = [[INSERT INTO core_users (username, steam, license) VALUES (@username, @steam, @license)]]
+        local b = {
 
-        for _, v in ipairs(GetPlayerIdentifiers(src)) do
+            ['@username'] = userName,
+            ['@steam'] = userSteam,
+            ['@license'] = userLicense
 
-            if string.match(v, 'steam:') then
-                
-                steam = v
-                
+        }
+
+        MySQL.insert(a, b)
+        userCheckStatus()
+    
+    end
+
+    local function userCheckDatabase()
+
+        local a = [[SELECT * FROM core_users WHERE username = @username]]
+        local b = {
+            
+            ['@username'] = userName
+
+        }
+
+        MySQL.query(a, b, function(queryResult)
+        
+            for _, data in pairs(queryResult) do
+
+                if next(queryResult) ~= nil then
+                    
+                    userCheckStatus()
+
+                elseif next(queryResult) == nil then
+
+                    userInsertDatabase()
+
+                end
+
             end
-            
-            if string.match(v, 'license:') then
-            
-                license = v
-            
-            end
-                
-        end
 
-        userCheckDatabase()
+        end)
 
     end
 
-    GetUserIdentifiers()
+    userCheckDatabase()
 
 end)
