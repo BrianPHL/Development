@@ -13,7 +13,8 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
 
     local function userDropConnection()
 
-        DropPlayer(src)
+        local message = 'You have been banned from joining the server! File a ticket in the Discord to appeal your ban.'
+        DropPlayer(src, message)
 
     end
 
@@ -47,7 +48,7 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
         end)
 
     end
-
+        
     local function userInsertDatabase()
 
         local a = [[INSERT INTO core_users (username, steam, license) VALUES (@username, @steam, @license)]]
@@ -74,18 +75,14 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
         }
 
         MySQL.query(a, b, function(queryResult)
-        
-            for _, data in pairs(queryResult) do
 
-                if next(queryResult) ~= nil then
-                    
-                    userCheckStatus()
+            if next(queryResult) ~= nil then
 
-                elseif next(queryResult) == nil then
+                userCheckStatus()
 
-                    userInsertDatabase()
+            elseif next(queryResult) == nil then
 
-                end
+                userInsertDatabase()
 
             end
 
