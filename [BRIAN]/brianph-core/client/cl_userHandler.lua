@@ -1,13 +1,2 @@
-AddEventHandler('playerSpawned', function(hasSpawned)
-
-    if not hasSpawned then
-
-        return
-
-    elseif hasSpawned then
-
-        TriggerServerEvent('brianph-core:userHandler:userCheckDatabase')
-
-    end
-
-end)
+-- TODO: Make a function that runs the server event once 
+-- TODO: the player starts connecting to the server.
