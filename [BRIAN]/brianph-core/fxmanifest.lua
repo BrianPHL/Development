@@ -1,14 +1,21 @@
 fx_version 'cerulean'
 game 'gta5'
 
--- * userHandlers
-client_script 'client/cl_userHandler.lua'
-server_script 'server/sv_userHandler.lua'
-server_script 'server/svM_userHandler.lua'
+-- ? deferralsHandler
 
--- * OxMySQL connection
-server_script '@oxmysql/lib/MySQL.lua'
+    server_script 'deferralsHandler/sv_main.lua'
+    server_script 'deferralsHandler/sv_modules.lua'
 
--- * Dependencies
+-- ? userHandler
 
-dependency 'oxmysql'
+    client_script 'userHandler/cl_main.lua'
+    server_script 'userHandler/sv_main.lua'
+    server_script 'userHandler/sv_modules.lua'
+
+-- ? OxMySQL connection
+
+    server_script '@oxmysql/lib/MySQL.lua'
+
+-- ? Dependencies
+
+    dependency 'oxmysql'
