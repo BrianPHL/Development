@@ -3,9 +3,7 @@ BRIANPH.UserHandler = BRIANPH.userHandler or {}
 BRIANPH.UserHandler.Utilities = BRIANPH.UserHandler.Utilities or {}
 
 RegisterServerEvent('brianph-core:userHandler:CheckDatabase')
-AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
-
-    local src = source
+AddEventHandler('brianph-core:userHandler:CheckDatabase', function(src)
 
     local userSteam   = BRIANPH.UserHandler.Utilities.GetSteamIdentifier(src)
     local userLicense = BRIANPH.UserHandler.Utilities.GetLicenseIdentifier(src)
@@ -76,15 +74,8 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
 
         MySQL.query(a, b, function(queryResult)
 
-            if next(queryResult) ~= nil then
-
-                userCheckStatus()
-
-            elseif next(queryResult) == nil then
-
-                userInsertDatabase()
-
-            end
+            if queryResult then userCheckStatus() end
+            if not queryResult then userInsertDatabase() end
 
         end)
 
@@ -93,3 +84,14 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function()
     userCheckDatabase()
 
 end)
+
+local function onPlayerConnecting()
+
+    local src = source
+    
+    TriggerEvent('brianph-core:userHandler:CheckDatabase', src)
+
+end
+
+AddEventHandler('playerConnecting', onPlayerConnecting)
+
