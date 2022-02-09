@@ -2,12 +2,14 @@ BRIANPH = BRIANPH or {}
 BRIANPH.deferralsHandler = BRIANPH.deferralsHandler or {}
 BRIANPH.deferralsHandler.Utilities = BRIANPH.deferralsHandler.Utilities or {}
 
-AddEventHandler('playerConnecting', function(playerName, setKickReason, deferrals)
+RegisterServerEvent('brianph-core:deferralsHandler:executeDeferrals')
+AddEventHandler('brianph-core:deferralsHandler:executeDeferrals', function(src, playerName, setKickReason, deferrals)
 
+    local pSrc = src
     deferrals.defer()
 
     local src   = source
-    local steam = BRIANPH.deferralsHandler.Utilities.GetSteamIdentifier(src)
+    local steam = BRIANPH.deferralsHandler.Utilities.GetSteamIdentifier(pSrc)
 
     deferrals.update(string.format(" 👋 Hello, " ..playerName .. "! We are now checking your information..."))
 
@@ -61,3 +63,4 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
     end
 
 end)
+
