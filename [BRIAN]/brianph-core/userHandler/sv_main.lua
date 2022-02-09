@@ -2,8 +2,8 @@ BRIANPH = BRIANPH or {}
 BRIANPH.UserHandler = BRIANPH.userHandler or {}
 BRIANPH.UserHandler.Utilities = BRIANPH.UserHandler.Utilities or {}
 
-RegisterServerEvent('brianph-core:userHandler:CheckDatabase')
-AddEventHandler('brianph-core:userHandler:CheckDatabase', function(src)
+RegisterServerEvent('brianph-core:userHandler:checkDatabase')
+AddEventHandler('brianph-core:userHandler:checkDatabase', function(src)
 
     local pSrc = src
 
@@ -12,7 +12,7 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function(src)
     local userName    = BRIANPH.UserHandler.Utilities.GetNameIdentifier(pSrc)
 
         
-    local function userInsertDatabase()
+    local function InsertDatabase()
 
         local a = [[INSERT INTO core_users (username, steam, license) VALUES (@username, @steam, @license)]]
         local b = {
@@ -27,7 +27,7 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function(src)
     
     end
 
-    local function userCheckDatabase()
+    local function CheckDatabase()
 
         local a = [[SELECT * FROM core_users WHERE username = @username]]
         local b = {
@@ -38,14 +38,13 @@ AddEventHandler('brianph-core:userHandler:CheckDatabase', function(src)
 
         MySQL.query(a, b, function(queryResult)
 
-            -- if queryResult then userCharacterSelection() end
-            if not queryResult then userInsertDatabase() end
+            if not queryResult then print('A user logged in to the server.') InsertDatabase() end
 
         end)
 
     end
 
-    userCheckDatabase()
+    CheckDatabase()
 
 end)
 
