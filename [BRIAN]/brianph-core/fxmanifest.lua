@@ -1,6 +1,11 @@
 fx_version 'cerulean'
 game 'gta5'
 
+-- ? queueHandler
+
+    server_script 'queueHandler/sv_main.lua'
+    server_script 'queueHandler/sv_modules.lua'
+
 -- ? deferralsHandler
 
     server_script 'deferralsHandler/sv_main.lua'
