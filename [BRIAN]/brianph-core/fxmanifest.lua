@@ -4,6 +4,7 @@ game 'gta5'
 -- ! IMPORTANT: globalModules
 
     server_script 'sv_globalModules.lua'
+    client_script 'cl_globalModules.lua'
 
 -- ? queueHandler
 
