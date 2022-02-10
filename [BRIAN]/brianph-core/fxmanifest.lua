@@ -1,22 +1,23 @@
 fx_version 'cerulean'
 game 'gta5'
 
+-- ! IMPORTANT: globalModules
+
+    server_script 'sv_globalModules.lua'
+
 -- ? queueHandler
 
     client_script 'queueHandler/cl_main.lua'
     server_script 'queueHandler/sv_main.lua'
-    server_script 'queueHandler/sv_modules.lua'
 
 -- ? deferralsHandler
 
     server_script 'deferralsHandler/sv_main.lua'
-    server_script 'deferralsHandler/sv_modules.lua'
 
 -- ? userHandler
 
     client_script 'userHandler/cl_main.lua'
     server_script 'userHandler/sv_main.lua'
-    server_script 'userHandler/sv_modules.lua'
 
 -- ? OxMySQL connection
 

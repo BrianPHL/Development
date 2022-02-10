@@ -1,16 +1,12 @@
 BRIANPH = BRIANPH or {}
-BRIANPH.UserHandler = BRIANPH.userHandler or {}
-BRIANPH.UserHandler.Utilities = BRIANPH.UserHandler.Utilities or {}
+BRIANPH.globalModules = BRIANPH.globalModules or {}
 
 RegisterServerEvent('brianph-core:userHandler:checkDatabase')
 AddEventHandler('brianph-core:userHandler:checkDatabase', function(src)
 
-    local pSrc = src
-
-    local userSteam   = BRIANPH.UserHandler.Utilities.GetSteamIdentifier(pSrc)
-    local userLicense = BRIANPH.UserHandler.Utilities.GetLicenseIdentifier(pSrc)
-    local userName    = BRIANPH.UserHandler.Utilities.GetNameIdentifier(pSrc)
-
+    local userSteam   = BRIANPH.globalModules.GetSteamIdentifier(src)
+    local userLicense = BRIANPH.globalModules.GetLicenseIdentifier(src)
+    local userName    = BRIANPH.globalModules.GetNameIdentifier(src)
         
     local function InsertDatabase()
 
@@ -18,8 +14,8 @@ AddEventHandler('brianph-core:userHandler:checkDatabase', function(src)
         local b = {
 
             ['@username'] = userName,
-            ['@steam'] = userSteam,
-            ['@license'] = userLicense
+            ['@steam']    = userSteam,
+            ['@license']  = userLicense
 
         }
 
@@ -38,7 +34,7 @@ AddEventHandler('brianph-core:userHandler:checkDatabase', function(src)
 
         MySQL.query(a, b, function(queryResult)
 
-            if not queryResult then print('A user logged in to the server.') InsertDatabase() end
+            if not queryResult then InsertDatabase() end
 
         end)
 

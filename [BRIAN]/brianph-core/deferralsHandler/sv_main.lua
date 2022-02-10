@@ -1,15 +1,10 @@
 BRIANPH = BRIANPH or {}
-BRIANPH.deferralsHandler = BRIANPH.deferralsHandler or {}
-BRIANPH.deferralsHandler.Utilities = BRIANPH.deferralsHandler.Utilities or {}
+BRIANPH.globalModules = BRIANPH.globalModules or {}
 
 RegisterServerEvent('brianph-core:deferralsHandler:executeDeferrals')
 AddEventHandler('brianph-core:deferralsHandler:executeDeferrals', function(src, playerName, setKickReason, deferrals)
 
-    local pSrc = src
-    deferrals.defer()
-
-    local src   = source
-    local steam = BRIANPH.deferralsHandler.Utilities.GetSteamIdentifier(pSrc)
+    local steam = BRIANPH.globalModules.GetSteamIdentifier(src)
 
     local connectingMessage = '[deferralsHandler] Welcome, ' .. playerName .. '. Your identifiers are being validated...'
     deferrals.update(connectingMessage)
@@ -18,7 +13,7 @@ AddEventHandler('brianph-core:deferralsHandler:executeDeferrals', function(src, 
 
     if not steam then
 
-        local steamMessage = '[deferralsHandler] Your Steam client wasn\'t detected! Please check if your Steam client is open or you might be having trouble with your internet connection'
+        local steamMessage = '[deferralsHandler] Your Steam client wasn\'t detected! Please check if your Steam client is open or you might be having trouble with your internet connection.'
         deferrals.done(steamMessage)
 
     else
