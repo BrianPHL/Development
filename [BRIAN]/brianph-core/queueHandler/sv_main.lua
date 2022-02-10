@@ -1,26 +1,33 @@
 BRIANPH = BRIANPH or {}
-BRIANPH.queueHandler = BRIANPH.queueHandler or {}
-BRIANPH.queueHandler.Utilities = BRIANPH.queueHandler.Utilities or {}
+BRIANPH.globalModules = BRIANPH.globalModules or {}
 
 -- TODO: completely rework the entire server cap system as the source code from hardcap is complete dogwater
 
 local userCount = 0 
-local userList = {}
+local userList  = {}
 
 RegisterServerEvent('brianph-core:queueHandler:playerSpawned')
-AddEventHandler('brianph-core:queueHandler:playerSpawned', function(src)
+AddEventHandler('brianph-core:queueHandler:playerSpawned', function()
 
-    local source = src
+    local src         = source
+    local steam       = BRIANPH.globalModules.GetSteamIdentifier(src)
 
-    userCount        = userCount + 1
-    userList[source] = true
+    userCount         = userCount + 1
+    userList[source]  = true
+
+    BRIANPH.globalModules.GenerateDatabaseLogs('playerConnected', steam)
 
 end)
 
 AddEventHandler('playerDropped', function()
 
-    userCount = userCount - 1
+    local src        = source
+    local steam      = BRIANPH.globalModules.GetSteamIdentifier(src)
+
+    userCount        = userCount - 1
     userList[source] = nil
+
+    BRIANPH.globalModules.GenerateDatabaseLogs('playerDisconnected', steam)
 
 end)
 
@@ -31,7 +38,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 
     deferrals.defer()
 
-    local connectingMessage = '[queueHandler] Initializing queue handlers'
+    local connectingMessage = '[queueHandler] Initializing queue handlers...'
     deferrals.update(connectingMessage)
 
     Wait(3000)
@@ -43,7 +50,7 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
 
     elseif userCount <= maxClients then
 
-        local transferMessage = '[queueHandler] No queue found. Transferring to deferralsHandler'
+        local transferMessage = '[queueHandler] No queue found. Transferring to deferralsHandler...'
         deferrals.update(transferMessage)
 
         Wait(3000)

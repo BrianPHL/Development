@@ -19,7 +19,6 @@ function BRIANPH.globalModules.GetSteamIdentifier(src)
 
     end
 
-    print(steam)
     return steam
 
 end
