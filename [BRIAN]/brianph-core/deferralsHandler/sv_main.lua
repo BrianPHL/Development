@@ -11,21 +11,22 @@ AddEventHandler('brianph-core:deferralsHandler:executeDeferrals', function(src, 
     local src   = source
     local steam = BRIANPH.deferralsHandler.Utilities.GetSteamIdentifier(pSrc)
 
-    deferrals.update(string.format(" 👋 Hello, " ..playerName .. "! We are now checking your information..."))
+    local connectingMessage = '[deferralsHandler] Welcome, ' .. playerName .. '. Your identifiers are being validated...'
+    deferrals.update(connectingMessage)
 
-    Wait(1000)
+    Wait(3000)
 
     if not steam then
 
-        local steamMessage = '🚫 Your Steam client wasn\'t detected! Please check if your Steam client is open or if you have weak internet connection.'
+        local steamMessage = '[deferralsHandler] Your Steam client wasn\'t detected! Please check if your Steam client is open or you might be having trouble with your internet connection'
         deferrals.done(steamMessage)
 
     else
 
-        local checkMessage  = '🐢 Now validating your information through our database...'
+        local checkMessage  = '[deferralsHandler] Now checking your information and status in the server database...'
         deferrals.update(checkMessage)
 
-        Wait(1000)
+        Wait(3000)
 
         local a = [[SELECT * FROM core_users WHERE steam = @steam]]
         local b = {
@@ -42,15 +43,15 @@ AddEventHandler('brianph-core:deferralsHandler:executeDeferrals', function(src, 
 
                 if status == 'banned' then
 
-                    local bannedMessage = '🚫 You are banned from connecting to our server! File a ticket in the Discord to appeal your ban.'
+                    local bannedMessage = '[deferralsHandler] You are banned from connecting to the server! File a ticket in the Discord to appeal your ban.'
                     deferrals.done(bannedMessage)
 
                 else
 
-                    local successMessage = '✔️ Validation successful! Connecting to server...'
+                    local successMessage = '[deferralsHandler] Validation successful! Connecting to server...'
                     deferrals.update(successMessage)
 
-                    Wait(1000)
+                    Wait(3000)
 
                     deferrals.done()
 
