@@ -1,10 +1,19 @@
-AddEventHandler('playerSpawned', function(hasSpawned)
+-- ? Executes queueHandler:playerSpawned once player secures their connection with the server.
 
-    local src = source
+Citizen.CreateThread(function()
 
-    if hasSpawned then
+    while true do
 
-        TriggerServerEvent('brianph-core:queueHandler:playerSpawned', src)
+        Wait(0)
+
+        local isConnected = NetworkIsSessionStarted()
+
+        if isConnected then
+
+            TriggerServerEvent('brianph-core:queueHandler:playerSpawned')
+            return
+
+        end
 
     end
 
