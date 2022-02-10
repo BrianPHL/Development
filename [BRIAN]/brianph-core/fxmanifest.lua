@@ -3,6 +3,7 @@ game 'gta5'
 
 -- ? queueHandler
 
+    client_script 'queueHandler/cl_main.lua'
     server_script 'queueHandler/sv_main.lua'
     server_script 'queueHandler/sv_modules.lua'
 
