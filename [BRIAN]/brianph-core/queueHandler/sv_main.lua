@@ -3,8 +3,24 @@ BRIANPH.globalModules = BRIANPH.globalModules or {}
 
 -- TODO: completely rework the entire server cap system as the source code from hardcap is complete dogwater
 
+local elapsedTime = '00:00:00'
 local userCount = 0 
 local userList  = {}
+
+local queueList = {}
+
+Citizen.CreateThread(function()
+
+    while true do
+
+        Wait(1500)
+
+        local queueLength = BRIANPH.globalModules.GetQueueLength(queueList)
+        print(queueLength)
+
+    end
+
+end)
 
 RegisterServerEvent('brianph-core:queueHandler:playerSpawned')
 AddEventHandler('brianph-core:queueHandler:playerSpawned', function()
@@ -34,29 +50,50 @@ end)
 AddEventHandler('playerConnecting', function(playerName, setKickReason, deferrals)
 
     local src        = source 
-    local maxClients = GetConvarInt('sv_maxclients', 1)
+    local maxClients = GetConvarInt('sv_maxclients', 32)
 
     deferrals.defer()
 
-    local connectingMessage = '[queueHandler] Initializing queue handlers...'
+    local connectingMessage = '[queueHandler] Initializing queue...'
     deferrals.update(connectingMessage)
 
-    Wait(3000)
+    Wait(1)
 
     if userCount >= maxClients then
 
-        -- TODO: Create a queueing system with priority integration
-        deferrals.done('SAGAD NA BOBO')
-
-    elseif userCount <= maxClients then
-
-        local transferMessage = '[queueHandler] No queue found. Transferring to deferralsHandler...'
-        deferrals.update(transferMessage)
-
-        Wait(3000)
-
-        TriggerEvent('brianph-core:deferralsHandler:executeDeferrals', src, playerName, setKickReason, deferrals)
+        local userName = BRIANPH.globalModules.GetNameIdentifier(src)
+        table.insert(queueList, userName)
 
     end
+
+    while userCount >= maxClients do
+
+        Wait(1000)
+        
+        local userName      = BRIANPH.globalModules.GetNameIdentifier(src)
+        local queuePosition = BRIANPH.globalModules.GetQueuePosition(userName, queueList)
+        local queueLength   = BRIANPH.globalModules.GetQueueLength(queueList)
+        local elapsedTime
+
+        if userName == nil then 
+
+            print('[queueHandler DEBUG] no username or player dropped from queue') 
+            table.remove(queueList, userName)
+            return 
+
+        end
+
+        local queueMessage = '[queueHandler] You are currently ' .. queuePosition .. '/' .. queueLength .. ' in the queue.'
+        deferrals.update(queueMessage)
+        
+
+    end
+
+    local transferMessage = '[queueHandler] No queue found. Transferring to deferralsHandler...'
+    deferrals.update(transferMessage)
+
+    Wait(3000)
+
+    TriggerEvent('brianph-core:deferralsHandler:executeDeferrals', src, playerName, setKickReason, deferrals)
 
 end)
