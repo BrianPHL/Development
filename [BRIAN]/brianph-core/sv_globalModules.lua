@@ -124,3 +124,31 @@ function BRIANPH.globalModules.GenerateDatabaseLogs(logType, steam)
     end
 
 end
+
+-- ? Queue functions
+
+function BRIANPH.globalModules.GetQueuePosition(userName, queueList)
+
+    local queuePosition
+
+    for index, values in ipairs(queueList) do
+
+        if values == userName then
+
+            queuePosition = index
+
+        end
+
+    end
+
+    return queuePosition
+
+end
+
+function BRIANPH.globalModules.GetQueueLength(queueList)
+
+    local queueLength = #queueList
+
+    return queueLength
+
+end
