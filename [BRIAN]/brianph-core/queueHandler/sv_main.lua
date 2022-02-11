@@ -9,19 +9,6 @@ local userList  = {}
 
 local queueList = {}
 
-Citizen.CreateThread(function()
-
-    while true do
-
-        Wait(1500)
-
-        local queueLength = BRIANPH.globalModules.GetQueueLength(queueList)
-        print(queueLength)
-
-    end
-
-end)
-
 RegisterServerEvent('brianph-core:queueHandler:playerSpawned')
 AddEventHandler('brianph-core:queueHandler:playerSpawned', function()
 
