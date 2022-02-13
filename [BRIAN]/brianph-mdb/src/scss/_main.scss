@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+
+* {
+
+    font-family: $montserrat;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+
+    background-color: rgb(53, 53, 53);
+    place-items: center;
+    display: grid;
+    height: 100vh;
+
+}
+
+.container {
+
+    background-color: #111111;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    height: 800px;
+    width: 1400px;
+
+    .police-container {
+
+        background-color: #202020;
+        height: 760px;
+        width: 1360px;
+
+    }
+
+    .ems-container {
+
+        background-color: #202020;
+        height: 760px;
+        width: 1360px;
+
+        display: none;
+
+    }
+
+    .civilian-container {
+
+        background-color: #202020;
+        height: 760px;
+        width: 1360px;
+        
+        display: none;
+
+    }
+
+}
