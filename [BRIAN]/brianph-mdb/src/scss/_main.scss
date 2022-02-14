@@ -26,21 +26,13 @@ body {
     border-radius: 10px;
     align-items: center;
     display: flex;
-    height: 800px;
+    height: 900px;
     width: 1400px;
-
-    .police-container {
-
-        background-color: #202020;
-        height: 760px;
-        width: 1360px;
-
-    }
 
     .ems-container {
 
         background-color: #202020;
-        height: 760px;
+        height: 860px;
         width: 1360px;
 
         display: none;
@@ -50,7 +42,7 @@ body {
     .civilian-container {
 
         background-color: #202020;
-        height: 760px;
+        height: 860px;
         width: 1360px;
         
         display: none;

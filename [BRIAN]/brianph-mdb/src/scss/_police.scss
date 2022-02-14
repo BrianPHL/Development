@@ -1,0 +1,102 @@
+.police-container {
+
+    background-color: #202020;
+    height: 860px;
+    width: 1360px;
+
+}
+
+.police-wrapper {
+
+    grid-template-columns: 190px 1fr;
+    grid-template-rows: 120px 1fr;
+    display: grid;
+    height: 100%;
+    width: 100%;
+
+    .police-header {
+
+        background-color: #2D2D2D;
+        border-bottom: 1px solid #E9204F;
+        grid-column: 1/3;
+        grid-row: 1/2;
+
+    }
+
+    .police-nav {
+
+        background-color: #2D2D2D;
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        .nav-buttons {
+
+            grid-template-columns: 50px 100px 40px;
+            grid-template-rows: 50px;
+            transition: 0.1s ease all;
+            display: grid;
+
+            &-icon {
+
+                place-items: center;
+                display: grid;
+
+                i {
+
+                    font-size: 1.25rem;
+                    color: white;
+                    
+                }
+
+            }
+
+            &-label {
+
+                justify-content: flex-start;
+                align-items: center;
+                display: flex;
+
+                h2 {
+
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    color: white;
+
+                }
+
+            }
+
+            &-highlight {
+
+                place-items: center;
+                display: grid;
+
+                i {
+
+                    font-size: 0.5rem;
+                    color: #E9204F;
+
+                }
+
+            }
+
+        }
+
+        .nav-buttons:hover {
+
+            background-color: #202020;
+            cursor: pointer;
+            
+        }
+
+        .nav-buttons-active {
+
+            background-color: #202020;
+
+        }
+
+    }
+
+
+    
+}
