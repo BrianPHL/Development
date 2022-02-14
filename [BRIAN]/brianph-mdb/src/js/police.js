@@ -1,8 +1,11 @@
 $(function() {
 
     setTimeout(function() {
-        $('.police-container').show()
+        $('.dashboard').show()
+        console.log('hello')
     }, 500)
+
+    
 
     const navHighlight = $('.nav-buttons-highlight')
 
