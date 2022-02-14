@@ -1,5 +1,9 @@
 $(function() {
 
+    setTimeout(function() {
+        $('.police-container').show()
+    }, 500)
+
     const navHighlight = $('.nav-buttons-highlight')
 
     $('#dashboard').addClass('nav-buttons-active')

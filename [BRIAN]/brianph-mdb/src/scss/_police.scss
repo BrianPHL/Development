@@ -16,16 +16,124 @@
 
     .police-header {
 
-        background-color: #2D2D2D;
-        border-bottom: 1px solid #E9204F;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 120px;
+        background-color: transparent;
+        border-bottom: 1px solid #ffffff1b;
         grid-column: 1/3;
         grid-row: 1/2;
+        display: grid;
+
+        .header-heading {
+
+            grid-template-columns: 10px 80px 10px 1fr;
+            grid-template-rows: 1fr;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: grid;
+
+            &-img {
+
+                grid-column: 2/3;
+                align-items: center;
+                display: flex;
+
+                &-container {
+
+                    background-color: white;
+                    border-radius: 100px;
+                    height: 80px;
+                    width: 80px;
+
+                }
+
+            }
+
+            &-title {
+
+                grid-column: 4/5;
+                align-items: center;
+                display: flex;
+
+                h1 {
+
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                    color: white;
+
+                }
+
+            }
+
+        }
+
+        .header-info {
+
+            grid-template-columns: 1fr 10px 60px 10px;
+            grid-template-rows: 1fr 30px 30px 1fr;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: grid;
+
+            &-img {
+
+                grid-column: 3/4;
+                grid-row: 2/4;
+
+                &-container {
+
+                    background-color: white;
+                    border-radius: 60px;
+                    height: 60px;
+                    width: 60px;
+
+                }
+
+            }
+
+            &-name {
+
+                justify-content: flex-end;
+                align-items: flex-end;
+                grid-column: 1/2;
+                grid-row: 2/3;
+                display: flex;
+
+                h2 {
+
+                    font-size: 1rem;
+                    color: white;
+
+                }
+
+            }
+
+            &-status {
+
+                justify-content: flex-end;
+                align-items: flex-start;
+                grid-column: 1/2;
+                grid-row: 3/4;
+                display: flex;
+
+                h2 {
+
+                    font-weight: 500;
+                    font-size: 1rem;
+                    color: white;
+
+                }
+
+            }
+
+        }
 
     }
 
     .police-nav {
 
-        background-color: #2D2D2D;
+        background-color: transparent;
+        border-right: 1px solid #ffffff1b;
         grid-column: 1/2;
         grid-row: 2/3;
 
@@ -34,6 +142,7 @@
             grid-template-columns: 50px 100px 40px;
             grid-template-rows: 50px;
             transition: 0.1s ease all;
+            border-bottom: 1px solid #ffffff1b;
             display: grid;
 
             &-icon {
@@ -73,9 +182,17 @@
 
                 i {
 
-                    font-size: 0.5rem;
-                    color: #E9204F;
-
+                    font-size: 0.2rem;
+                    color: #ffffff;
+                    text-shadow:
+                    0 0 5px #ffffff2c,
+                    0 0 10px #ffffff2c,
+                    0 0 15px #ffffff2c,
+                    0 0 20px #ffffff2c,
+                    0 0 25px #ffffff2c,
+                    0 0 30px #ffffff2c,
+                    0 0 35px #ffffff2c,
+                    0 0 40px #ffffff2c;
                 }
 
             }
@@ -84,19 +201,23 @@
 
         .nav-buttons:hover {
 
-            background-color: #202020;
+            text-shadow:
+            0 0 5px #ffffff2c,
+            0 0 10px #ffffff2c,
+            0 0 15px #ffffff2c;
             cursor: pointer;
             
         }
 
         .nav-buttons-active {
 
-            background-color: #202020;
+            text-shadow:
+            0 0 5px #ffffff2c,
+            0 0 10px #ffffff2c,
+            0 0 15px #ffffff2c;
 
         }
 
     }
 
-
-    
 }
