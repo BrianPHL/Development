@@ -228,35 +228,110 @@
         grid-row: 2/3;
         display: grid;
 
-        .content-child {
+        .dashboard {
 
             grid-template-columns: 1fr 20px 1fr 20px 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 1fr 20px 80px;
             grid-column: 2/3;
             grid-row: 2/3;
             display: grid;
-            // border: 1px solid #ffffff1b;
 
-            .dashboard-first {
+            &-first {
 
                 grid-column: 1/2;
-                grid-row: 1/2;
+                grid-row: 1/4;
                 border: 1px solid #ffffff1b;
 
             }
 
-            .dashboard-second {
+            &-second {
 
                 grid-column: 3/4;
-                grid-row: 1/2;
+                grid-row: 1/4;
                 border: 1px solid #ffffff1b;
 
             }
 
-            .dashboard-third {
+            &-third {
 
                 grid-column: 5/6;
                 grid-row: 1/2;
+                border: 1px solid #ffffff1b;
+
+            }
+
+            &-fourth {
+
+                grid-column: 5/6;
+                grid-row: 3/4;
+                border: 1px solid #ffffff1b;
+
+            }
+
+        }
+
+        .persons {
+
+            grid-template-columns: 1fr 20px 1fr 20px 1fr;
+            grid-template-rows: 1fr 20px 80px;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: grid;
+
+            &-first {
+
+                grid-column: 1/2;
+                grid-row: 1/4;
+                border: 1px solid #ffffff1b;
+
+            }
+
+            &-second {
+
+                grid-column: 3/4;
+                grid-row: 1/4;
+                border: 1px solid #ffffff1b;
+
+            }
+
+            &-third {
+
+                grid-column: 5/6;
+                grid-row: 1/4;
+                border: 1px solid #ffffff1b;
+
+            }
+
+        }
+
+        .vehicles {
+
+            grid-template-columns: 1fr 20px 1fr 20px 1fr;
+            grid-template-rows: 1fr 20px 80px;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: grid;
+
+            &-first {
+
+                grid-column: 1/2;
+                grid-row: 1/4;
+                border: 1px solid #ffffff1b;
+
+            }
+
+            &-second {
+
+                grid-column: 3/4;
+                grid-row: 1/4;
+                border: 1px solid #ffffff1b;
+
+            }
+
+            &-third {
+
+                grid-column: 5/6;
+                grid-row: 1/4;
                 border: 1px solid #ffffff1b;
 
             }
