@@ -1,12 +1,5 @@
 $(function() {
 
-    setTimeout(function() {
-        $('.dashboard').show()
-        console.log('hello')
-    }, 500)
-
-    
-
     const navHighlight = $('.nav-buttons-highlight')
 
     $('#dashboard').addClass('nav-buttons-active')
@@ -22,6 +15,12 @@ $(function() {
 
         $(this).addClass('nav-buttons-active')
         $(this).find(navHighlight).show()
+
+        const id  = $(this).attr('id')
+        const div = $('.content-child')
+        
+        div.hide()
+        $('.' + id).show()
 
     })
 
