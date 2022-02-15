@@ -231,37 +231,245 @@
         .dashboard {
 
             grid-template-columns: 1fr 20px 1fr 20px 1fr;
-            grid-template-rows: 1fr 20px 80px;
+            grid-template-rows: 150px 20px 1fr;
             grid-column: 2/3;
             grid-row: 2/3;
             display: grid;
 
             &-first {
 
-                grid-column: 1/2;
-                grid-row: 1/4;
+                grid-template-columns: 1fr 20px 1fr 20px 1fr;
+                grid-template-rows: 1fr;
+                border-radius: 5px;
+                grid-column: 1/6;
+                grid-row: 1/2;
+                display: grid;
                 border: 1px solid #ffffff1b;
+
+                &-officerCount {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 40px 10px 1fr 10px;
+                    grid-column: 1/2;
+                    display: grid;
+
+                    .officerCount-header {
+
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 20px 20px;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: grid;
+
+                        &-label {
+
+                            align-items: center;
+                            display: flex;
+
+                            h2 {
+
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                font-size: 1.25rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-sublabel {
+
+                            align-items: center;
+                            display: flex;
+
+                            h3 {
+
+                                font-weight: 300;
+                                font-size: 0.75rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                    }
+
+                    .officerCount-counter {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 4/5;
+                        display: flex;
+
+                        h2 {
+
+                            font-weight: 200;
+                            font-size: 3rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                }
+
+                &-totalReports {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 40px 10px 1fr 10px;
+                    grid-column: 3/4;
+                    display: grid;
+
+                    .totalReports-header {
+
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 20px 20px;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: grid;
+
+                        &-label {
+
+                            align-items: center;
+                            display: flex;
+
+                            h2 {
+
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                font-size: 1.25rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-sublabel {
+
+                            align-items: center;
+                            display: flex;
+
+                            h3 {
+
+                                font-weight: 300;
+                                font-size: 0.75rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                    }
+
+                    .totalReports-counter {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 4/5;
+                        display: flex;
+
+                        h2 {
+
+                            font-weight: 200;
+                            font-size: 3rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                }
+
+                &-totalArrests {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 40px 10px 1fr 10px;
+                    grid-column: 5/6;
+                    display: grid;
+
+                    .totalArrests-header {
+
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 20px 20px;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: grid;
+
+                        &-label {
+
+                            align-items: center;
+                            display: flex;
+
+                            h2 {
+
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                font-size: 1.25rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-sublabel {
+
+                            align-items: center;
+                            display: flex;
+
+                            h3 {
+
+                                font-weight: 300;
+                                font-size: 0.75rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                    }
+
+                    .totalArrests-counter {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 4/5;
+                        display: flex;
+
+                        h2 {
+
+                            font-weight: 200;
+                            font-size: 3rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                }
 
             }
 
             &-second {
 
-                grid-column: 3/4;
-                grid-row: 1/4;
+                border-radius: 5px;
+                grid-column: 1/2;
+                grid-row: 3/4;
                 border: 1px solid #ffffff1b;
 
             }
 
             &-third {
 
-                grid-column: 5/6;
-                grid-row: 1/2;
+                border-radius: 5px;
+                grid-column: 3/4;
+                grid-row: 3/4;
                 border: 1px solid #ffffff1b;
 
             }
 
             &-fourth {
 
+                border-radius: 5px;
                 grid-column: 5/6;
                 grid-row: 3/4;
                 border: 1px solid #ffffff1b;
