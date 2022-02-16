@@ -50,3 +50,45 @@ body {
     }
 
 }
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    transition: 0.1s ease all;
+    background: rgb(118, 118, 118); 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(201, 201, 201); 
+  }
+
+@mixin border-thin {
+
+    border: 1px solid #ffffff1b;
+
+}
+
+@mixin h2-styling {
+    
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: white;
+
+}
+
+@mixin h3-styling {
+
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: white;
+
+}
