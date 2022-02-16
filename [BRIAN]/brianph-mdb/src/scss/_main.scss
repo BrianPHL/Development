@@ -56,19 +56,22 @@ body {
     width: 10px;
 
   }
+::-webkit-scrollbar-track {
 
-  ::-webkit-scrollbar-track {
-    background: #111; 
-  }
+  background: #111; 
 
-  ::-webkit-scrollbar-thumb {
-    transition: 0.1s ease all;
-    background: rgb(118, 118, 118); 
-  }
+}
+::-webkit-scrollbar-thumb {
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(201, 201, 201); 
-  }
+  transition: 0.1s ease all;
+  background: rgb(118, 118, 118);
+
+}
+::-webkit-scrollbar-thumb:hover {
+
+  background: rgb(201, 201, 201); 
+
+}
 
 @mixin border-thin {
 
@@ -80,7 +83,7 @@ body {
     
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: white;
 
 }
@@ -88,7 +91,7 @@ body {
 @mixin h3-styling {
 
     font-weight: 300;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: white;
 
 }
