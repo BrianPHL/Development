@@ -2784,7 +2784,7 @@
 
                             &-entry {
 
-                                grid-template-columns: 10px 1fr 10px;
+                                grid-template-columns: 10px 1fr 10px 15px 10px;
                                 grid-template-rows: 5px 1fr 5px;
                                 background-color: white;
                                 border-radius: 50px;
@@ -2802,6 +2802,30 @@
 
                                         font-weight: 400;
                                         font-size: 0.75rem;
+
+                                    }
+
+                                }
+
+                                &-remove {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 4/5;
+                                    grid-row: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 1rem;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: red;
 
                                     }
 
@@ -2850,7 +2874,7 @@
 
                             &-entry {
 
-                                grid-template-columns: 10px 1fr 10px;
+                                grid-template-columns: 10px 1fr 10px 15px 10px;
                                 grid-template-rows: 5px 1fr 5px;
                                 background-color: white;
                                 border-radius: 50px;
@@ -2868,6 +2892,30 @@
 
                                         font-weight: 400;
                                         font-size: 0.75rem;
+
+                                    }
+
+                                }
+
+                                &-remove {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 4/5;
+                                    grid-row: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 1rem;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: red;
 
                                     }
 
@@ -2916,7 +2964,7 @@
 
                             &-entry {
 
-                                grid-template-columns: 10px 1fr 10px;
+                                grid-template-columns: 10px 1fr 10px 15px 10px;
                                 grid-template-rows: 5px 1fr 5px;
                                 background-color: white;
                                 border-radius: 50px;
@@ -2934,6 +2982,30 @@
 
                                         font-weight: 400;
                                         font-size: 0.75rem;
+
+                                    }
+
+                                }
+
+                                &-remove {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 4/5;
+                                    grid-row: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 1rem;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: red;
 
                                     }
 
@@ -2982,7 +3054,7 @@
 
                             &-entry {
 
-                                grid-template-columns: 10px 1fr 10px;
+                                grid-template-columns: 10px 1fr 10px 15px 10px;
                                 grid-template-rows: 5px 1fr 5px;
                                 background-color: white;
                                 border-radius: 50px;
@@ -3000,6 +3072,30 @@
 
                                         font-weight: 400;
                                         font-size: 0.75rem;
+
+                                    }
+
+                                }
+
+                                &-remove {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 4/5;
+                                    grid-row: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 1rem;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: red;
 
                                     }
 
@@ -3048,7 +3144,7 @@
 
                             &-entry {
 
-                                grid-template-columns: 10px 1fr 10px;
+                                grid-template-columns: 10px 1fr 10px 15px 10px;
                                 grid-template-rows: 5px 1fr 5px;
                                 background-color: white;
                                 border-radius: 50px;
@@ -3066,6 +3162,30 @@
 
                                         font-weight: 400;
                                         font-size: 0.75rem;
+
+                                    }
+
+                                }
+
+                                &-remove {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 4/5;
+                                    grid-row: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 1rem;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: red;
 
                                     }
 
