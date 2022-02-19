@@ -1,4 +1,4 @@
-$(function() {
+$(() => {
 
     const navHighlight = $('.nav-buttons-highlight')
 
