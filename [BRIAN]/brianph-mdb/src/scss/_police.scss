@@ -152,7 +152,7 @@
 
                 i {
 
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                     color: white;
                     
                 }
@@ -2125,7 +2125,7 @@
         .vehicles {
 
             grid-template-columns: 1fr 20px 1fr 20px 1fr;
-            grid-template-rows: 1fr 20px 80px;
+            grid-template-rows: 1fr;
             grid-column: 2/3;
             grid-row: 2/3;
             display: grid;
