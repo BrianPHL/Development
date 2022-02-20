@@ -222,18 +222,18 @@
 
     .police-content {
 
-        grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 20px 1fr 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         grid-column: 2/3;
         grid-row: 2/3;
         display: grid;
 
         .dashboard {
 
-            grid-template-columns: 1fr 20px 1fr 20px 1fr;
-            grid-template-rows: 150px 20px 1fr;
-            grid-column: 2/3;
-            grid-row: 2/3;
+            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-rows: 20px 150px 20px 1fr 20px;
+            grid-column: 1/2;
+            grid-row: 1/2;
             display: grid;
 
             &-first {
@@ -241,8 +241,8 @@
                 grid-template-columns: 1fr 20px 1fr 20px 1fr;
                 grid-template-rows: 1fr;
                 border-radius: 2.5px;
-                grid-column: 1/6;
-                grid-row: 1/2;
+                grid-column: 2/7;
+                grid-row: 2/3;
                 display: grid;
 
                 @include border-thin;
@@ -440,8 +440,8 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: 60px 1fr;
                 border-radius: 2.5px;
-                grid-column: 1/2;
-                grid-row: 3/4;
+                grid-column: 2/3;
+                grid-row: 4/5;
                 display: grid;
                 
                 @include border-thin;
@@ -592,8 +592,8 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: 60px 1fr;
                 border-radius: 2.5px;
-                grid-column: 3/4;
-                grid-row: 3/4;
+                grid-column: 4/5;
+                grid-row: 4/5;
                 display: grid;
                 
                 @include border-thin;
@@ -744,8 +744,8 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: 60px 1fr;
                 border-radius: 2.5px;
-                grid-column: 5/6;
-                grid-row: 3/4;
+                grid-column: 6/7;
+                grid-row: 4/5;
                 display: grid;
                 
                 @include border-thin;
@@ -894,17 +894,17 @@
 
         .persons {
 
-            grid-template-columns: 1fr 20px 1fr 20px 1fr;
-            grid-template-rows: 1fr;
-            grid-column: 2/3;
-            grid-row: 2/3;
+            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-rows: 20px 1fr 20px;
+            grid-column: 1/2;
+            grid-row: 1/2;
             display: grid;
 
             &-first {
 
                 border-radius: 2.5px;
-                grid-column: 1/2;
-                grid-row: 1/2;
+                grid-column: 2/3;
+                grid-row: 2/3;
 
                 @include border-thin;
 
@@ -1184,15 +1184,15 @@
             &-second {
 
                 border-radius: 2.5px;
-                grid-column: 3/4;
-                grid-row: 1/4;
+                grid-column: 4/5;
+                grid-row: 2/3;
                 
                 @include border-thin;
 
                 &-view {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 105px 1fr;
+                    grid-template-rows: 60px 170px 170px 1fr;
                     display: grid;
                     height: 700px;
 
@@ -1202,6 +1202,7 @@
                         grid-template-rows: 10px 20px 20px 10px;
                         background-color: #202020;
                         border-bottom: 1px solid #ffffff1b;
+                        border-right: 1px solid #ffffff1b;
                         grid-column: 1/2;
                         grid-row: 1/2;
                         display: grid;
@@ -1265,8 +1266,10 @@
 
                     &-mugshot {
 
-                        grid-template-columns: 10px 375px 10px;
+                        grid-template-columns: 10px 1fr 10px;
                         grid-template-rows: 10px 150px 10px;
+                        grid-column: 1/2;
+                        grid-row: 2/3;
                         display: grid;
 
                         &-container {
@@ -1283,7 +1286,7 @@
                                 object-fit: cover;
                                 outline: none;
                                 height: 148px;
-                                width: 373px;
+                                width: 340.5px;
 
                             }
 
@@ -1293,317 +1296,11 @@
 
                     &-info {
 
-                        grid-template-columns: 10px 1fr 10px 1fr 10px;
-                        grid-template-rows: 1fr 10px 1fr 10px;
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 30px 10px 30px 10px 30px 10px 30px 10px;
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
-
-                        &-name {
-
-                            grid-template-columns: 5px 20px 1fr 5px;
-                            grid-template-rows: 5px 10px 20px 5px;
-                            border-radius: 2.5px;
-                            grid-column: 2/3;
-                            grid-row: 1/2;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-label {
-
-                                align-items: center;
-                                grid-column: 2/4;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                label {
-
-                                    text-transform: uppercase;
-                                    font-weight: 500;
-                                    font-size: 0.5rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                            }
-
-                            &-icon {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                i {
-
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                                i:hover {
-
-                                    cursor: pointer;
-                                    color: #ffffff;
-
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                h2 {
-                                    
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;                                    
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    overflow: hidden;
-                                    width: 150px;
-                                    color: white;
-
-                                }
-
-                            }
-
-                        }
-
-                        &-id {
-
-                            grid-template-columns: 5px 20px 1fr 5px;
-                            grid-template-rows: 5px 10px 20px 5px;
-                            border-radius: 2.5px;
-                            grid-column: 4/5;
-                            grid-row: 1/2;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-label {
-
-                                align-items: center;
-                                grid-column: 2/4;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                label {
-
-                                    text-transform: uppercase;
-                                    font-weight: 500;
-                                    font-size: 0.5rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                            }
-
-                            &-icon {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                i {
-
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                                i:hover {
-
-                                    cursor: pointer;
-                                    color: #ffffff;
-
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                h2 {
-
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;                                    
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    overflow: hidden;
-                                    width: 150px;
-                                    color: white;
-
-                                }
-
-                            }
-
-                        }
-
-                        &-pnum {
-
-                            grid-template-columns: 5px 20px 1fr 5px;
-                            grid-template-rows: 5px 10px 20px 5px;
-                            border-radius: 2.5px;
-                            grid-column: 2/3;
-                            grid-row: 3/4;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-label {
-
-                                align-items: center;
-                                grid-column: 2/4;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                label {
-
-                                    text-transform: uppercase;
-                                    font-weight: 500;
-                                    font-size: 0.5rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                            }
-
-                            &-icon {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                i {
-
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                                i:hover {
-
-                                    cursor: pointer;
-                                    color: #ffffff;
-
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                h2 {
-
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;                                    
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    overflow: hidden;
-                                    width: 150px;
-                                    color: white;
-
-                                }
-
-                            }
-
-                        }
-
-                        
-                        &-img {
-
-                            grid-template-columns: 5px 20px 1fr 5px;
-                            grid-template-rows: 5px 10px 20px 5px;
-                            border-radius: 2.5px;
-                            grid-column: 4/5;
-                            grid-row: 3/4;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-label {
-
-                                align-items: center;
-                                grid-column: 2/4;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                label {
-
-                                    text-transform: uppercase;
-                                    font-weight: 500;
-                                    font-size: 0.5rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                            }
-
-                            &-icon {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                i {
-
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                                i:hover {
-
-                                    cursor: pointer;
-                                    color: #ffffff;
-
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                h2 {
-
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;                                    
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    overflow: hidden;
-                                    width: 150px;
-                                    color: white;
-
-                                }
-
-                            }
-
-                        }
-
 
                     }
 
@@ -1657,7 +1354,7 @@
 
                     &-header {
 
-                        grid-template-columns: 10px 1fr 100px 10px;
+                        grid-template-columns: 10px 1fr 40px 10px;
                         grid-template-rows: 10px 20px 20px 10px;
                         background-color: #202020;
                         border-bottom: 1px solid #ffffff1b;
@@ -1726,8 +1423,10 @@
 
                     &-mugshot {
 
-                        grid-template-columns: 10px 375px 10px;
+                        grid-template-columns: 10px 1fr 10px;
                         grid-template-rows: 10px 150px 10px;
+                        grid-column: 1/2;
+                        grid-row: 2/3;
                         display: grid;
 
                         &-container {
@@ -1744,7 +1443,7 @@
                                 object-fit: cover;
                                 outline: none;
                                 height: 148px;
-                                width: 373px;
+                                width: 340.5px;
 
                             }
 
@@ -2124,8 +1823,8 @@
             &-third {
 
                 border-radius: 2.5px;
-                grid-column: 5/6;
-                grid-row: 1/4;
+                grid-column: 6/7;
+                grid-row: 2/3;
                 
                 @include border-thin;
 
@@ -3249,6 +2948,7 @@
 
             &-first {
 
+                border-radius: 2.5px;
                 grid-column: 1/2;
                 grid-row: 1/4;
                
@@ -3258,6 +2958,7 @@
 
             &-second {
 
+                border-radius: 2.5px;
                 grid-column: 3/4;
                 grid-row: 1/4;
                 
@@ -3267,6 +2968,7 @@
 
             &-third {
 
+                border-radius: 2.5px;
                 grid-column: 5/6;
                 grid-row: 1/4;
                 

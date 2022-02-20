@@ -79,6 +79,12 @@ body {
 
 }
 
+@mixin border-radius {
+
+    border-radius: 2px;
+
+}
+
 @mixin h2-styling {
     
     text-transform: uppercase;
