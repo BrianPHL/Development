@@ -1192,7 +1192,7 @@
                 &-view {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 170px 1fr;
+                    grid-template-rows: 60px 170px 210px 1fr;
                     display: grid;
                     height: 700px;
 
@@ -1297,10 +1297,354 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 10px 30px 10px 30px 10px 30px 10px 30px 10px;
+                        grid-template-rows: 10px 40px 10px 40px 10px 40px 10px 40px 10px;
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
+
+                        &-name {
+
+                            grid-template-columns: 5px 1fr 5px;
+                            grid-template-rows: 5px 10px 20px 5px;
+                            border-radius: 2.5px;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: grid;
+
+                            @include border-thin;
+
+                            &-header {
+
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                label {
+
+                                    text-transform: uppercase;
+                                    font-weight: 500;
+                                    font-size: 0.5rem;
+                                    color: #ffffff4b;
+
+                                }
+
+                            }
+
+                            &-footer {
+
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                                display: grid;
+
+                                &-icon {
+
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
+
+                                }
+
+                                &-value {
+
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    h3 {
+                                    
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
+                                        font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
+                                        color: white;
+    
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        &-id {
+
+                            grid-template-columns: 5px 1fr 5px;
+                            grid-template-rows: 5px 10px 20px 5px;
+                            border-radius: 2.5px;
+                            grid-column: 2/3;
+                            grid-row: 4/5;
+                            display: grid;
+
+                            @include border-thin;
+
+                            &-header {
+
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                label {
+
+                                    text-transform: uppercase;
+                                    font-weight: 500;
+                                    font-size: 0.5rem;
+                                    color: #ffffff4b;
+
+                                }
+
+                            }
+
+                            &-footer {
+
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                                display: grid;
+
+                                &-icon {
+
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
+
+                                }
+
+                                &-value {
+
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    h3 {
+                                    
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
+                                        font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
+                                        color: white;
+    
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        &-pnum {
+
+                            grid-template-columns: 5px 1fr 5px;
+                            grid-template-rows: 5px 10px 20px 5px;
+                            border-radius: 2.5px;
+                            grid-column: 2/3;
+                            grid-row: 6/7;
+                            display: grid;
+
+                            @include border-thin;
+
+                            &-header {
+
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                label {
+
+                                    text-transform: uppercase;
+                                    font-weight: 500;
+                                    font-size: 0.5rem;
+                                    color: #ffffff4b;
+
+                                }
+
+                            }
+
+                            &-footer {
+
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                                display: grid;
+
+                                &-icon {
+
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
+
+                                }
+
+                                &-value {
+
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    h3 {
+                                    
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
+                                        font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
+                                        color: white;
+    
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        &-img {
+
+                            grid-template-columns: 5px 1fr 5px;
+                            grid-template-rows: 5px 10px 20px 5px;
+                            border-radius: 2.5px;
+                            grid-column: 2/3;
+                            grid-row: 8/9;
+                            display: grid;
+
+                            @include border-thin;
+
+                            &-header {
+
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                label {
+
+                                    text-transform: uppercase;
+                                    font-weight: 500;
+                                    font-size: 0.5rem;
+                                    color: #ffffff4b;
+
+                                }
+
+                            }
+
+                            &-footer {
+
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                                display: grid;
+
+                                &-icon {
+
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
+
+                                }
+
+                                &-value {
+
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    h3 {
+                                    
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
+                                        font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
+                                        color: white;
+    
+                                    }
+
+                                }
+
+                            }
+
+                        }
 
                     }
 
@@ -1348,7 +1692,7 @@
                 &-edit {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 105px 1fr;
+                    grid-template-rows: 60px 170px 210px 1fr;
                     display: grid;
                     height: 700px;
 
@@ -1358,6 +1702,7 @@
                         grid-template-rows: 10px 20px 20px 10px;
                         background-color: #202020;
                         border-bottom: 1px solid #ffffff1b;
+                        border-right: 1px solid #ffffff1b;
                         grid-column: 1/2;
                         grid-row: 1/2;
                         display: grid;
@@ -1453,27 +1798,27 @@
 
                     &-info {
 
-                        grid-template-columns: 10px 1fr 10px 1fr 10px;
-                        grid-template-rows: 1fr 10px 1fr 10px;
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 40px 10px 40px 10px 40px 10px 40px 10px;
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
 
                         &-name {
 
-                            grid-template-columns: 5px 20px 1fr 5px;
+                            grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
                             border-radius: 2.5px;
                             grid-column: 2/3;
-                            grid-row: 1/2;
+                            grid-row: 2/3;
                             display: grid;
 
                             @include border-thin;
 
-                            &-label {
+                            &-header {
 
                                 align-items: center;
-                                grid-column: 2/4;
+                                grid-column: 2/3;
                                 grid-row: 2/3;
                                 display: flex;
 
@@ -1488,46 +1833,56 @@
 
                             }
 
-                            &-icon {
+                            &-footer {
 
-                                align-items: center;
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
                                 grid-column: 2/3;
                                 grid-row: 3/4;
-                                display: flex;
+                                display: grid;
 
-                                i {
+                                &-icon {
 
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
 
                                 }
 
-                                i:hover {
+                                &-value {
 
-                                    cursor: pointer;
-                                    color: #ffffff;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
 
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                h2 {
+                                    h3 {
                                     
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;                                    
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    overflow: hidden;
-                                    width: 150px;
-                                    color: white;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
+                                        font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
+                                        color: white;
+    
+                                    }
 
                                 }
 
@@ -1537,19 +1892,19 @@
 
                         &-id {
 
-                            grid-template-columns: 5px 20px 1fr 5px;
+                            grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
                             border-radius: 2.5px;
-                            grid-column: 4/5;
-                            grid-row: 1/2;
+                            grid-column: 2/3;
+                            grid-row: 4/5;
                             display: grid;
 
                             @include border-thin;
 
-                            &-label {
+                            &-header {
 
                                 align-items: center;
-                                grid-column: 2/4;
+                                grid-column: 2/3;
                                 grid-row: 2/3;
                                 display: flex;
 
@@ -1564,46 +1919,56 @@
 
                             }
 
-                            &-icon {
+                            &-footer {
 
-                                align-items: center;
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
                                 grid-column: 2/3;
                                 grid-row: 3/4;
-                                display: flex;
+                                display: grid;
 
-                                i {
+                                &-icon {
 
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
 
                                 }
 
-                                i:hover {
+                                &-value {
 
-                                    cursor: pointer;
-                                    color: #ffffff;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
 
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                h2 {
-
-                                    text-overflow: ellipsis;
-                                    white-space: nowrap;                                    
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    overflow: hidden;
-                                    width: 150px;
-                                    color: white;
+                                    h3 {
+                                    
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
+                                        font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
+                                        color: white;
+    
+                                    }
 
                                 }
 
@@ -1613,19 +1978,19 @@
 
                         &-pnum {
 
-                            grid-template-columns: 5px 20px 1fr 5px;
+                            grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
                             border-radius: 2.5px;
                             grid-column: 2/3;
-                            grid-row: 3/4;
+                            grid-row: 6/7;
                             display: grid;
 
                             @include border-thin;
 
-                            &-label {
+                            &-header {
 
                                 align-items: center;
-                                grid-column: 2/4;
+                                grid-column: 2/3;
                                 grid-row: 2/3;
                                 display: flex;
 
@@ -1640,51 +2005,61 @@
 
                             }
 
-                            &-icon {
+                            &-footer {
 
-                                align-items: center;
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
                                 grid-column: 2/3;
                                 grid-row: 3/4;
-                                display: flex;
+                                display: grid;
 
-                                i {
+                                &-icon {
 
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
 
-                                }
+                                    i {
 
-                                i:hover {
-
-                                    cursor: pointer;
-                                    color: #ffffff;
-
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                input {
-
-                                    background-color: transparent;
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    height: 100%;
-                                    border: 0;
-                                    width: 100%;
-                                    color: #ffffff;
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
 
                                 }
-                                input:focus {
 
-                                    outline: none;
+                                &-value {
+
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    input {
+
+                                        background-color: transparent;
+                                        font-size: 0.75rem;
+                                        color: white;
+                                        border: none;
+                                        height: 100%;
+                                        width: 100%;
+
+                                    }
+
+                                    input:focus {
+
+                                        outline: none;
+
+                                    }
 
                                 }
 
@@ -1692,22 +2067,21 @@
 
                         }
 
-                        
                         &-img {
 
-                            grid-template-columns: 5px 20px 1fr 5px;
+                            grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
                             border-radius: 2.5px;
-                            grid-column: 4/5;
-                            grid-row: 3/4;
+                            grid-column: 2/3;
+                            grid-row: 8/9;
                             display: grid;
 
                             @include border-thin;
 
-                            &-label {
+                            &-header {
 
                                 align-items: center;
-                                grid-column: 2/4;
+                                grid-column: 2/3;
                                 grid-row: 2/3;
                                 display: flex;
 
@@ -1722,58 +2096,67 @@
 
                             }
 
-                            &-icon {
+                            &-footer {
 
-                                align-items: center;
+                                grid-template-columns: 18px 1fr;
+                                grid-template-rows: 1fr;
                                 grid-column: 2/3;
                                 grid-row: 3/4;
-                                display: flex;
+                                display: grid;
 
-                                i {
+                                &-icon {
 
-                                    transition: 0.1s ease all;
-                                    font-size: 0.7rem;
-                                    color: #ffffff4b;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.7rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                    i:hover {
+    
+                                        cursor: pointer;
+                                        color: #ffffff;
+    
+                                    }
+
+                                }
+
+                                &-value {
+
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 1/2;
+                                    display: flex;
+
+                                    input {
+
+                                        background-color: transparent;
+                                        font-size: 0.75rem;
+                                        color: white;
+                                        border: none;
+                                        height: 100%;
+                                        width: 100%;
+
+                                    }
+
+                                    input:focus {
+
+                                        outline: none;
+
+                                    }
 
                                 }
 
-                                i:hover {
-
-                                    cursor: pointer;
-                                    color: #ffffff;
-
-                                }
-
-                            }
-
-                            &-value {
-
-                                align-items: center;
-                                grid-column: 3/4;
-                                grid-row: 3/4;
-                                display: flex;
-
-                                input {
-
-                                    background-color: transparent;
-                                    font-weight: 400;
-                                    font-size: 0.75rem;
-                                    height: 100%;
-                                    border: 0;
-                                    width: 100%;
-                                    color: #ffffff;
-
-                                }
-                                input:focus {
-
-                                    outline: none;
-
-                                }
-                                
                             }
 
                         }
-
 
                     }
 
