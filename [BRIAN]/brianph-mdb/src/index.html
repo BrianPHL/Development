@@ -513,7 +513,7 @@
 
                         </div>
 
-                        <div class="content-child persons">
+                        <div class="content-child persons" style="display: none;">
 
                             <div class="persons-first">
 
@@ -529,7 +529,7 @@
 
                                         <div class="persons-first-view-header-sublabel">
 
-                                            <h3>Search the person's name or state ID</h3>
+                                            <h3>Search full name or state ID</h3>
 
                                         </div>
 
@@ -614,7 +614,7 @@
 
                                         <div class="persons-second-view-header-label">
 
-                                            <h2>Viewing Profile (#${cid})</h2>
+                                            <h2>Viewing Person (#${cid})</h2>
 
                                         </div>
 
@@ -626,7 +626,7 @@
 
                                         <div class="persons-second-view-header-sublabel">
 
-                                            <h3>Currently viewing ${searched_person}</h3>
+                                            <h3>Currently viewing ${person_name}</h3>
 
                                         </div>
 
@@ -636,7 +636,7 @@
 
                                         <div class="persons-second-view-mugshot-container">
 
-                                            <img src="https://img.gta5-mods.com/q95/images/short-hairstyle-for-mp-male/b09e54-f2.png" alt="">
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
 
                                         </div>
 
@@ -768,21 +768,22 @@
 
                                         <div class="persons-second-edit-header-label">
 
-                                            <h2>Editing Profile (#${cid})</h2>
+                                            <h2>Editing Person (#${cid})</h2>
 
                                         </div>
 
                                         <div class="persons-second-edit-header-options">
 
-                                            <i class="fa-solid fa-chevron-left"></i>
+                                            <i class="fa-solid fa-arrow-left"></i>
                                             <i class="fa-solid fa-redo"></i>
                                             <i class="fa-solid fa-trash"></i>
+                                            <i class="fa-solid fa-floppy-disk"></i>
 
                                         </div>
 
                                         <div class="persons-second-edit-header-sublabel">
 
-                                            <h3>Currently editing ${searched_person}</h3>
+                                            <h3>Currently editing ${person_name}</h3>
 
                                         </div>
 
@@ -792,7 +793,7 @@
 
                                         <div class="persons-second-edit-mugshot-container">
 
-                                            <img src="https://img.gta5-mods.com/q95/images/short-hairstyle-for-mp-male/b09e54-f2.png" alt="">
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
 
                                         </div>
 
@@ -928,7 +929,7 @@
 
                                         <div class="persons-third-view-header-label">
 
-                                            <h2>Viewing profile information</h2>
+                                            <h2>Viewing Person information</h2>
 
                                         </div>
 
@@ -1097,7 +1098,7 @@
 
                                         <div class="persons-third-edit-header-label">
 
-                                            <h2>Editing profile information</h2>
+                                            <h2>Editing person information</h2>
 
                                         </div>
 
@@ -1315,7 +1316,7 @@
 
                                         <div class="vehicles-first-view-header-sublabel">
 
-                                            <h3>Search the person's name or state ID</h3>
+                                            <h3>Search vehicle model or plate number</h3>
 
                                         </div>
 
@@ -1394,15 +1395,425 @@
 
                             <div class="vehicles-second">
 
+                                <div class="vehicles-second-view" style="display: none;">
+
+                                    <div class="vehicles-second-view-header">
+
+                                        <div class="vehicles-second-view-header-label">
+
+                                            <h2>Viewing vehicle (#${plate})</h2>
+
+                                        </div>
+
+                                        <div class="vehicles-second-view-header-options">
+
+                                            <i class="fa-solid fa-pencil"></i>
+
+                                        </div>
+
+                                        <div class="vehicles-second-view-header-sublabel">
+
+                                            <h3>Currently viewing ${plate_number}</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-second-view-mugshot">
+
+                                        <div class="vehicles-second-view-mugshot-container">
+
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-second-view-info">
+
+                                        <div class="vehicles-second-view-info-model">
+
+                                            <div class="vehicles-second-view-info-model-header">
+
+                                                <label>Model</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-view-info-model-footer">
+
+                                                <div class="vehicles-second-view-info-model-footer-icon">
+
+                                                    <i class="fa-solid fa-car"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-view-info-model-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="vehicles-second-view-info-owner">
+
+                                            <div class="vehicles-second-view-info-owner-header">
+
+                                                <label>Owner</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-view-info-owner-footer">
+
+                                                <div class="vehicles-second-view-info-owner-footer-icon">
+
+                                                    <i class="fa-solid fa-user"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-view-info-owner-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="vehicles-second-view-info-plate">
+
+                                            <div class="vehicles-second-view-info-plate-header">
+
+                                                <label>Plate number</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-view-info-plate-footer">
+
+                                                <div class="vehicles-second-view-info-plate-footer-icon">
+
+                                                    <i class="fa-solid fa-id-card"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-view-info-plate-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="vehicles-second-view-info-img">
+
+                                            <div class="vehicles-second-view-info-img-header">
+
+                                                <label>Image URL</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-view-info-img-footer">
+
+                                                <div class="vehicles-second-view-info-img-footer-icon">
+
+                                                    <i class="fa-solid fa-camera"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-view-info-img-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-second-view-docs">
+
+                                        <div class="vehicles-second-view-docs-panel">
+
+                                            <textarea placeholder="Profile document goes here..." readonly></textarea>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="vehicles-second-edit">
+
+                                    <div class="vehicles-second-edit-header">
+
+                                        <div class="vehicles-second-edit-header-label">
+
+                                            <h2>Editing vehicle (#${plate})</h2>
+
+                                        </div>
+
+                                        <div class="vehicles-second-edit-header-options">
+
+                                            <i class="fa-solid fa-pencil"></i>
+
+                                        </div>
+
+                                        <div class="vehicles-second-edit-header-sublabel">
+
+                                            <h3>Currently editing ${plate_number}</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-second-edit-mugshot">
+
+                                        <div class="vehicles-second-edit-mugshot-container">
+
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-second-edit-info">
+
+                                        <div class="vehicles-second-edit-info-model">
+
+                                            <div class="vehicles-second-edit-info-model-header">
+
+                                                <label>Model</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-edit-info-model-footer">
+
+                                                <div class="vehicles-second-edit-info-model-footer-icon">
+
+                                                    <i class="fa-solid fa-car"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-edit-info-model-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="vehicles-second-edit-info-owner">
+
+                                            <div class="vehicles-second-edit-info-owner-header">
+
+                                                <label>Owner</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-edit-info-owner-footer">
+
+                                                <div class="vehicles-second-edit-info-owner-footer-icon">
+
+                                                    <i class="fa-solid fa-user"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-edit-info-owner-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="vehicles-second-edit-info-plate">
+
+                                            <div class="vehicles-second-edit-info-plate-header">
+
+                                                <label>Plate number</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-edit-info-plate-footer">
+
+                                                <div class="vehicles-second-edit-info-plate-footer-icon">
+
+                                                    <i class="fa-solid fa-id-card"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-edit-info-plate-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="vehicles-second-edit-info-img">
+
+                                            <div class="vehicles-second-edit-info-img-header">
+
+                                                <label>Image URL (Imgur preferrably)</label>
+
+                                            </div>
+
+                                            <div class="vehicles-second-edit-info-img-footer">
+
+                                                <div class="vehicles-second-edit-info-img-footer-icon">
+
+                                                    <i class="fa-solid fa-camera"></i>
+
+                                                </div>
+
+                                                <div class="vehicles-second-edit-info-img-footer-value">
+
+                                                    <input type="text" placeholder="https://www.imgur.com/xxxxxx">
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-second-edit-docs">
+
+                                        <div class="vehicles-second-edit-docs-panel">
+
+                                            <textarea placeholder="Profile document goes here..."></textarea>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
                             <div class="vehicles-third">
                                 
+                                <div class="vehicles-third-view" style="display: none;">
+
+                                    <div class="vehicles-third-view-header">
+
+                                        <div class="vehicles-third-view-header-label">
+
+                                            <h2>Viewing Vehicle information</h2>
+
+                                        </div>
+
+                                        <div class="vehicles-third-view-header-sublabel">
+
+                                            <h3>Other information that is related to the vehicle</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-third-view-categories">
+
+                                        <div class="vehicles-third-view-categories-involvement">
+
+                                            <div class="vehicles-third-view-categories-involvement-header">
+
+                                                <h2>Involvement</h2>
+
+                                            </div>
+
+                                            <div class="vehicles-third-view-categories-involvement-entries">
+
+                                                <div class="vehicles-third-view-categories-involvement-entry">
+
+                                                    <div class="vehicles-third-view-categories-involvement-entry-value">
+
+                                                        <h3>This is a tag</h3>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="vehicles-third-edit">
+
+                                    <div class="vehicles-third-edit-header">
+
+                                        <div class="vehicles-third-edit-header-label">
+
+                                            <h2>Editing vehicle information</h2>
+
+                                        </div>
+
+                                        <div class="vehicles-third-edit-header-sublabel">
+
+                                            <h3>Other information that is related to the vehicle</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="vehicles-third-edit-categories">
+
+                                        <div class="vehicles-third-edit-categories-involvement">
+
+                                            <div class="vehicles-third-edit-categories-involvement-header">
+
+                                                <h2>Involvement</h2>
+
+                                            </div>
+
+                                            <div class="vehicles-third-edit-categories-involvement-entries">
+
+                                                <div class="vehicles-third-edit-categories-involvement-entry">
+
+                                                    <div class="vehicles-third-edit-categories-involvement-entry-value">
+
+                                                        <h3>This is a tag</h3>
+
+                                                    </div>
+
+                                                    <div class="vehicles-third-edit-categories-involvement-entry-remove">
+
+                                                        <i class="fa-solid fa-circle-xmark"></i>
+                                                        
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
                         </div>
 
-                        <div class="content-child reports" style="display: none;">
+                        <div class="content-child reports">
 
                             <div class="reports-first">
 
