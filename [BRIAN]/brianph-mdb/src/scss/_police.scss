@@ -2762,17 +2762,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
@@ -2855,17 +2887,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
@@ -2948,17 +3012,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
@@ -3041,17 +3137,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
@@ -3134,17 +3262,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
@@ -3227,17 +3387,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
@@ -4841,17 +5033,49 @@
 
                             &-header {
 
-                                align-items: center;
+                                grid-template-columns: 1fr 30px;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                display: grid;
 
-                                h2 {
+                                &-label {
 
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
+                                    align-items: center;
+                                    grid-column: 1/2;
+                                    display: flex;
+
+                                    h2 {
+
+                                        text-transform: uppercase;
+                                        font-weight: 400;
+                                        font-size: 0.8rem;
+                                        color: white;
+
+                                    }
+
+                                }
+
+                                &-add {
+
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    display: flex;
+
+                                    i {
+
+                                        transition: 0.1s ease all;
+                                        font-size: 0.75rem;
+                                        color: #ffffff4b;
+
+                                    }
+
+                                    i:hover {
+
+                                        cursor: pointer;
+                                        color: white;
+
+                                    }
 
                                 }
 
