@@ -230,7 +230,7 @@
 
         .dashboard {
 
-            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-columns: repeat(3, 20px 363.33px) 20px;
             grid-template-rows: 20px 150px 20px 1fr 20px;
             grid-column: 1/2;
             grid-row: 1/2;
@@ -894,7 +894,7 @@
 
         .persons {
 
-            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-columns: repeat(3, 20px 363.33px) 20px;
             grid-template-rows: 20px 1fr 20px;
             grid-column: 1/2;
             grid-row: 1/2;
@@ -1297,7 +1297,7 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 40px 10px 40px 10px 40px 10px 40px 10px;
+                        grid-template-rows: repeat(4, 40px 10px);                        
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
@@ -1799,7 +1799,7 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 40px 10px 40px 10px 40px 10px 40px 10px;
+                        grid-template-rows: repeat(4, 40px 10px);     
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
@@ -3515,7 +3515,7 @@
 
         .vehicles {
 
-            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-columns: repeat(3, 20px 363.33px) 20px;
             grid-template-rows: 20px 1fr 20px;
             grid-column: 1/2;
             grid-row: 1/2;
@@ -3916,9 +3916,9 @@
                     }
 
                     &-info {
-
+     
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 40px 10px 40px 10px 40px 10px 40px 10px;
+                        grid-template-rows: repeat(4, 40px 10px);
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
@@ -4420,7 +4420,7 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 40px 10px 40px 10px 40px 10px 40px 10px;
+                        grid-template-rows: repeat(4, 40px 10px);
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
@@ -5161,7 +5161,7 @@
 
         .reports {
 
-            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-columns: repeat(3, 20px 363.33px) 20px;
             grid-template-rows: 20px 1fr 20px;
             grid-column: 1/2;
             grid-row: 1/2;
@@ -5564,7 +5564,7 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 40px 10px 40px 10px 40px 10px 40px 10px;
+                        grid-template-rows: repeat(4, 40px 10px);
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
@@ -6066,7 +6066,7 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 40px 10px 40px 10px 40px 10px 40px 10px;
+                        grid-template-rows: repeat(4, 40px 10px);
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
@@ -6807,7 +6807,7 @@
 
         .evidences {
 
-            grid-template-columns: 20px 363.33px 20px 363.33px 20px 363.33px 20px;
+            grid-template-columns: repeat(3, 20px 363.33px) 20px;
             grid-template-rows: 20px 1fr 20px;
             grid-column: 1/2;
             grid-row: 1/2;
