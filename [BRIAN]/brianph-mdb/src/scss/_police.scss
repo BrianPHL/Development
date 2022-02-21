@@ -3641,7 +3641,7 @@
                 &-view {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 200px 1fr;
+                    grid-template-rows: 60px 170px 150px 1fr;
                     display: grid;
                     height: 715px;
 
@@ -3923,99 +3923,13 @@
 
                         }
 
-                        &-plate {
-
-                            grid-template-columns: 5px 1fr 5px;
-                            grid-template-rows: 5px 10px 20px 5px;
-                            border-radius: 2px;
-                            grid-column: 2/3;
-                            grid-row: 5/6;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                label {
-
-                                    text-transform: uppercase;
-                                    font-weight: 500;
-                                    font-size: 0.5rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                            }
-
-                            &-footer {
-
-                                grid-template-columns: 18px 1fr;
-                                grid-template-rows: 1fr;
-                                grid-column: 2/3;
-                                grid-row: 3/4;
-                                display: grid;
-
-                                &-icon {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    grid-row: 1/2;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.7rem;
-                                        color: #ffffff4b;
-    
-                                    }
-    
-                                    i:hover {
-    
-                                        cursor: pointer;
-                                        color: #ffffff;
-    
-                                    }
-
-                                }
-
-                                &-value {
-
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    grid-row: 1/2;
-                                    display: flex;
-
-                                    h3 {
-                                    
-                                        text-overflow: ellipsis;
-                                        white-space: nowrap;                                    
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-                                        overflow: hidden;
-                                        width: 150px;
-                                        color: white;
-    
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
                         &-img {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
                             border-radius: 2px;
                             grid-column: 2/3;
-                            grid-row: 7/8;
+                            grid-row: 5/6;
                             display: grid;
 
                             @include border-thin;
@@ -4141,7 +4055,7 @@
                 &-edit {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 200px 1fr;
+                    grid-template-rows: 60px 170px 150px 1fr;
                     display: grid;
                     height: 715px;
 
@@ -4425,99 +4339,13 @@
 
                         }
 
-                        &-plate {
-
-                            grid-template-columns: 5px 1fr 5px;
-                            grid-template-rows: 5px 10px 20px 5px;
-                            border-radius: 2px;
-                            grid-column: 2/3;
-                            grid-row: 5/6;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                label {
-
-                                    text-transform: uppercase;
-                                    font-weight: 500;
-                                    font-size: 0.5rem;
-                                    color: #ffffff4b;
-
-                                }
-
-                            }
-
-                            &-footer {
-
-                                grid-template-columns: 18px 1fr;
-                                grid-template-rows: 1fr;
-                                grid-column: 2/3;
-                                grid-row: 3/4;
-                                display: grid;
-
-                                &-icon {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    grid-row: 1/2;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.7rem;
-                                        color: #ffffff4b;
-    
-                                    }
-    
-                                    i:hover {
-    
-                                        cursor: pointer;
-                                        color: #ffffff;
-    
-                                    }
-
-                                }
-
-                                &-value {
-
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    grid-row: 1/2;
-                                    display: flex;
-
-                                    h3 {
-                                    
-                                        text-overflow: ellipsis;
-                                        white-space: nowrap;                                    
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-                                        overflow: hidden;
-                                        width: 150px;
-                                        color: white;
-    
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
                         &-img {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
                             border-radius: 2px;
                             grid-column: 2/3;
-                            grid-row: 7/8;
+                            grid-row: 5/6;
                             display: grid;
 
                             @include border-thin;
