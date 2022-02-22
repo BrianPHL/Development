@@ -614,7 +614,7 @@
 
                                         <div class="persons-second-view-header-label">
 
-                                            <h2>Viewing Person (#${cid})</h2>
+                                            <h2>Viewing Person Profile</h2>
 
                                         </div>
 
@@ -742,7 +742,7 @@
 
                                         <div class="persons-second-edit-header-label">
 
-                                            <h2>Editing Person (#${cid})</h2>
+                                            <h2>Editing Person Profile</h2>
 
                                         </div>
 
@@ -1411,7 +1411,7 @@
 
                                         <div class="vehicles-second-view-header-label">
 
-                                            <h2>Viewing vehicle (#${plate})</h2>
+                                            <h2>Viewing vehicle profile</h2>
 
                                         </div>
 
@@ -1539,7 +1539,7 @@
 
                                         <div class="vehicles-second-edit-header-label">
 
-                                            <h2>Editing vehicle (#${plate})</h2>
+                                            <h2>Editing vehicle profile</h2>
 
                                         </div>
 
@@ -2113,13 +2113,13 @@
 
                             <div class="reports-second">
 
-                                <div class="reports-second-view">
+                                <div class="reports-second-view" style="display: none;">
 
                                     <div class="reports-second-view-header">
 
                                         <div class="reports-second-view-header-label">
 
-                                            <h2>Viewing report</h2>
+                                            <h2>Viewing report profile</h2>
 
                                         </div>
 
@@ -2241,17 +2241,17 @@
 
                                 </div>
 
-                                <div class="reports-second-edit" style="display: none;">
+                                <div class="reports-second-edit">
 
-                                    <div class="vehicles-second-edit-header">
+                                    <div class="reports-second-edit-header">
 
-                                        <div class="vehicles-second-edit-header-label">
+                                        <div class="reports-second-edit-header-label">
 
-                                            <h2>Editing vehicle (#${plate})</h2>
+                                            <h2>Editing report profile</h2>
 
                                         </div>
 
-                                        <div class="vehicles-second-edit-header-options">
+                                        <div class="reports-second-edit-header-options">
 
                                             <i class="fa-solid fa-arrow-left"></i>
                                             <i class="fa-solid fa-redo"></i>
@@ -2260,7 +2260,7 @@
 
                                         </div>
 
-                                        <div class="vehicles-second-edit-header-sublabel">
+                                        <div class="reports-second-edit-header-sublabel">
 
                                             <h3>Currently editing ${plate_number}</h3>
 
@@ -2268,9 +2268,9 @@
 
                                     </div>
 
-                                    <div class="vehicles-second-edit-mugshot">
+                                    <div class="reports-second-edit-mugshot">
 
-                                        <div class="vehicles-second-edit-mugshot-container">
+                                        <div class="reports-second-edit-mugshot-container">
 
                                             <img src="/src/assets/profiles_placeholder.png" alt="">
 
@@ -2278,27 +2278,27 @@
 
                                     </div>
 
-                                    <div class="vehicles-second-edit-info">
+                                    <div class="reports-second-edit-info">
 
-                                        <div class="vehicles-second-edit-info-model">
+                                        <div class="reports-second-edit-info-author">
 
-                                            <div class="vehicles-second-edit-info-model-header">
+                                            <div class="reports-second-edit-info-author-header">
 
-                                                <label>Model</label>
+                                                <label>Author</label>
 
                                             </div>
 
-                                            <div class="vehicles-second-edit-info-model-footer">
+                                            <div class="reports-second-edit-info-author-footer">
 
-                                                <div class="vehicles-second-edit-info-model-footer-icon">
+                                                <div class="reports-second-edit-info-author-footer-icon">
 
                                                     <i class="fa-solid fa-car"></i>
 
                                                 </div>
 
-                                                <div class="vehicles-second-edit-info-model-footer-value">
+                                                <div class="reports-second-edit-info-author-footer-value">
 
-                                                    <h3>null</h3>
+                                                    <h3>(null) null</h3>
 
                                                 </div>
 
@@ -2306,25 +2306,25 @@
 
                                         </div>
 
-                                        <div class="vehicles-second-edit-info-owner">
+                                        <div class="reports-second-edit-info-offender">
 
-                                            <div class="vehicles-second-edit-info-owner-header">
+                                            <div class="reports-second-edit-info-offender-header">
 
-                                                <label>Owner</label>
+                                                <label>Offender</label>
 
                                             </div>
 
-                                            <div class="vehicles-second-edit-info-owner-footer">
+                                            <div class="reports-second-edit-info-offender-footer">
 
-                                                <div class="vehicles-second-edit-info-owner-footer-icon">
+                                                <div class="reports-second-edit-info-offender-footer-icon">
 
                                                     <i class="fa-solid fa-user"></i>
 
                                                 </div>
 
-                                                <div class="vehicles-second-edit-info-owner-footer-value">
+                                                <div class="reports-second-edit-info-offender-footer-value">
 
-                                                    <h3>null</h3>
+                                                    <h3>(null) null</h3>
 
                                                 </div>
 
@@ -2332,23 +2332,23 @@
 
                                         </div>
 
-                                        <div class="vehicles-second-edit-info-plate">
+                                        <div class="reports-second-edit-info-type">
 
-                                            <div class="vehicles-second-edit-info-plate-header">
+                                            <div class="reports-second-edit-info-type-header">
 
-                                                <label>Plate number</label>
+                                                <label>Report type</label>
 
                                             </div>
 
-                                            <div class="vehicles-second-edit-info-plate-footer">
+                                            <div class="reports-second-edit-info-type-footer">
 
-                                                <div class="vehicles-second-edit-info-plate-footer-icon">
+                                                <div class="reports-second-edit-info-type-footer-icon">
 
                                                     <i class="fa-solid fa-id-card"></i>
 
                                                 </div>
 
-                                                <div class="vehicles-second-edit-info-plate-footer-value">
+                                                <div class="reports-second-edit-info-type-footer-value">
 
                                                     <h3>null</h3>
 
@@ -2358,37 +2358,11 @@
 
                                         </div>
 
-                                        <div class="vehicles-second-edit-info-img">
-
-                                            <div class="vehicles-second-edit-info-img-header">
-
-                                                <label>Image URL (Imgur preferrably)</label>
-
-                                            </div>
-
-                                            <div class="vehicles-second-edit-info-img-footer">
-
-                                                <div class="vehicles-second-edit-info-img-footer-icon">
-
-                                                    <i class="fa-solid fa-camera"></i>
-
-                                                </div>
-
-                                                <div class="vehicles-second-edit-info-img-footer-value">
-
-                                                    <input type="text" placeholder="https://www.imgur.com/xxxxxx">
-
-                                                </div>
-
-                                            </div>
-                                            
-                                        </div>
-
                                     </div>
 
-                                    <div class="vehicles-second-edit-docs">
+                                    <div class="reports-second-edit-docs">
 
-                                        <div class="vehicles-second-edit-docs-panel">
+                                        <div class="reports-second-edit-docs-panel">
 
                                             <textarea placeholder="Vehicle's documents go here..."></textarea>
 

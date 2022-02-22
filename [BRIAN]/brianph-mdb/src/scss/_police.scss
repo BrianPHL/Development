@@ -4645,7 +4645,7 @@
                 &-edit {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 200px 1fr;
+                    grid-template-rows: 60px 170px 150px 1fr;
                     display: grid;
                     height: 720px;
 
@@ -4752,12 +4752,12 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: repeat(4, 40px 10px);
+                        grid-template-rows: repeat(3, 40px 10px);
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
 
-                        &-model {
+                        &-author {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
@@ -4843,7 +4843,7 @@
 
                         }
 
-                        &-owner {
+                        &-offender {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
@@ -4929,7 +4929,7 @@
 
                         }
 
-                        &-plate {
+                        &-type {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
@@ -5083,21 +5083,16 @@
                                     grid-row: 1/2;
                                     display: flex;
 
-                                    input {
-
-                                        background-color: transparent;
+                                    h3 {
+                                    
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;                                    
+                                        font-weight: 400;
                                         font-size: 0.75rem;
+                                        overflow: hidden;
+                                        width: 150px;
                                         color: white;
-                                        border: none;
-                                        height: 100%;
-                                        width: 100%;
-
-                                    }
-
-                                    input:focus {
-
-                                        outline: none;
-
+    
                                     }
 
                                 }
