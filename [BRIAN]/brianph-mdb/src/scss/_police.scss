@@ -2096,425 +2096,80 @@
 
                         @include conceal-scrollbar;
 
-                        &-tags {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                h2 {
-
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-licenses {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                h2 {
-
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-vehicles {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                h2 {
-
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-housing {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                h2 {
-
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-employment {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                h2 {
-
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-priors {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                align-items: center;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: flex;
-
-                                h2 {
-
-                                    text-transform: uppercase;
-                                    font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
                     }
 
                     &-categories::-webkit-scrollbar {
 
                         display: none;
+
+                    }
+
+                    &-category {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        min-height: 40px;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+
+                            h2 {
+
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                font-size: 0.8rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-entries {
+
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            grid-row: 3/4;
+                            display: flex;
+
+                        }
+
+                        &-entry {
+
+                            grid-template-columns: 10px 1fr 10px;
+                            grid-template-rows: 5px 1fr 5px;
+                            background-color: white;
+                            border-radius: 50px;
+                            margin-top: 10px;
+                            min-width: 0px;   
+                            display: grid;
+
+                            &-value {
+
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                color: black;
+
+                                h3 {
+
+                                    font-weight: 400;
+                                    font-size: 0.75rem;
+
+                                }
+
+                            }
+
+                        }
 
                     }
 
@@ -2577,761 +2232,136 @@
 
                         @include conceal-scrollbar;
 
-                        &-tags {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                                &-remove {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: red;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-licenses {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                                &-remove {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: red;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-vehicles {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                                &-remove {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: red;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-housing {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                                &-remove {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: red;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-employment {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                                &-remove {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: red;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
-                        &-priors {
-
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
-                            display: grid;
-
-                            @include border-thin;
-
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
-
-                                }
-
-                                &-remove {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: red;
-
-                                    }
-
-                                }
-
-                            }
-
-                        }
-
                     }
 
                     &-categories::-webkit-scrollbar {
 
                         display: none;
+
+                    }
+
+                    &-category {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        min-height: 40px;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            grid-template-columns: 1fr 30px;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: grid;
+
+                            &-label {
+
+                                align-items: center;
+                                grid-column: 1/2;
+                                display: flex;
+
+                                h2 {
+
+                                    text-transform: uppercase;
+                                    font-weight: 400;
+                                    font-size: 0.8rem;
+                                    color: white;
+
+                                }
+
+                            }
+
+                            &-add {
+
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 2/3;
+                                display: flex;
+
+                                i {
+
+                                    transition: 0.1s ease all;
+                                    font-size: 0.75rem;
+                                    color: #ffffff4b;
+
+                                }
+
+                                i:hover {
+
+                                    cursor: pointer;
+                                    color: white;
+
+                                }
+
+                            }
+
+                        }
+
+                        &-entries {
+
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            grid-row: 3/4;
+                            display: flex;
+
+                        }
+
+                        &-entry {
+
+                            grid-template-columns: 10px 1fr 10px 15px 10px;
+                            grid-template-rows: 5px 1fr 5px;
+                            background-color: white;
+                            border-radius: 50px;
+                            margin-top: 10px;
+                            min-width: 0px;   
+                            display: grid;
+
+                            &-value {
+
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                color: black;
+
+                                h3 {
+
+                                    font-weight: 400;
+                                    font-size: 0.75rem;
+
+                                }
+
+                            }
+
+                            &-remove {
+
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 4/5;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                i {
+
+                                    transition: 0.1s ease all;
+                                    font-size: 1rem;
+
+                                }
+
+                                i:hover {
+
+                                    cursor: pointer;
+                                    color: red;
+
+                                }
+
+                            }
+
+                        }
 
                     }
 
@@ -4540,80 +3570,80 @@
 
                         @include conceal-scrollbar;
 
-                        &-involvement {
+                    }
+
+                    &-categories::-webkit-scrollbar {
+
+                        display: none;
+
+                    }
+
+                    &-category {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        min-height: 40px;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+
+                            h2 {
+
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                font-size: 0.8rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-entries {
+
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            grid-row: 3/4;
+                            display: flex;
+
+                        }
+
+                        &-entry {
 
                             grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
+                            grid-template-rows: 5px 1fr 5px;
+                            background-color: white;
+                            border-radius: 50px;
+                            margin-top: 10px;
+                            min-width: 0px;   
                             display: grid;
 
-                            @include border-thin;
+                            &-value {
 
-                            &-header {
-
-                                align-items: center;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                color: black;
 
-                                h2 {
+                                h3 {
 
-                                    text-transform: uppercase;
                                     font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
+                                    font-size: 0.75rem;
 
                                 }
 
                             }
 
                         }
-
-                    }
-
-                    &-categories::-webkit-scrollbar {
-
-                        display: none;
 
                     }
 
@@ -4676,124 +3706,68 @@
 
                         @include conceal-scrollbar;
 
-                        &-involvement {
+                    }
 
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
+                    &-categories::-webkit-scrollbar {
+
+                        display: none;
+
+                    }
+
+                    &-category {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        min-height: 40px;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            grid-template-columns: 1fr 30px;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
                             display: grid;
 
-                            @include border-thin;
+                            &-label {
 
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
+                                align-items: center;
+                                grid-column: 1/2;
                                 display: flex;
 
-                            }
+                                h2 {
 
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
+                                    text-transform: uppercase;
+                                    font-weight: 400;
+                                    font-size: 0.8rem;
+                                    color: white;
 
                                 }
 
-                                &-remove {
+                            }
 
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
+                            &-add {
 
-                                    i {
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 2/3;
+                                display: flex;
 
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
+                                i {
 
-                                    }
+                                    transition: 0.1s ease all;
+                                    font-size: 0.75rem;
+                                    color: #ffffff4b;
 
-                                    i:hover {
+                                }
 
-                                        cursor: pointer;
-                                        color: red;
+                                i:hover {
 
-                                    }
+                                    cursor: pointer;
+                                    color: white;
 
                                 }
 
@@ -4801,11 +3775,67 @@
 
                         }
 
-                    }
+                        &-entries {
 
-                    &-categories::-webkit-scrollbar {
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            grid-row: 3/4;
+                            display: flex;
 
-                        display: none;
+                        }
+
+                        &-entry {
+
+                            grid-template-columns: 10px 1fr 10px 15px 10px;
+                            grid-template-rows: 5px 1fr 5px;
+                            background-color: white;
+                            border-radius: 50px;
+                            margin-top: 10px;
+                            min-width: 0px;   
+                            display: grid;
+
+                            &-value {
+
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                color: black;
+
+                                h3 {
+
+                                    font-weight: 400;
+                                    font-size: 0.75rem;
+
+                                }
+
+                            }
+
+                            &-remove {
+
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 4/5;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                i {
+
+                                    transition: 0.1s ease all;
+                                    font-size: 1rem;
+
+                                }
+
+                                i:hover {
+
+                                    cursor: pointer;
+                                    color: red;
+
+                                }
+
+                            }
+
+                        }
 
                     }
 
@@ -5115,7 +4145,7 @@
                 &-view {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 60px 170px 200px 1fr;
+                    grid-template-rows: 60px 170px 150px 1fr;
                     display: grid;
                     height: 720px;
 
@@ -5220,12 +4250,12 @@
                     &-info {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: repeat(4, 40px 10px);
+                        grid-template-rows: repeat(3, 40px 10px);
                         grid-column: 1/2;
                         grid-row: 3/4;
                         display: grid;
 
-                        &-model {
+                        &-author {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
@@ -5311,7 +4341,7 @@
 
                         }
 
-                        &-owner {
+                        &-offender {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
@@ -5397,7 +4427,7 @@
 
                         }
 
-                        &-plate {
+                        &-type {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
@@ -6186,80 +5216,80 @@
 
                         @include conceal-scrollbar;
 
-                        &-involvement {
+                    }
+
+                    &-categories::-webkit-scrollbar {
+
+                        display: none;
+
+                    }
+
+                    &-category {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        min-height: 40px;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+
+                            h2 {
+
+                                text-transform: uppercase;
+                                font-weight: 400;
+                                font-size: 0.8rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-entries {
+
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            grid-row: 3/4;
+                            display: flex;
+
+                        }
+
+                        &-entry {
 
                             grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
+                            grid-template-rows: 5px 1fr 5px;
+                            background-color: white;
+                            border-radius: 50px;
+                            margin-top: 10px;
+                            min-width: 0px;   
                             display: grid;
 
-                            @include border-thin;
+                            &-value {
 
-                            &-header {
-
-                                align-items: center;
                                 grid-column: 2/3;
                                 grid-row: 2/3;
-                                display: flex;
+                                color: black;
 
-                                h2 {
+                                h3 {
 
-                                    text-transform: uppercase;
                                     font-weight: 400;
-                                    font-size: 0.8rem;
-                                    color: white;
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
-                                display: flex;
-
-                            }
-
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
+                                    font-size: 0.75rem;
 
                                 }
 
                             }
 
                         }
-
-                    }
-
-                    &-categories::-webkit-scrollbar {
-
-                        display: none;
 
                     }
 
@@ -6322,124 +5352,68 @@
 
                         @include conceal-scrollbar;
 
-                        &-involvement {
+                    }
 
-                            grid-template-columns: 10px 1fr 10px;
-                            grid-template-rows: 10px 20px minmax(0px, auto) 10px;
-                            border-radius: 2px;
-                            margin-bottom: 10px;
-                            min-height: 40px;
+                    &-categories::-webkit-scrollbar {
+
+                        display: none;
+
+                    }
+
+                    &-category {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        min-height: 40px;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            grid-template-columns: 1fr 30px;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
                             display: grid;
 
-                            @include border-thin;
+                            &-label {
 
-                            &-header {
-
-                                grid-template-columns: 1fr 30px;
-                                grid-column: 2/3;
-                                grid-row: 2/3;
-                                display: grid;
-
-                                &-label {
-
-                                    align-items: center;
-                                    grid-column: 1/2;
-                                    display: flex;
-
-                                    h2 {
-
-                                        text-transform: uppercase;
-                                        font-weight: 400;
-                                        font-size: 0.8rem;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                                &-add {
-
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 2/3;
-                                    display: flex;
-
-                                    i {
-
-                                        transition: 0.1s ease all;
-                                        font-size: 0.75rem;
-                                        color: #ffffff4b;
-
-                                    }
-
-                                    i:hover {
-
-                                        cursor: pointer;
-                                        color: white;
-
-                                    }
-
-                                }
-
-                            }
-
-                            &-entries {
-
-                                flex-direction: row;
-                                grid-column: 2/3;
-                                column-gap: 10px;
-                                flex-wrap: wrap;
-                                grid-row: 3/4;
+                                align-items: center;
+                                grid-column: 1/2;
                                 display: flex;
 
-                            }
+                                h2 {
 
-                            &-entry {
-
-                                grid-template-columns: 10px 1fr 10px 15px 10px;
-                                grid-template-rows: 5px 1fr 5px;
-                                background-color: white;
-                                border-radius: 50px;
-                                margin-top: 10px;
-                                min-width: 0px;   
-                                display: grid;
-
-                                &-value {
-
-                                    grid-column: 2/3;
-                                    grid-row: 2/3;
-                                    color: black;
-
-                                    h3 {
-
-                                        font-weight: 400;
-                                        font-size: 0.75rem;
-
-                                    }
+                                    text-transform: uppercase;
+                                    font-weight: 400;
+                                    font-size: 0.8rem;
+                                    color: white;
 
                                 }
 
-                                &-remove {
+                            }
 
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    grid-column: 4/5;
-                                    grid-row: 2/3;
-                                    display: flex;
+                            &-add {
 
-                                    i {
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 2/3;
+                                display: flex;
 
-                                        transition: 0.1s ease all;
-                                        font-size: 1rem;
+                                i {
 
-                                    }
+                                    transition: 0.1s ease all;
+                                    font-size: 0.75rem;
+                                    color: #ffffff4b;
 
-                                    i:hover {
+                                }
 
-                                        cursor: pointer;
-                                        color: red;
+                                i:hover {
 
-                                    }
+                                    cursor: pointer;
+                                    color: white;
 
                                 }
 
@@ -6447,11 +5421,67 @@
 
                         }
 
-                    }
+                        &-entries {
 
-                    &-categories::-webkit-scrollbar {
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            grid-row: 3/4;
+                            display: flex;
 
-                        display: none;
+                        }
+
+                        &-entry {
+
+                            grid-template-columns: 10px 1fr 10px 15px 10px;
+                            grid-template-rows: 5px 1fr 5px;
+                            background-color: white;
+                            border-radius: 50px;
+                            margin-top: 10px;
+                            min-width: 0px;   
+                            display: grid;
+
+                            &-value {
+
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                color: black;
+
+                                h3 {
+
+                                    font-weight: 400;
+                                    font-size: 0.75rem;
+
+                                }
+
+                            }
+
+                            &-remove {
+
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 4/5;
+                                grid-row: 2/3;
+                                display: flex;
+
+                                i {
+
+                                    transition: 0.1s ease all;
+                                    font-size: 1rem;
+
+                                }
+
+                                i:hover {
+
+                                    cursor: pointer;
+                                    color: red;
+
+                                }
+
+                            }
+
+                        }
 
                     }
 
