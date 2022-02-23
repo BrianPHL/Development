@@ -222,8 +222,8 @@
 
     .police-content {
 
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
         grid-column: 2/3;
         grid-row: 2/3;
         display: grid;
@@ -3855,11 +3855,8 @@
 
             &-first {
 
-                border-radius: 2px;
                 grid-column: 2/3;
                 grid-row: 2/3;
-
-                @include border-thin;
 
                 &-view {
 
@@ -4082,7 +4079,7 @@
                 &-edit {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 1fr;
+                    grid-template-rows: 1fr 20px 320px;
                     display: grid;
                     height: 720px;
 
@@ -4090,10 +4087,13 @@
 
                         grid-template-columns: 1fr;
                         grid-template-rows: 1fr 1fr;
+                        border-radius: 2px;
                         grid-column: 1/2;
                         grid-row: 1/2;
                         display: grid;
 
+                        @include border-thin;
+                        
                         &-label {
 
                             justify-content: center;
@@ -4126,6 +4126,510 @@
 
                             }
                             
+                        }
+
+                    }
+
+                    &-summary {
+
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 60px 260px;
+                        border-radius: 2px;
+                        grid-column: 1/2;
+                        grid-row: 3/4;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-header {
+
+                            grid-template-columns: 10px 1fr  10px;
+                            grid-template-rows: 10px 20px 20px 10px;
+                            border-bottom: 1px solid #ffffff1b;
+                            grid-column: 1/4;
+                            grid-row: 1/2;
+                            display: grid;
+                            z-index: 9999;
+        
+                            &-label {
+    
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                display: flex;
+    
+                                h2 {
+    
+                                    @include h2-styling;
+    
+                                }
+    
+                            }
+    
+                            &-sublabel {
+    
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 3/4;
+                                display: flex;
+    
+                                h3 {
+    
+                                    @include h3-styling;
+    
+                                }
+    
+                            }
+        
+                        }
+
+                        &-info {
+
+                            grid-template-columns: 10px 1fr 10px;
+                            grid-template-rows: repeat(5, 10px 40px) 10px;
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                            display: grid;
+
+                            &-type {
+
+                                grid-template-columns: 5px 1fr 5px;
+                                grid-template-rows: 5px 10px 20px 5px;
+                                border-radius: 2px;
+                                grid-column: 2/3;
+                                grid-row: 2/3;
+                                display: grid;
+    
+                                @include border-thin;
+    
+                                &-header {
+    
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 2/3;
+                                    display: flex;
+    
+                                    label {
+    
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        font-size: 0.5rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                }
+    
+                                &-footer {
+    
+                                    grid-template-columns: 18px 1fr;
+                                    grid-template-rows: 1fr;
+                                    grid-column: 2/3;
+                                    grid-row: 3/4;
+                                    display: grid;
+    
+                                    &-icon {
+    
+                                        align-items: center;
+                                        grid-column: 1/2;
+                                        grid-row: 1/2;
+                                        display: flex;
+    
+                                        i {
+    
+                                            transition: 0.1s ease all;
+                                            font-size: 0.7rem;
+                                            color: #ffffff4b;
+        
+                                        }
+        
+                                        i:hover {
+        
+                                            cursor: pointer;
+                                            color: #ffffff;
+        
+                                        }
+    
+                                    }
+    
+                                    &-value {
+    
+                                        align-items: center;
+                                        grid-column: 2/3;
+                                        grid-row: 1/2;
+                                        display: flex;
+
+                                        select {
+
+                                            background-color: transparent;
+                                            font-weight: 400;
+                                            font-size: 0.75rem;
+                                            border: none;
+                                            width: 100%;
+                                            color: white;
+
+                                        }
+
+                                        select:focus {
+
+                                            outline: none;
+
+                                        }
+    
+                                    }
+    
+                                }
+    
+                            }
+
+                            &-plea {
+
+                                grid-template-columns: 5px 1fr 5px;
+                                grid-template-rows: 5px 10px 20px 5px;
+                                border-radius: 2px;
+                                grid-column: 2/3;
+                                grid-row: 4/5;
+                                display: grid;
+    
+                                @include border-thin;
+    
+                                &-header {
+    
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 2/3;
+                                    display: flex;
+    
+                                    label {
+    
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        font-size: 0.5rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                }
+    
+                                &-footer {
+    
+                                    grid-template-columns: 18px 1fr;
+                                    grid-template-rows: 1fr;
+                                    grid-column: 2/3;
+                                    grid-row: 3/4;
+                                    display: grid;
+    
+                                    &-icon {
+    
+                                        align-items: center;
+                                        grid-column: 1/2;
+                                        grid-row: 1/2;
+                                        display: flex;
+    
+                                        i {
+    
+                                            transition: 0.1s ease all;
+                                            font-size: 0.7rem;
+                                            color: #ffffff4b;
+        
+                                        }
+        
+                                        i:hover {
+        
+                                            cursor: pointer;
+                                            color: #ffffff;
+        
+                                        }
+    
+                                    }
+    
+                                    &-value {
+    
+                                        align-items: center;
+                                        grid-column: 2/3;
+                                        grid-row: 1/2;
+                                        display: flex;
+
+                                        select {
+
+                                            background-color: transparent;
+                                            font-weight: 400;
+                                            font-size: 0.75rem;
+                                            border: none;
+                                            width: 100%;
+                                            color: white;
+
+                                        }
+
+                                        select:focus {
+
+                                            outline: none;
+
+                                        }
+    
+                                    }
+    
+                                }
+    
+                            }
+
+                            &-status {
+
+                                grid-template-columns: 5px 1fr 5px;
+                                grid-template-rows: 5px 10px 20px 5px;
+                                border-radius: 2px;
+                                grid-column: 2/3;
+                                grid-row: 6/7;
+                                display: grid;
+    
+                                @include border-thin;
+    
+                                &-header {
+    
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 2/3;
+                                    display: flex;
+    
+                                    label {
+    
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        font-size: 0.5rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                }
+    
+                                &-footer {
+    
+                                    grid-template-columns: 18px 1fr;
+                                    grid-template-rows: 1fr;
+                                    grid-column: 2/3;
+                                    grid-row: 3/4;
+                                    display: grid;
+    
+                                    &-icon {
+    
+                                        align-items: center;
+                                        grid-column: 1/2;
+                                        grid-row: 1/2;
+                                        display: flex;
+    
+                                        i {
+    
+                                            transition: 0.1s ease all;
+                                            font-size: 0.7rem;
+                                            color: #ffffff4b;
+        
+                                        }
+        
+                                        i:hover {
+        
+                                            cursor: pointer;
+                                            color: #ffffff;
+        
+                                        }
+    
+                                    }
+    
+                                    &-value {
+    
+                                        align-items: center;
+                                        grid-column: 2/3;
+                                        grid-row: 1/2;
+                                        display: flex;
+
+                                        select {
+
+                                            background-color: transparent;
+                                            font-weight: 400;
+                                            font-size: 0.75rem;
+                                            border: none;
+                                            width: 100%;
+                                            color: white;
+
+                                        }
+
+                                        select:focus {
+
+                                            outline: none;
+
+                                        }
+    
+                                    }
+    
+                                }
+    
+                            }
+
+                            &-sentence {
+
+                                grid-template-columns: 5px 1fr 5px;
+                                grid-template-rows: 5px 10px 20px 5px;
+                                border-radius: 2px;
+                                grid-column: 2/3;
+                                grid-row: 8/9;
+                                display: grid;
+    
+                                @include border-thin;
+    
+                                &-header {
+    
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 2/3;
+                                    display: flex;
+    
+                                    label {
+    
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        font-size: 0.5rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                }
+    
+                                &-footer {
+    
+                                    grid-template-columns: 18px 1fr;
+                                    grid-template-rows: 1fr;
+                                    grid-column: 2/3;
+                                    grid-row: 3/4;
+                                    display: grid;
+    
+                                    &-icon {
+    
+                                        align-items: center;
+                                        grid-column: 1/2;
+                                        grid-row: 1/2;
+                                        display: flex;
+    
+                                        i {
+    
+                                            transition: 0.1s ease all;
+                                            font-size: 0.7rem;
+                                            color: #ffffff4b;
+        
+                                        }
+        
+                                        i:hover {
+        
+                                            cursor: pointer;
+                                            color: #ffffff;
+        
+                                        }
+    
+                                    }
+    
+                                    &-value {
+    
+                                        align-items: center;
+                                        grid-column: 2/3;
+                                        grid-row: 1/2;
+                                        display: flex;
+
+                                        h3 {
+
+                                            font-weight: 400;
+                                            font-size: 0.75rem;
+                                            width: 100%;
+                                            color: white;
+        
+                                        }
+    
+                                    }
+    
+                                }
+    
+                            }
+
+                            &-fine {
+
+                                grid-template-columns: 5px 1fr 5px;
+                                grid-template-rows: 5px 10px 20px 5px;
+                                border-radius: 2px;
+                                grid-column: 2/3;
+                                grid-row: 10/11;
+                                display: grid;
+    
+                                @include border-thin;
+    
+                                &-header {
+    
+                                    align-items: center;
+                                    grid-column: 2/3;
+                                    grid-row: 2/3;
+                                    display: flex;
+    
+                                    label {
+    
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        font-size: 0.5rem;
+                                        color: #ffffff4b;
+    
+                                    }
+    
+                                }
+    
+                                &-footer {
+    
+                                    grid-template-columns: 18px 1fr;
+                                    grid-template-rows: 1fr;
+                                    grid-column: 2/3;
+                                    grid-row: 3/4;
+                                    display: grid;
+    
+                                    &-icon {
+    
+                                        align-items: center;
+                                        grid-column: 1/2;
+                                        grid-row: 1/2;
+                                        display: flex;
+    
+                                        i {
+    
+                                            transition: 0.1s ease all;
+                                            font-size: 0.7rem;
+                                            color: #ffffff4b;
+        
+                                        }
+        
+                                        i:hover {
+        
+                                            cursor: pointer;
+                                            color: #ffffff;
+        
+                                        }
+    
+                                    }
+    
+                                    &-value {
+    
+                                        align-items: center;
+                                        grid-column: 2/3;
+                                        grid-row: 1/2;
+                                        display: flex;
+
+                                        h3 {
+
+                                            font-weight: 400;
+                                            font-size: 0.75rem;
+                                            width: 100%;
+                                            color: white;
+        
+                                        }
+    
+                                    }
+    
+                                }
+    
+                            }
+
                         }
 
                     }
@@ -4647,7 +5151,7 @@
                     grid-template-columns: 1fr;
                     grid-template-rows: 60px 170px 150px 1fr;
                     display: grid;
-                    height: 720px;
+                    // height: 720px;
 
                     &-header {
 
