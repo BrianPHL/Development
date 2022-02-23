@@ -4066,8 +4066,9 @@
                 &-edit {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 1fr 20px 320px;
+                    grid-template-rows: 1fr 20px 322px;
                     display: grid;
+                    height: 720px;
 
                     &-placeholder {
 
@@ -4171,7 +4172,7 @@
 
                         &-info {
 
-                            grid-template-columns: 10px 1fr 10px;
+                            grid-template-columns: 10px 1fr 10px;                           
                             grid-template-rows: repeat(5, 10px 40px) 10px;
                             grid-column: 1/2;
                             grid-row: 2/3;
@@ -5136,6 +5137,7 @@
                     grid-template-columns: 1fr;
                     grid-template-rows: 60px 170px 150px 1fr;
                     display: grid;
+                    height: 718px;
 
                     &-header {
 
