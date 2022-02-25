@@ -3966,6 +3966,225 @@
                 grid-column: 2/3;
                 grid-row: 2/3;
 
+                &-search {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 60px 50px 1fr;
+                    display: grid;
+                    height: 100%;
+
+                    @include border-thin;
+                 
+                    &-header {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px 20px 10px;
+                        background-color: #202020;
+                        border-bottom: 1px solid #ffffff1b;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+                        z-index: 9999;
+    
+                        &-label {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+
+                            h2 {
+
+                                @include h2-styling;
+
+                            }
+
+                        }
+
+                        &-sublabel {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 3/4;
+                            display: flex;
+
+                            h3 {
+
+                                @include h3-styling;
+
+                            }
+
+                        }
+    
+                    }
+    
+                    &-search {
+    
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;                    
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                        display: grid;
+    
+                        &-wrapper {
+    
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+    
+                            input {
+    
+                                background-color: transparent;
+                                border-radius: 2px;
+                                font-size: 0.75rem;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                height: 100%;
+                                width: 100%;
+                                color: white;
+        
+                                
+                                @include border-thin;
+                            }
+        
+                            input:focus {
+        
+                                outline: none;
+        
+                            }
+    
+                        }
+    
+                    }
+    
+                    &-preload {
+    
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        place-items: center;
+                        grid-column: 1/2;
+                        grid-row: 3/4;
+                        display: grid;
+    
+                        i {
+    
+                            grid-column: 2/3;
+                            font-size: 2rem;
+                            grid-row: 2/3;
+                            color: #fff;
+    
+                        }
+    
+                    }
+    
+                    &-entries {
+    
+                        grid-column: 1/2;
+                        overflow-y: scroll;
+                        grid-row: 3/4;
+                        z-index: 9997;
+                        height: 600px;
+
+                        @include conceal-scrollbar;
+
+                    }
+                    &-entries::-webkit-scrollbar {
+
+                        display: none;
+
+                    }
+    
+                    &-entry {
+    
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 20px 20px 10px;
+                        border-radius: 2px;
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        transition: 0.1s ease all;
+                        display: grid;
+                        height: 60px;
+    
+                        @include border-thin;
+    
+                        &-header {
+    
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+                            width: 305px;
+    
+                            h2 {
+    
+                                text-transform: uppercase;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-weight: 400;
+                                font-size: 0.8rem;
+                                overflow: hidden;
+                                color: white;
+    
+                            }
+    
+                        }
+    
+                        &-footer {
+    
+                            grid-template-columns: 50px 1fr;
+                            grid-template-rows: 1fr;
+                            grid-column: 2/3;
+                            grid-row: 3/4;
+                            display: grid;
+    
+                            &-id {
+    
+                                align-items: center;
+                                grid-column: 1/2;
+                                grid-row: 1/2;
+                                display: flex;
+    
+                                h3 {
+    
+                                    font-weight: 300;
+                                    font-size: 0.6rem;
+                                    color: white;
+        
+                                }
+    
+                            }
+    
+                            &-date {
+    
+                                justify-content: flex-end;
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 1/2;
+                                display: flex;
+    
+                                h3 {
+    
+                                    font-weight: 300;
+                                    font-size: 0.6rem;
+                                    color: white;
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                    &-entry:hover {
+    
+                        cursor: pointer;
+                        border: 1px solid #ffffff4b;
+    
+                    }
+
+                }
+
                 &-view {
 
                     grid-template-columns: 1fr;
@@ -5242,6 +5461,33 @@
                 
                 @include border-thin;
 
+                &-search {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    display: grid;
+                    height: 100%;
+
+                    &-placeholder {
+
+                        place-items: center;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+
+                        h2 {
+
+                            margin-bottom: 2px;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            color: #ffffff4b;
+
+                        }
+
+                    }
+
+                }
+
                 &-view {
 
                     grid-template-columns: 1fr;
@@ -6453,6 +6699,33 @@
                 grid-row: 2/3;
                 
                 @include border-thin;
+
+                &-search {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    display: grid;
+                    height: 100%;
+
+                    &-placeholder {
+
+                        place-items: center;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+
+                        h2 {
+
+                            margin-bottom: 2px;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            color: #ffffff4b;
+
+                        }
+
+                    }
+
+                }
 
                 &-view {
 
