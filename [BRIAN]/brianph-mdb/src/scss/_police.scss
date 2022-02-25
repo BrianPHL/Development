@@ -908,7 +908,7 @@
 
                 @include border-thin;
 
-                &-view {
+                &-search {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 60px 50px 1fr;
@@ -1125,52 +1125,54 @@
 
                 }
 
+                &-view {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    display: grid;
+                    height: 100%;
+
+                    &-placeholder {
+
+                        place-items: center;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+
+                        h2 {
+
+                            margin-bottom: 2px;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            color: #ffffff4b;
+
+                        }
+
+                    }
+
+                }
+
                 &-edit {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr;
                     display: grid;
+                    height: 100%;
 
                     &-placeholder {
 
-                        grid-template-columns: 1fr;
-                        grid-template-rows: 1fr 1fr;
+                        place-items: center;
                         grid-column: 1/2;
                         grid-row: 1/2;
                         display: grid;
 
-                        &-label {
+                        h2 {
 
-                            justify-content: center;
-                            align-items: flex-end;
-                            grid-column: 1/2;
-                            grid-row: 1/2;
-                            display: flex;
+                            margin-bottom: 2px;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            color: #ffffff4b;
 
-                            h2 {
-
-                                text-transform: uppercase;
-                                font-size: 1rem;
-                                color: #ffffff4b;
-    
-                            }
-
-                        }
-
-                        &-icon {
-
-                            justify-content: center;
-                            align-items: flex-start;
-                            grid-column: 1/2;
-                            grid-row: 2/3;
-                            display: flex;
-
-                            i {
-
-                                color: #ffffff1b;
-
-                            }
-                            
                         }
 
                     }
@@ -1186,6 +1188,33 @@
                 grid-row: 2/3;
                 
                 @include border-thin;
+
+                &-search {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    display: grid;
+                    height: 100%;
+
+                    &-placeholder {
+
+                        place-items: center;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+
+                        h2 {
+
+                            margin-bottom: 2px;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            color: #ffffff4b;
+
+                        }
+
+                    }
+
+                }
 
                 &-view {
 
@@ -2038,6 +2067,33 @@
                 grid-row: 2/3;
                 
                 @include border-thin;
+
+                &-search {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    display: grid;
+                    height: 100%;
+
+                    &-placeholder {
+
+                        place-items: center;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+
+                        h2 {
+
+                            margin-bottom: 2px;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            color: #ffffff4b;
+
+                        }
+
+                    }
+
+                }
 
                 &-view {
 
