@@ -1,5 +1,2 @@
-const deputangEventHandler = new ResizeObserver((entries) => {
-
-    console.log(entries)
-
-})
+const test = 'yes';
+console.log(test);
