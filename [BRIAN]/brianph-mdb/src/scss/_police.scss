@@ -1141,7 +1141,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -1166,9 +1165,8 @@
                         grid-row: 1/2;
                         display: grid;
 
-                        h2 {
+                    h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -1205,7 +1203,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -2084,7 +2081,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -2674,7 +2670,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -2699,9 +2694,8 @@
                         grid-row: 1/2;
                         display: grid;
 
-                        h2 {
+h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -2738,7 +2732,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -3612,7 +3605,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -4415,7 +4407,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -4936,7 +4927,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -5464,20 +5454,90 @@
                 &-search {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 1fr;
+                    grid-template-rows: 60px 1fr;
                     display: grid;
                     height: 100%;
+
+                    &-header {
+
+                        grid-template-columns: 10px 1fr 60px 10px;
+                        grid-template-rows: 10px 20px 20px 10px;
+                        background-color: #202020;
+                        border-bottom: 1px solid #ffffff1b;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+                        z-index: 9999;
+    
+                        &-label {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+
+                            h2 {
+
+                                @include h2-styling;
+
+                            }
+
+                        }
+
+                        &-options {
+
+                            justify-content: flex-end;
+                            align-items: center;
+                            grid-column: 3/4;
+                            grid-row: 2/3;
+                            display: flex;
+
+                            i {
+
+                                margin-left: 5px;
+                                transition: 0.1s ease all;
+                                font-size: 0.75rem;
+                                color: #ffffff4b;
+
+                            }
+
+                            i:hover {
+
+                                cursor: pointer;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-sublabel {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 3/4;
+                            display: flex;
+
+                            h3 {
+
+                                @include h3-styling;
+
+                            }
+
+                        }
+    
+                    }
+
 
                     &-placeholder {
 
                         place-items: center;
                         grid-column: 1/2;
-                        grid-row: 1/2;
+                        grid-row: 2/3;
                         display: grid;
 
                         h2 {
 
-                            margin-bottom: 2px;
+                            margin-bottom: 60px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
@@ -6716,7 +6776,6 @@
 
                         h2 {
 
-                            margin-bottom: 2px;
                             text-transform: uppercase;
                             font-size: 1rem;
                             color: #ffffff4b;
