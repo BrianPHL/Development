@@ -2622,7 +2622,7 @@
 
                                 </div>
                                 
-                                <div class="reports-third-view">
+                                <div class="reports-third-view" style="display: none;">
 
                                     <div class="reports-third-view-header">
 
@@ -2790,7 +2790,7 @@
 
                                 </div>
 
-                                <div class="reports-third-edit" style="display: none;">
+                                <div class="reports-third-edit">
 
                                     <div class="reports-third-edit-header">
 
@@ -3066,7 +3066,7 @@
 
                             <div class="evidences-first">
 
-                                <div class="evidences-first-search">
+                                <div class="evidences-first-search" style="display: none;">
 
                                     <div class="evidences-first-search-header">
 
@@ -3143,7 +3143,7 @@
 
                                 </div>
 
-                                <div class="evidences-first-edit" style="display: none;">
+                                <div class="evidences-first-edit">
 
                                     <div class="evidences-first-edit-placeholder">
 
@@ -3189,7 +3189,7 @@
 
                                 </div>
 
-                                <div class="evidences-second-view">
+                                <div class="evidences-second-view" style="display: none;">
 
                                     <div class="evidences-second-view-title">
 
@@ -3296,8 +3296,113 @@
 
                                 </div>
 
-                                <div class="evidences-second-edit" style="display: none;">
-                                    
+                                <div class="evidences-second-edit">
+                                   
+                                    <div class="evidences-second-edit-title">
+
+                                        <div class="evidences-second-edit-title-wrapper">
+
+                                            <div class="evidences-second-edit-title-header">
+
+                                                <label>Title</label>
+
+                                            </div>
+
+                                            <div class="evidences-second-edit-title-footer">
+
+                                                <div class="evidences-second-edit-title-footer-icon">
+
+                                                    <i class="fa-solid fa-file-lines"></i>
+
+                                                </div>
+
+                                                <div class="evidences-second-edit-title-footer-value">
+
+                                                    <input type="text" placeholder="Evidence title here...">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-edit-header">
+
+                                        <div class="evidences-second-edit-header-label">
+
+                                            <h2>Editing evidence profile</h2>
+
+                                        </div>
+
+                                        <div class="evidences-second-edit-header-options">
+
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <i class="fa-solid fa-redo"></i>
+                                            <i class="fa-solid fa-trash"></i>
+                                            <i class="fa-solid fa-floppy-disk"></i>
+
+                                        </div>
+
+                                        <div class="evidences-second-edit-header-sublabel">
+
+                                            <h3>Currently editing ${evidence_id}</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-edit-mugshot">
+
+                                        <div class="evidences-second-edit-mugshot-container">
+
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-edit-info">
+
+                                        <div class="evidences-second-edit-info-author">
+
+                                            <div class="evidences-second-edit-info-author-header">
+
+                                                <label>Author</label>
+
+                                            </div>
+
+                                            <div class="evidences-second-edit-info-author-footer">
+
+                                                <div class="evidences-second-edit-info-author-footer-icon">
+
+                                                    <i class="fa-solid fa-user-pen"></i>
+
+                                                </div>
+
+                                                <div class="evidences-second-edit-info-author-footer-value">
+
+                                                    <h3>(null) null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-edit-docs">
+
+                                        <div class="evidences-second-edit-docs-panel">
+
+                                            <textarea placeholder="Evidence documents go here..."></textarea>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -3314,7 +3419,7 @@
 
                                 </div>
 
-                                <div class="evidences-third-view">
+                                <div class="evidences-third-view" style="display: none;">
 
                                     <div class="evidences-third-view-header">
 
@@ -3386,8 +3491,112 @@
 
                                 </div>
 
-                                <div class="evidences-third-edit" style="display: none;">
+                                <div class="evidences-third-edit">
                                     
+                                    <div class="reports-third-edit-header">
+
+                                        <div class="reports-third-edit-header-label">
+
+                                            <h2>Editing evidence information</h2>
+
+                                        </div>
+
+                                        <div class="reports-third-edit-header-sublabel">
+
+                                            <h3>Other information that is related to the evidence</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reports-third-edit-categories">
+
+                                        <div class="reports-third-edit-categories">
+
+                                            <div class="reports-third-edit-category">
+    
+                                                <div class="reports-third-edit-category-header">
+    
+                                                    <div class="reports-third-edit-category-header-label">
+    
+                                                        <h2>Connected report</h2>
+    
+                                                    </div>
+    
+                                                    <div class="reports-third-edit-category-header-add">
+    
+                                                        <i class="fa-solid fa-plus"></i>
+    
+                                                    </div>
+    
+                                                </div>
+    
+                                                <div class="reports-third-edit-category-entries">
+    
+                                                    <div class="reports-third-edit-category-entry">
+    
+                                                        <div class="reports-third-edit-category-entry-value">
+    
+                                                            <h3>This is a report</h3>
+    
+                                                        </div>
+    
+                                                        <div class="reports-third-edit-category-entry-remove">
+    
+                                                            <i class="fa-solid fa-circle-xmark"></i>
+                                                            
+                                                        </div>
+    
+                                                    </div>
+    
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="reports-third-edit-category">
+    
+                                                <div class="reports-third-edit-category-header">
+    
+                                                    <div class="reports-third-edit-category-header-label">
+    
+                                                        <h2>Inventory</h2>
+    
+                                                    </div>
+    
+                                                    <div class="reports-third-edit-category-header-add">
+    
+                                                        <i class="fa-solid fa-plus"></i>
+    
+                                                    </div>
+    
+                                                </div>
+    
+                                                <div class="reports-third-edit-category-entries">
+    
+                                                    <div class="reports-third-edit-category-entry">
+    
+                                                        <div class="reports-third-edit-category-entry-value">
+    
+                                                            <h3>This is an item</h3>
+    
+                                                        </div>
+    
+                                                        <div class="reports-third-edit-category-entry-remove">
+    
+                                                            <i class="fa-solid fa-circle-xmark"></i>
+                                                            
+                                                        </div>
+    
+                                                    </div>
+    
+                                                </div>
+                                                
+                                            </div>
+    
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                             </div>
