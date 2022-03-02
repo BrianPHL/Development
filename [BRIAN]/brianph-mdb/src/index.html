@@ -2612,7 +2612,7 @@
 
                             <div class="reports-third">
 
-                                <div class="reports-third-search">
+                                <div class="reports-third-search" style="display: none;">
 
                                     <div class="reports-third-search-placeholder">
 
@@ -2622,7 +2622,7 @@
 
                                 </div>
                                 
-                                <div class="reports-third-view" style="display: none;">
+                                <div class="reports-third-view">
 
                                     <div class="reports-third-view-header">
 
@@ -3066,7 +3066,7 @@
 
                             <div class="evidences-first">
 
-                                <div class="evidences-first-search" style="display: none;">
+                                <div class="evidences-first-search">
 
                                     <div class="evidences-first-search-header">
 
@@ -3143,7 +3143,7 @@
 
                                 </div>
 
-                                <div class="evidences-first-edit">
+                                <div class="evidences-first-edit" style="display: none;">
 
                                     <div class="evidences-first-edit-placeholder">
 
@@ -3157,7 +3157,7 @@
 
                             <div class="evidences-second">
 
-                                <div class="evidences-second-search">
+                                <div class="evidences-second-search" style="display: none;">
 
                                     <div class="evidences-second-search-header">
 
@@ -3191,9 +3191,112 @@
 
                                 <div class="evidences-second-view">
 
+                                    <div class="evidences-second-view-title">
+
+                                        <div class="evidences-second-view-title-wrapper">
+
+                                            <div class="evidences-second-view-title-header">
+
+                                                <label>Title</label>
+
+                                            </div>
+
+                                            <div class="evidences-second-view-title-footer">
+
+                                                <div class="evidences-second-view-title-footer-icon">
+
+                                                    <i class="fa-solid fa-file-lines"></i>
+
+                                                </div>
+
+                                                <div class="evidences-second-view-title-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-view-header">
+
+                                        <div class="evidences-second-view-header-label">
+
+                                            <h2>Viewing evidence profile</h2>
+
+                                        </div>
+
+                                        <div class="evidences-second-view-header-options">
+
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <i class="fa-solid fa-pen"></i>
+
+                                        </div>
+
+                                        <div class="evidences-second-view-header-sublabel">
+
+                                            <h3>Currently viewing (#${evidence_id})</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-view-mugshot">
+
+                                        <div class="evidences-second-view-mugshot-container">
+
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-view-info">
+
+                                        <div class="evidences-second-view-info-author">
+
+                                            <div class="evidences-second-view-info-author-header">
+
+                                                <label>Author</label>
+
+                                            </div>
+
+                                            <div class="evidences-second-view-info-author-footer">
+
+                                                <div class="evidences-second-view-info-author-footer-icon">
+
+                                                    <i class="fa-solid fa-user-pen"></i>
+
+                                                </div>
+
+                                                <div class="evidences-second-view-info-author-footer-value">
+
+                                                    <h3>(null) null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-second-view-docs">
+
+                                        <div class="evidences-second-view-docs-panel">
+
+                                            <textarea placeholder="Evidence documents go here..." readonly></textarea>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
-                                <div class="evidences-second-edit">
+                                <div class="evidences-second-edit" style="display: none;">
                                     
                                 </div>
 
@@ -3201,7 +3304,7 @@
 
                             <div class="evidences-third">
                                 
-                                <div class="evidences-third-search">
+                                <div class="evidences-third-search" style="display: none;">
 
                                     <div class="evidences-third-search-placeholder">
 
@@ -3213,9 +3316,77 @@
 
                                 <div class="evidences-third-view">
 
+                                    <div class="evidences-third-view-header">
+
+                                        <div class="evidences-third-view-header-label">
+
+                                            <h2>Viewing evidence information</h2>
+
+                                        </div>
+
+                                        <div class="evidences-third-view-header-sublabel">
+
+                                            <h3>Other information that is related to the evidence</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="evidences-third-view-categories">
+
+                                        <div class="evidences-third-view-category">
+
+                                            <div class="evidences-third-view-category-header">
+
+                                                <h2>Connected report</h2>
+
+                                            </div>
+
+                                            <div class="evidences-third-view-category-entries">
+
+                                                <div class="evidences-third-view-category-entry">
+
+                                                    <div class="evidences-third-view-category-entry-value">
+
+                                                        <h3>This is a report</h3>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="evidences-third-view-category">
+
+                                            <div class="evidences-third-view-category-header">
+
+                                                <h2>Inventory</h2>
+
+                                            </div>
+
+                                            <div class="evidences-third-view-category-entries">
+
+                                                <div class="evidences-third-view-category-entry">
+
+                                                    <div class="evidences-third-view-category-entry-value">
+
+                                                        <h3>This is an item</h3>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
-                                <div class="evidences-third-edit">
+                                <div class="evidences-third-edit" style="display: none;">
                                     
                                 </div>
 
