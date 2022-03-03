@@ -8843,6 +8843,122 @@ h2 {
 
         }
 
+        .penalcodes {
+
+            grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: 20px 110px 20px 1fr 20px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: grid;
+
+            &-first {
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px 50px;
+                grid-column: 2/3;
+                grid-row: 2/3;
+                display: grid;
+
+                &-header {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 20px 20px 10px;
+                    border-top-right-radius: 2px;
+                    border-top-left-radius: 2px;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    display: grid;
+
+                    @include border-thin;
+
+                    &-label {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: flex;
+
+                        h2 {
+
+                            @include h2-styling;
+
+                        }
+
+                    }
+
+                    &-sublabel {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 3/4;
+                        display: flex;
+
+                        h3 {
+
+                            @include h3-styling;
+
+                        }
+
+                    }
+
+                }
+
+                &-search {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 1fr 10px;
+                    border-bottom: 1px solid #ffffff1b;
+                    border-right: 1px solid #ffffff1b;
+                    border-left: 1px solid #ffffff1b;
+                    border-radius: 2px;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    display: grid;
+
+                    &-wrapper {
+
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+
+                        input {
+    
+                            background-color: transparent;
+                            border-radius: 2px;
+                            font-size: 0.75rem;
+                            padding-right: 10px;
+                            padding-left: 10px;
+                            height: 100%;
+                            width: 100%;
+                            color: white;
+    
+                            
+                            @include border-thin;
+                        }
+    
+                        input:focus {
+    
+                            outline: none;
+    
+                        }
+                        
+                    }
+
+                }
+
+            }
+
+            &-second {
+
+                border-radius: 2px;
+                grid-column: 2/3;
+                grid-row: 4/5;
+
+                @include border-thin;
+
+            }
+
+        }
+
     }
 
 }
