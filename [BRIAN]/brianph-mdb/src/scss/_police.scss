@@ -8846,7 +8846,7 @@ h2 {
         .penalcodes {
 
             grid-template-columns: 20px 1fr 20px;
-            grid-template-rows: 20px 1fr 20px;
+            grid-template-rows: 20px 112px 10px 1fr 20px;
             grid-column: 1/2;
             grid-row: 1/2;
             display: grid;
@@ -8865,7 +8865,7 @@ h2 {
                 &-header {
 
                     grid-template-columns: 10px 1fr 10px;
-                    grid-template-rows: 10px 20px 20px 10px;
+                    grid-template-rows: 10px repeat(2, 20px) 10px;
                     border-bottom: 1px solid #ffffff1b;
                     grid-column: 1/2;
                     grid-row: 1/2;
@@ -8920,9 +8920,9 @@ h2 {
     
                             background-color: transparent;
                             border-radius: 2px;
+                            font-size: 0.75rem;
                             padding-right: 10px;
                             padding-left: 10px;
-                            font-size: 0.75rem;
                             height: 100%;
                             width: 100%;
                             color: white;
@@ -8936,16 +8936,23 @@ h2 {
                             outline: none;
     
                         }
-                        
+
                     }
 
                 }
 
-                &-entries {
+            }
 
-                    border-top: 1px solid #ffffff1b;
-    
-                }
+            &-second {
+
+                grid-template-columns: 10px 1fr 10px;
+                grid-template-rows: 10px 1fr 10px;
+                border-radius: 2px;
+                grid-column: 2/3;
+                grid-row: 4/5;
+                display: grid;
+
+                @include border-thin;
 
             }
 
