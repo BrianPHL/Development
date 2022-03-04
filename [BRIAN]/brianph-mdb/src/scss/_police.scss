@@ -8947,12 +8947,48 @@ h2 {
 
                 grid-template-columns: 10px 1fr 10px;
                 grid-template-rows: 10px 1fr 10px;
+                background-color: #151515;
                 border-radius: 2px;
                 grid-column: 2/3;
                 grid-row: 4/5;
                 display: grid;
 
                 @include border-thin;
+
+                &-entries {
+
+                    flex-direction: row;
+                    align-content: flex-start;
+                    grid-column: 2/3;
+                    overflow-y: auto;
+                    flex-wrap: wrap;
+                    grid-row: 2/3;
+                    display: flex;
+                    height: 576px;
+                    gap: 10px;
+
+                    @include conceal-scrollbar;
+
+                }
+                &-entries::-webkit-scrollbar {
+
+                    display: none;
+
+                }
+
+                &-entry {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 30px 1fr;
+                    background-color: #202020;
+                    border-radius: 2px;
+                    display: grid;
+                    height: 200px;
+                    width: 362.66px;
+
+                    @include border-thin;
+
+                }
 
             }
 

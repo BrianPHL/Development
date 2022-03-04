@@ -25,4 +25,10 @@ $(() => {
 
     })
 
+    const box = $('.penalcodes-second-entries')
+    const height = box.height()
+    const width = box.width()
+
+    console.log(height, width)
+
 })
