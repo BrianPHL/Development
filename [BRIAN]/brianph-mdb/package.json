@@ -1,0 +1,16 @@
+{
+  "name": "brianph-mdb",
+
+  "version": "1.0.0",
+
+  "description": "A twist on FiveM MDT.",
+
+  "scripts": {
+    "test": "echo \"WOW: you are a blithering idiot!\" && exit 1"
+  },
+
+  "author": "BrianPHL#2145",
+
+  "license": "ISC"
+
+}
