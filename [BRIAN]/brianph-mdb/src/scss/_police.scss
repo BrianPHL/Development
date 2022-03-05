@@ -8979,7 +8979,7 @@ h2 {
                 &-entry {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: 30px 1fr;
+                    grid-template-rows: 40px 1fr 40px;
                     background-color: #202020;
                     border-radius: 2px;
                     display: grid;
@@ -8987,6 +8987,193 @@ h2 {
                     width: 362.66px;
 
                     @include border-thin;
+
+                    &-header {
+                        
+                        grid-template-columns: 10px 1fr 18px 10px;
+                        border-bottom: 1px solid #ffffff1b;
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        display: grid;
+
+                        &-code {
+
+                            grid-column: 2/3;
+                            align-items: center;
+                            display: flex;
+
+                            h3 {
+
+                                @include h3-styling;
+
+                            }
+
+                        }
+
+                        &-info {
+
+                            justify-content: flex-end;
+                            align-items: center;
+                            grid-column: 3/4;
+                            display: flex;
+
+                            i {
+
+                                font-size: 1rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                    }
+
+                    &-title {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr;
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                        display: grid; 
+
+                        &-wrapper {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            overflow-y: auto;
+                            grid-row: 2/3;
+                            display: flex;
+                            height: 110px;
+                            
+                            @include conceal-scrollbar;
+
+                            h2 {
+
+                                font-weight: 500;
+                                font-size: 1.25rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &-wrapper::-webkit-scrollbar {
+
+                            display: none;
+
+                        }
+
+                    }
+
+                    &-info {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        grid-column: 1/2;
+                        grid-row: 3/4;
+                        display: grid;
+
+                        &-wrapper {
+
+                            column-gap: 10px;
+                            flex-direction: row;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+
+                        }
+
+                        &-time {
+
+                            border-radius: 20px;
+                            background-color: #ffffff1b;
+                            grid-template-columns: 5px 13px 5px minmax(0px, auto) 7.5px;
+                            grid-template-rows: 20px;
+                            min-width: 0px;
+                            display: grid;
+                            height: 20px;
+
+                            &-icon {
+
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 1/2;
+                                display: flex;
+
+                                i {
+
+                                    font-size: 0.75rem;
+                                    color: white;
+
+                                }
+
+                            }
+
+                            &-value {
+
+                                align-items: center;
+                                grid-column: 4/5;
+                                grid-row: 1/2;
+                                display: flex;
+
+                                h3 {
+
+                                    font-weight: 300;
+                                    font-size: 0.6rem;
+                                    color: white;
+
+                                }
+
+                            }
+
+                        }
+
+                        &-fine {
+
+                            border-radius: 20px;
+                            background-color: #ffffff1b;
+                            grid-template-columns: 6px 7px 5px minmax(0px, auto) 7.5px;
+                            grid-template-rows: 20px;
+                            min-width: 0px;
+                            display: grid;
+                            height: 20px;
+
+                            &-icon {
+
+                                align-items: center;
+                                grid-column: 2/3;
+                                grid-row: 1/2;
+                                display: flex;
+
+                                i {
+
+                                    font-size: 0.75rem;
+                                    color: white;
+
+                                }
+
+                            }
+
+                            &-value {
+
+                                align-items: center;
+                                grid-column: 4/5;
+                                grid-row: 1/2;
+                                display: flex;
+
+                                h3 {
+
+                                    font-weight: 300;
+                                    font-size: 0.6rem;
+                                    color: white;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
 
                 }
 
