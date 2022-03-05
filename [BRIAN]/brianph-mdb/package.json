@@ -1,6 +1,6 @@
 {
   "name": "brianph-mdb",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "description": "A twist on FiveM MDT.",
   "scripts": {
     "test": "echo \"WOW: you are a blithering idiot!\" && exit 1"
