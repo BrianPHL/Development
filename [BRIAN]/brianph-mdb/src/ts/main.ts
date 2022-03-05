@@ -25,7 +25,7 @@ $(() => {
 
     })
 
-    const box = $('.penalcodes-second-entry-title-wrapper')
+    const box = $('.evidences-third-view-categories')
     const height = box.height()
     const width = box.width()
 
