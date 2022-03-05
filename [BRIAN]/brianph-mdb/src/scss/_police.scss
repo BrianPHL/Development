@@ -2441,6 +2441,7 @@
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 60px 50px 1fr;
+                    background-color: #191919;
                     display: grid;
                  
                     &-header {
@@ -2496,6 +2497,7 @@
     
                         &-wrapper {
     
+                            background-color: #202020;
                             grid-column: 2/3;
                             grid-row: 2/3;
     
@@ -2566,6 +2568,7 @@
     
                         grid-template-columns: 10px 1fr 10px;
                         grid-template-rows: 10px 20px 20px 10px;
+                        background-color: #202020;
                         border-radius: 2px;
                         margin-bottom: 10px;
                         margin-right: 10px;
@@ -2658,6 +2661,7 @@
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr;
+                    background-color: #191919;
                     display: grid;
                     height: 100%;
 
@@ -2684,6 +2688,7 @@
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr;
+                    background-color: #191919;
                     display: grid;
                     height: 100%;
 
@@ -2720,6 +2725,7 @@ h2 {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr;
+                    background-color: #191919;
                     display: grid;
                     height: 100%;
 
@@ -2746,6 +2752,7 @@ h2 {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 60px 170px 150px 1fr;
+                    background-color: #191919;
                     display: grid;
                     height: 100%;
 
@@ -2822,13 +2829,14 @@ h2 {
                     &-mugshot {
 
                         grid-template-columns: 10px 1fr 10px;
-                        grid-template-rows: 10px 150px 10px;
+                        grid-template-rows: 10px 150px 10px;                        
                         grid-column: 1/2;
                         grid-row: 2/3;
                         display: grid;
 
                         &-container {
 
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 2/3;
@@ -2861,6 +2869,7 @@ h2 {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 1/2;
@@ -2947,6 +2956,7 @@ h2 {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 3/4;
@@ -3033,6 +3043,7 @@ h2 {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 5/6;
@@ -3127,6 +3138,7 @@ h2 {
 
                         &-panel {
 
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 1/2;
@@ -3162,6 +3174,7 @@ h2 {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 60px 170px 150px 1fr;
+                    background-color: #191919;
                     display: grid;
                     height: 100%;
 
@@ -3245,6 +3258,7 @@ h2 {
 
                         &-container {
 
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 2/3;
@@ -3277,6 +3291,7 @@ h2 {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 1/2;
@@ -3363,6 +3378,7 @@ h2 {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 3/4;
@@ -3449,6 +3465,7 @@ h2 {
 
                             grid-template-columns: 5px 1fr 5px;
                             grid-template-rows: 5px 10px 20px 5px;
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 5/6;
@@ -3548,6 +3565,7 @@ h2 {
 
                         &-panel {
 
+                            background-color: #202020;
                             border-radius: 2px;
                             grid-column: 2/3;
                             grid-row: 1/2;
@@ -3593,6 +3611,7 @@ h2 {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: 1fr;
+                    background-color: #191919;
                     display: grid;
                     height: 100%;
 
@@ -3617,8 +3636,8 @@ h2 {
 
                 &-view {
 
-                    grid-template-columns: 10px 1fr 10px;
-                    grid-template-rows: 60px 10px 1fr 10px;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 60px 657px;
                     display: grid;
 
                     &-header {
@@ -3665,24 +3684,36 @@ h2 {
 
                     &-categories {
 
-                        grid-column: 2/3;
-                        grid-row: 3/4;
-                        overflow-y: auto;
+                        background-color: #191919;
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                        display: grid;
 
-                        @include conceal-scrollbar;
+                        &-wrapper {
+                            grid-column: 2/3;
+                            overflow-y: auto;
+                            grid-row: 2/3;
+
+                            @include conceal-scrollbar;
+
+                        }
+
+                        &-wrapper::-webkit-scrollbar {
+
+                            display: none;
+
+                        }
 
                     }
 
-                    &-categories::-webkit-scrollbar {
-
-                        display: none;
-
-                    }
 
                     &-category {
 
                         grid-template-columns: 10px 1fr 10px;
                         grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        background-color: #202020;
                         border-radius: 2px;
                         margin-bottom: 10px;
                         min-height: 40px;
@@ -3752,8 +3783,8 @@ h2 {
 
                 &-edit {
 
-                    grid-template-columns: 10px 1fr 10px;
-                    grid-template-rows: 60px 10px 1fr 10px;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 60px 657px;
                     display: grid;
 
                     &-header {
@@ -3800,17 +3831,27 @@ h2 {
 
                     &-categories {
 
-                        grid-column: 2/3;
-                        grid-row: 3/4;
-                        overflow-y: auto;
+                        background-color: #191919;
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        grid-column: 1/2;
+                        grid-row: 2/3;
+                        display: grid;
 
-                        @include conceal-scrollbar;
+                        &-wrapper {
+                            grid-column: 2/3;
+                            overflow-y: auto;
+                            grid-row: 2/3;
 
-                    }
+                            @include conceal-scrollbar;
 
-                    &-categories::-webkit-scrollbar {
+                        }
 
-                        display: none;
+                        &-wrapper::-webkit-scrollbar {
+
+                            display: none;
+
+                        }
 
                     }
 
@@ -3818,6 +3859,7 @@ h2 {
 
                         grid-template-columns: 10px 1fr 10px;
                         grid-template-rows: 10px 20px minmax(0px, auto) 10px;
+                        background-color: #202020;
                         border-radius: 2px;
                         margin-bottom: 10px;
                         min-height: 40px;
