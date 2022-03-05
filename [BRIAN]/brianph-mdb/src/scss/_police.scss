@@ -8950,6 +8950,7 @@ h2 {
 
                     grid-template-columns: 10px 1fr 10px;
                     grid-template-rows: 10px 1fr 10px;
+                    background-color: #191919;
                     grid-column: 1/2;
                     grid-row: 2/3;
                     display: grid;
@@ -8961,7 +8962,7 @@ h2 {
 
                         input {
     
-                            background-color: transparent;
+                            background-color: #202020;
                             border-radius: 2px;
                             font-size: 0.75rem;
                             padding-right: 10px;
