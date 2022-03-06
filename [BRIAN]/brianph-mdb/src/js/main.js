@@ -15,7 +15,7 @@ $(() => {
         $(this).find(navHighlight).show();
         $('.' + navId).show();
     });
-    const box = $('.evidences-third-view-categories');
+    const box = $('.dashboard-first-counter-value-wrapper');
     const height = box.height();
     const width = box.width();
     console.log(height, width);

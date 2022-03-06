@@ -238,71 +238,98 @@
 
             &-first {
 
-                grid-template-columns: 1fr 20px 1fr 20px 1fr;
-                grid-template-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px 1fr;
                 background-color: #191919;
                 border-radius: 2px;
-                grid-column: 2/7;
+                grid-column: 2/3;
                 grid-row: 2/3;
                 display: grid;
-
+                
                 @include border-thin;
 
-                &-officerCount {
+                &-header {
 
                     grid-template-columns: 10px 1fr 10px;
-                    grid-template-rows: 10px 40px 10px 1fr 10px;
+                    grid-template-rows: 10px 20px 20px 10px;
+                    background-color: #202020;
+                    border-bottom: 1px solid #ffffff1b;
                     grid-column: 1/2;
+                    grid-row: 1/2;
                     display: grid;
 
-                    .officerCount-header {
+                    &-label {
 
-                        grid-template-columns: 1fr;
-                        grid-template-rows: 20px 20px;
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: flex;
+
+                        h2 {
+
+                            @include h2-styling
+
+                        }
+
+                    }
+
+                    &-sublabel {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 3/4;
+                        display: flex;
+
+                        
+                        h3 {
+
+                            @include h3-styling
+
+                        }
+
+                    }
+
+                }
+
+                &-counter {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 1fr 10px;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    display: grid;
+
+                    &-value {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        background-color: #202020;
+                        border-radius: 2px;
                         grid-column: 2/3;
                         grid-row: 2/3;
                         display: grid;
 
-                        &-label {
+                        @include border-thin;
+
+                        &-wrapper {
 
                             align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
                             display: flex;
+                            width: 319.333px;
 
-                            h2 {
+                            h3 {
 
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            
                                 @include h2-styling;
 
-                            }
-
-                        }
-
-                        &-sublabel {
-
-                            align-items: center;
-                            display: flex;
-
-                            h3 {
-
-                                @include h3-styling;
+                                text-transform: lowercase;
 
                             }
-
-                        }
-
-                    }
-
-                    .officerCount-counter {
-
-                        align-items: center;
-                        grid-column: 2/3;
-                        grid-row: 4/5;
-                        display: flex;
-
-                        h2 {
-
-                            font-weight: 200;
-                            font-size: 2rem;
-                            color: white;
 
                         }
 
@@ -310,61 +337,56 @@
 
                 }
 
-                &-totalReports {
+            }
+
+            &-second {
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px 1fr;
+                background-color: #191919;
+                border-radius: 2px;
+                grid-column: 4/5;
+                grid-row: 2/3;
+                display: grid;
+                
+                @include border-thin;
+
+                &-header {
 
                     grid-template-columns: 10px 1fr 10px;
-                    grid-template-rows: 10px 40px 10px 1fr 10px;
-                    grid-column: 3/4;
+                    grid-template-rows: 10px 20px 20px 10px;
+                    background-color: #202020;
+                    border-bottom: 1px solid #ffffff1b;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
                     display: grid;
 
-                    .totalReports-header {
+                    &-label {
 
-                        grid-template-columns: 1fr;
-                        grid-template-rows: 20px 20px;
+                        align-items: center;
                         grid-column: 2/3;
                         grid-row: 2/3;
-                        display: grid;
+                        display: flex;
 
-                        &-label {
+                        h2 {
 
-                            align-items: center;
-                            display: flex;
-
-                            h2 {
-
-                                @include h2-styling
-
-                            }
-
-                        }
-
-                        &-sublabel {
-
-                            align-items: center;
-                            display: flex;
-
-                            h3 {
-
-                                @include h3-styling
-
-                            }
+                            @include h2-styling
 
                         }
 
                     }
 
-                    .totalReports-counter {
+                    &-sublabel {
 
                         align-items: center;
                         grid-column: 2/3;
-                        grid-row: 4/5;
+                        grid-row: 3/4;
                         display: flex;
 
-                        h2 {
+                        
+                        h3 {
 
-                            font-weight: 200;
-                            font-size: 2rem;
-                            color: white;
+                            @include h3-styling
 
                         }
 
@@ -372,42 +394,43 @@
 
                 }
 
-                &-totalArrests {
+                &-counter {
 
                     grid-template-columns: 10px 1fr 10px;
-                    grid-template-rows: 10px 40px 10px 1fr 10px;
-                    grid-column: 5/6;
+                    grid-template-rows: 10px 1fr 10px;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
                     display: grid;
 
-                    .totalArrests-header {
+                    &-value {
 
-                        grid-template-columns: 1fr;
-                        grid-template-rows: 20px 20px;
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        background-color: #202020;
+                        border-radius: 2px;
                         grid-column: 2/3;
                         grid-row: 2/3;
                         display: grid;
 
-                        &-label {
+                        @include border-thin;
+
+                        &-wrapper {
 
                             align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
                             display: flex;
-
-                            h2 {
-
-                                @include h2-styling
-
-                            }
-
-                        }
-
-                        &-sublabel {
-
-                            align-items: center;
-                            display: flex;
+                            width: 319.333px;
 
                             h3 {
 
-                                @include h3-styling
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            
+                                @include h2-styling;
+                                
+                                text-transform: lowercase;
 
                             }
 
@@ -415,18 +438,104 @@
 
                     }
 
-                    .totalArrests-counter {
+                }
+
+            }
+
+            &-third {
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px 1fr;
+                background-color: #191919;
+                border-radius: 2px;
+                grid-column: 6/7;
+                grid-row: 2/3;
+                display: grid;
+                
+                @include border-thin;
+
+                &-header {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 20px 20px 10px;
+                    background-color: #202020;
+                    border-bottom: 1px solid #ffffff1b;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    display: grid;
+
+                    &-label {
 
                         align-items: center;
                         grid-column: 2/3;
-                        grid-row: 4/5;
+                        grid-row: 2/3;
                         display: flex;
 
                         h2 {
 
-                            font-weight: 200;
-                            font-size: 2rem;
-                            color: white;
+                            @include h2-styling
+
+                        }
+
+                    }
+
+                    &-sublabel {
+
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 3/4;
+                        display: flex;
+
+                        
+                        h3 {
+
+                            @include h3-styling
+
+                        }
+
+                    }
+
+                }
+
+                &-counter {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 1fr 10px;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    display: grid;
+
+                    &-value {
+
+                        grid-template-columns: 10px 1fr 10px;
+                        grid-template-rows: 10px 1fr 10px;
+                        background-color: #202020;
+                        border-radius: 2px;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: grid;
+
+                        @include border-thin;
+
+                        &-wrapper {
+
+                            align-items: center;
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                            display: flex;
+                            width: 319.333px;
+
+                            h3 {
+
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            
+                                @include h2-styling;
+                                
+                                text-transform: lowercase;
+
+                            }
 
                         }
 
