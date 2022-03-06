@@ -214,7 +214,7 @@
 
                             <div class="nav-buttons-label">
 
-                                <h2>Management</h2>
+                                <h2>staff</h2>
 
                             </div>
 
@@ -274,7 +274,7 @@
 
                     <div class="police-content">
 
-                        <div class="content-child dashboard">
+                        <div class="content-child dashboard" style="display: none;">
 
                             <div class="dashboard-first">
                                 
@@ -3870,18 +3870,712 @@
 
                         </div>
 
-                        <div class="content-child management" style="display: none;">
+                        <div class="content-child staff">
 
-                            <div class="management-first">
+                            <div class="staff-first">
+
+                                <div class="staff-first-search">
+
+                                    <div class="staff-first-search-header">
+
+                                        <div class="staff-first-search-header-label">
+
+                                            <h2>Staff Search</h2>
+
+                                        </div>
+
+                                        <div class="staff-first-search-header-sublabel">
+
+                                            <h3>Search full name, callsign or state ID</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-first-search-search">
+
+                                        <div class="staff-first-search-search-wrapper">
+
+                                            <input type="text" placeholder="Search here...">
+    
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-first-search-preload" style="display: none;">
+
+                                        <i class="fa-solid fa-spinner animated faa-spin"></i>
+
+                                    </div>
+
+                                    <div class="staff-first-search-entries">
+
+                                        <div class="staff-first-search-entry">
+
+                                            <div class="staff-first-search-entry-header">
+    
+                                                <h2>null</h2>
+    
+                                            </div>
+    
+                                            <div class="staff-first-search-entry-footer">
+    
+                                                <div class="staff-first-search-entry-footer-id">
+    
+                                                    <h3>ID <span>null</span></h3>
+    
+                                                </div>
+    
+                                                <div class="staff-first-search-entry-footer-date">
+    
+                                                    <h3>MM-DD 00:00</h3>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="staff-first-view" style="display: none;">
+
+                                    <div class="staff-first-view-placeholder">
+
+                                        <h2>MDB</h2>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="staff-first-edit" style="display: none;">
+
+                                    <div class="staff-first-edit-placeholder">
+
+                                        <h2>MDB</h2>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
-                            <div class="management-second">
+                            <div class="staff-second">
+
+                                <div class="staff-second-search">
+
+                                    <div class="staff-second-search-header">
+
+                                        <div class="staff-second-search-header-label">
+
+                                            <h2>View or Hire staff</h2>
+
+                                        </div>
+
+                                        <div class="staff-second-search-header-options">
+
+                                            <i class="fa-solid fa-plus"></i>
+
+                                        </div>
+
+                                        <div class="staff-second-search-header-sublabel">
+
+                                            <h3>Choose staff to view or hire staff</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-search-placeholder">
+
+                                        <h2>MDB</h2>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="staff-second-view" style="display: none;">
+
+                                    <div class="staff-second-view-header">
+
+                                        <div class="staff-second-view-header-label">
+
+                                            <h2>Viewing Staff Profile</h2>
+
+                                        </div>
+
+                                        <div class="staff-second-view-header-options">
+
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <i class="fa-solid fa-pencil"></i>
+
+                                        </div>
+
+                                        <div class="staff-second-view-header-sublabel">
+
+                                            <h3>Currently viewing ${person_name}</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-view-mugshot">
+
+                                        <div class="staff-second-view-mugshot-container">
+
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-view-info">
+
+                                        <div class="staff-second-view-info-staff">
+
+                                            <div class="staff-second-view-info-staff-header">
+
+                                                <label>Staff</label>
+
+                                            </div>
+
+                                            <div class="staff-second-view-info-staff-footer">
+
+                                                <div class="staff-second-view-info-staff-footer-icon">
+
+                                                    <i class="fa-solid fa-user"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-view-info-staff-footer-value">
+
+                                                    <h3>(null) null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-view-info-pnum">
+
+                                            <div class="staff-second-view-info-pnum-header">
+
+                                                <label>Phone number</label>
+
+                                            </div>
+
+                                            <div class="staff-second-view-info-pnum-footer">
+
+                                                <div class="staff-second-view-info-pnum-footer-icon">
+
+                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-view-info-pnum-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-view-info-callsign">
+
+                                            <div class="staff-second-view-info-callsign-header">
+
+                                                <label>Callsign</label>
+
+                                            </div>
+
+                                            <div class="staff-second-view-info-callsign-footer">
+
+                                                <div class="staff-second-view-info-callsign-footer-icon">
+
+                                                    <i class="fa-solid fa-headset"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-view-info-callsign-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-view-info-rank">
+
+                                            <div class="staff-second-view-info-rank-header">
+
+                                                <label>Rank</label>
+
+                                            </div>
+
+                                            <div class="staff-second-view-info-rank-footer">
+
+                                                <div class="staff-second-view-info-rank-footer-icon">
+
+                                                    <i class="fa-solid fa-chevron-up"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-view-info-rank-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-view-info-department">
+
+                                            <div class="staff-second-view-info-department-header">
+
+                                                <label>Department</label>
+
+                                            </div>
+
+                                            <div class="staff-second-view-info-department-footer">
+
+                                                <div class="staff-second-view-info-department-footer-icon">
+
+                                                    <i class="fa-solid fa-building-columns"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-view-info-department-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-view-info-img">
+
+                                            <div class="staff-second-view-info-img-header">
+
+                                                <label>Image URL</label>
+
+                                            </div>
+
+                                            <div class="staff-second-view-info-img-footer">
+
+                                                <div class="staff-second-view-info-img-footer-icon">
+
+                                                    <i class="fa-solid fa-camera"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-view-info-img-footer-value">
+
+                                                    <h3>null</h3>
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-view-docs">
+
+                                        <div class="staff-second-view-docs-panel">
+
+                                            <textarea placeholder="Staff documents go here..." readonly></textarea>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="staff-second-edit" style="display: none;">
+
+                                    <div class="staff-second-edit-header">
+
+                                        <div class="staff-second-edit-header-label">
+
+                                            <h2>Editing Person Profile</h2>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-header-options">
+
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <i class="fa-solid fa-redo"></i>
+                                            <i class="fa-solid fa-trash"></i>
+                                            <i class="fa-solid fa-floppy-disk"></i>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-header-sublabel">
+
+                                            <h3>Currently editing ${person_name}</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-edit-mugshot">
+
+                                        <div class="staff-second-edit-mugshot-container">
+
+                                            <img src="/src/assets/profiles_placeholder.png" alt="">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-edit-info">
+
+                                        <div class="staff-second-edit-info-staff">
+
+                                            <div class="staff-second-edit-info-staff-header">
+
+                                                <label>Staff</label>
+
+                                            </div>
+
+                                            <div class="staff-second-edit-info-staff-footer">
+
+                                                <div class="staff-second-edit-info-staff-footer-icon">
+
+                                                    <i class="fa-solid fa-user"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-edit-info-staff-footer-value">
+
+                                                    <h3>(null) null</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-info-pnum">
+
+                                            <div class="staff-second-edit-info-pnum-header">
+
+                                                <label>Phone number (10 Digits)</label>
+
+                                            </div>
+
+                                            <div class="staff-second-edit-info-pnum-footer">
+
+                                                <div class="staff-second-edit-info-pnum-footer-icon">
+
+                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-edit-info-pnum-footer-value">
+
+                                                    <input type="text" placeholder="(012) 345-6789">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-info-callsign">
+
+                                            <div class="staff-second-edit-info-callsign-header">
+
+                                                <label>Callsign</label>
+
+                                            </div>
+
+                                            <div class="staff-second-edit-info-callsign-footer">
+
+                                                <div class="staff-second-edit-info-callsign-footer-icon">
+
+                                                    <i class="fa-solid fa-headset"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-edit-info-callsign-footer-value">
+
+                                                    <input type="text" placeholder="A-100">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-info-rank">
+
+                                            <div class="staff-second-edit-info-rank-header">
+
+                                                <label>Rank</label>
+
+                                            </div>
+
+                                            <div class="staff-second-edit-info-rank-footer">
+
+                                                <div class="staff-second-edit-info-rank-footer-icon">
+
+                                                    <i class="fa-solid fa-chevron-up"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-edit-info-rank-footer-value">
+
+                                                    <select>
+                                                        <option value="placeholder">Please choose an option...</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-info-department">
+
+                                            <div class="staff-second-edit-info-department-header">
+
+                                                <label>Department</label>
+
+                                            </div>
+
+                                            <div class="staff-second-edit-info-department-footer">
+
+                                                <div class="staff-second-edit-info-department-footer-icon">
+
+                                                    <i class="fa-solid fa-building-columns"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-edit-info-department-footer-value">
+
+                                                    <select>
+                                                        <option value="placeholder">Please choose an option...</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="staff-second-edit-info-img">
+
+                                            <div class="staff-second-edit-info-img-header">
+
+                                                <label>Image URL (Imgur preferrably)</label>
+
+                                            </div>
+
+                                            <div class="staff-second-edit-info-img-footer">
+
+                                                <div class="staff-second-edit-info-img-footer-icon">
+
+                                                    <i class="fa-solid fa-camera"></i>
+
+                                                </div>
+
+                                                <div class="staff-second-edit-info-img-footer-value">
+
+                                                    <input type="text" placeholder="https://www.imgur.com/xxxxxx">
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-second-edit-docs">
+
+                                        <div class="staff-second-edit-docs-panel">
+
+                                            <textarea placeholder="Person's documents go here..."></textarea>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
-                            <div class="management-third">
+                            <div class="staff-third">
+
+                                <div class="staff-third-search">
+
+                                    <div class="staff-third-search-placeholder">
+
+                                        <h2>MDB</h2>
+
+                                    </div>
+
+                                </div>
                                 
+                                <div class="staff-third-view" style="display: none;">
+
+                                    <div class="staff-third-view-header">
+
+                                        <div class="staff-third-view-header-label">
+
+                                            <h2>Viewing Staff information</h2>
+
+                                        </div>
+
+                                        <div class="staff-third-view-header-sublabel">
+
+                                            <h3>Other information that is related to the staff</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-third-view-categories">
+
+                                        <div class="staff-third-view-categories-wrapper">
+
+                                            <div class="staff-third-view-category">
+
+                                                <div class="staff-third-view-category-header">
+    
+                                                    <h2>Roles</h2>
+    
+                                                </div>
+    
+                                                <div class="staff-third-view-category-entries">
+    
+                                                    <div class="staff-third-view-category-entry">
+    
+                                                        <div class="staff-third-view-category-entry-value">
+    
+                                                            <h3>PD Edit</h3>
+    
+                                                        </div>
+    
+                                                    </div>
+
+                                                    <div class="staff-third-view-category-entry">
+    
+                                                        <div class="staff-third-view-category-entry-value">
+    
+                                                            <h3>PD Manage</h3>
+    
+                                                        </div>
+    
+                                                    </div>
+    
+                                                </div>
+    
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="staff-third-edit" style="display: none;">
+
+                                    <div class="staff-third-edit-header">
+
+                                        <div class="staff-third-edit-header-label">
+
+                                            <h2>Editing staff information</h2>
+
+                                        </div>
+
+                                        <div class="staff-third-edit-header-sublabel">
+
+                                            <h3>Other information that is related to the staff</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="staff-third-edit-categories">
+
+                                        <div class="staff-third-edit-categories-wrapper">
+
+                                            <div class="staff-third-edit-category">
+
+                                                <div class="staff-third-edit-category-header">
+    
+                                                    <div class="staff-third-edit-category-header-label">
+    
+                                                        <h2>Roles</h2>
+    
+                                                    </div>
+    
+                                                    <div class="staff-third-edit-category-header-add">
+                                                        
+                                                        <i class="fa-solid fa-plus"></i>
+    
+                                                    </div>
+    
+                                                </div>
+    
+                                                <div class="staff-third-edit-category-entries">
+    
+                                                    <div class="staff-third-edit-category-entry">
+    
+                                                        <div class="staff-third-edit-category-entry-value">
+    
+                                                            <h3>PD Edit</h3>
+    
+                                                        </div>
+    
+                                                        <div class="staff-third-edit-category-entry-remove">
+                                                           
+                                                            <i class="fa-solid fa-circle-xmark"></i>
+    
+                                                        </div>
+    
+                                                    </div>
+
+                                                    <div class="staff-third-edit-category-entry">
+    
+                                                        <div class="staff-third-edit-category-entry-value">
+    
+                                                            <h3>PD Manage</h3>
+    
+                                                        </div>
+    
+                                                        <div class="staff-third-edit-category-entry-remove">
+                                                           
+                                                            <i class="fa-solid fa-circle-xmark"></i>
+    
+                                                        </div>
+    
+                                                    </div>
+    
+                                                </div>
+    
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
                         </div>
