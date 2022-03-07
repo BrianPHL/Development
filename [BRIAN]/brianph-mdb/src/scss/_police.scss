@@ -11715,6 +11715,25 @@ h2 {
                     
                     @include border-thin;
 
+                    textarea {
+
+                        background-color: transparent;
+                        font-size: 0.75rem;
+                        padding: 10px;
+                        resize: none;
+                        border: 0;
+                        height: 100%;
+                        width: 100%;
+                        color: white;
+
+                    }
+
+                    textarea:focus {
+
+                        outline: none;
+
+                    }
+
                 }
 
             }
