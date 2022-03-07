@@ -11649,6 +11649,45 @@ h2 {
 
                 }
 
+                &-submit {
+
+                    grid-template-columns: 10px 1fr 10px;
+                    grid-template-rows: 10px 1fr 10px;
+                    grid-column: 2/3;
+                    display: grid;
+
+                    &-wrapper {
+
+                        justify-content: flex-end;
+                        align-items: center;
+                        grid-column: 2/3;
+                        grid-row: 2/3;
+                        display: flex;
+
+                        button {
+
+                            background-color: transparent;
+                            border-radius: 2px;
+                            font-weight: 400;
+                            transition: 0.1s ease-in-out;
+                            border: 1px solid #ffffff24;
+                            height: 30px;
+                            width: 120px;
+                            color: white;
+
+                        }
+
+                        button:hover {
+
+                            background-color: hsl(120, 40, 50);
+                            cursor: pointer;
+
+                        }
+
+                    }
+
+                }
+
             }
 
         }
