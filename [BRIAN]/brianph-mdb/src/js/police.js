@@ -5,10 +5,10 @@ $(() => {
     });
     flushForms();
     const feedbackTextarea = $('.feedback-second-textarea > textarea');
-    $(document).on('keyup', feedbackTextarea, function () {
+    $(document).on('keyup', feedbackTextarea, (() => {
         const feedbackTextareaVal = $(feedbackTextarea).val();
         const feedbackTextareaLength = feedbackTextareaVal.length;
         const feedbackCounter = $('#feedback-counter-value');
         feedbackCounter.text(feedbackTextareaLength);
-    });
+    }));
 });

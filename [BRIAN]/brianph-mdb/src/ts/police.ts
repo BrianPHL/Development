@@ -1,6 +1,6 @@
 $(() => {
 
-    const flushForms : any = (() => {
+    const flushForms = (() => {
 
         $('textarea').val('')
         $('input').val('')
@@ -10,7 +10,7 @@ $(() => {
 
     const feedbackTextarea = $('.feedback-second-textarea > textarea')
 
-    $(document).on('keyup', feedbackTextarea, function() {
+    $(document).on('keyup', feedbackTextarea, (() => {
 
         const feedbackTextareaVal    = $(feedbackTextarea).val() as string
         const feedbackTextareaLength = feedbackTextareaVal.length
@@ -18,6 +18,6 @@ $(() => {
         const feedbackCounter = $('#feedback-counter-value')
         feedbackCounter.text(feedbackTextareaLength)
         
-    })
+    }))
 
 })  

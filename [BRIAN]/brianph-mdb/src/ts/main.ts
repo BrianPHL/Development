@@ -1,31 +1,24 @@
 $(() => {
 
-    //addEventListener "click" on navBtn
     const navBtn = $('.nav-buttons')
 
-    // function when navBtn is clicked 
-    navBtn.click(function() {
+    $(navBtn).on('click', function() {
 
-        // constanced variables
-        const navHighlight = $('.nav-buttons-highlight')
-        const navId        = $(this).attr('id')
-        const navDiv       = $('.content-child')
+        const highlight    = $('.nav-buttons-highlight')
+        const identifier   = $(this).attr('id')
+        const div          = $('.content-child')
 
-        // hides previously activated styles
-        // it only shows on a clicked button
-        navDiv.hide()
-        navHighlight.hide()
+        const hideElements = function() {
 
-        // shows styles on clicked button 
-        $(this).find(navHighlight).show()
-        $('.' + navId).show()
+            highlight.hide()
+            div.hide()
+
+        }
+        hideElements()
+
+        $(this).find(highlight).show()
+        $('.' + identifier).show()
 
     })
-
-    const box = $('.evidences-third-view-categories')
-    const height = box.height()
-    const width = box.width()
-
-    console.log(height, width)
 
 })
