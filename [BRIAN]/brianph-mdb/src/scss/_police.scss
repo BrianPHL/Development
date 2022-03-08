@@ -11517,7 +11517,7 @@ h2 {
         .feedback {
 
             grid-template-columns: 20px 1fr 20px;
-            grid-template-rows: 20px 110px 20px 1fr 20px 50px 20px;
+            grid-template-rows: 20px 110px 10px 1fr 10px 60px 20px;
             grid-column: 1/2;
             grid-row: 1/2;
             display: grid;
@@ -11766,7 +11766,8 @@ h2 {
                         h3 {
 
                             @include h3-styling;
-                            font-weight: 300;
+                            font-weight: 400;
+                            font-size: 1rem;
 
                         }
 
@@ -11796,7 +11797,7 @@ h2 {
                             font-weight: 400;
                             transition: 0.1s ease-in-out;
                             border: 1px solid #ffffff24;
-                            height: 30px;
+                            height: 40px;
                             width: 120px;
                             color: white;
 
