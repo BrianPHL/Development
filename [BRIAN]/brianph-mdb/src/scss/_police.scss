@@ -26,7 +26,7 @@
 
         .header-heading {
 
-            grid-template-columns: 10px 80px 10px 1fr;
+            grid-template-columns: 20px 80px 10px 1fr;
             grid-template-rows: 1fr;
             grid-column: 1/2;
             grid-row: 1/2;
@@ -40,10 +40,16 @@
 
                 &-container {
 
-                    background-color: white;
+                    background-color: transparent;
                     border-radius: 100px;
                     height: 80px;
                     width: 80px;
+
+                    img {
+
+                        width: 100%;
+
+                    }
 
                 }
 
@@ -58,7 +64,7 @@
                 h1 {
 
                     text-transform: uppercase;
-                    font-size: 1.5rem;
+                    font-size: 3rem;
                     color: white;
 
                 }
@@ -69,27 +75,11 @@
 
         .header-info {
 
-            grid-template-columns: 1fr 10px 60px 10px;
+            grid-template-columns: 1fr 20px;
             grid-template-rows: 1fr 30px 30px 1fr;
             grid-column: 2/3;
             grid-row: 1/2;
             display: grid;
-
-            &-img {
-
-                grid-column: 3/4;
-                grid-row: 2/4;
-
-                &-container {
-
-                    background-color: white;
-                    border-radius: 60px;
-                    height: 60px;
-                    width: 60px;
-
-                }
-
-            }
 
             &-name {
 
