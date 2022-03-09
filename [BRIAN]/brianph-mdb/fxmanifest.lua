@@ -7,10 +7,10 @@ author 'BrianPHL'
 ui_page 'src/index.html'
 
 files {
-    'dist/jquery/js/*',
-    'dist/fontawesome/css/*',
-    'dist/fontawesome/webfonts/*',
-    'dist/fontawesome/anims/*',
+    'lib/jquery/js/*',
+    'lib/fontawesome/css/*',
+    'lib/fontawesome/webfonts/*',
+    'lib/fontawesome/anims/*',
     'src/index.html',
     'src/assets/*',
     'src/css/*',
