@@ -83,12 +83,12 @@ body {
         &-view {
 
             grid-template-columns: 1fr;
-            grid-template-rows: 35px 150px 50px;
+            grid-template-rows: 35px 190px 50px;
             background-color: #202020;
             border-radius: 5px;
             transition: 0.1s ease all;
             display: grid;
-            height: 235px;
+            height: 275px;
             width: 300px;
 
             &-header {
@@ -137,14 +137,14 @@ body {
             &-infos {
 
                 grid-template-columns: 10px 1fr 10px;
-                grid-template-rows: 150px;
+                grid-template-rows: 190px;
                 grid-row: 2;
                 display: grid;
 
                 &-wrapper {
 
                     grid-template-columns: 1fr;
-                    grid-template-rows: repeat(4, 30px);
+                    grid-template-rows: repeat(5, 30px);
                     row-gap: 10px;
                     grid-column: 2;
                     grid-row: 1;
@@ -156,7 +156,7 @@ body {
 
             &-info {
 
-                grid-template-columns: 10px 40px 5px 1fr 10px;
+                grid-template-columns: 10px 40px 8px 1fr 10px;
                 background-color: #101010;
                 border: 1px solid #202020;
                 flex-direction: row;
