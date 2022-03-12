@@ -114,6 +114,118 @@ body {
 
             }
 
+            &_view {
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 30px 1fr 65px;
+                grid-column: 2;
+                grid-row: 2;
+                row-gap: 5px;
+                display: grid;
+                height: 300px;  
+
+                &_header {
+
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    align-items: center;
+                    grid-row: 1;
+                    display: flex;
+                    border: 1px solid $primary;
+
+                    h1 {
+
+                        margin-left: 5px;
+                        font-weight: 600;
+                        font-size: 0.8rem;
+                        color: white;
+
+                    }
+
+                }
+
+                &_options {
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, 30px);
+                    grid-row: 3;
+                    row-gap: 5px;
+                    display: grid;
+
+                    &_delete {
+
+                        background-color: $secondary;
+                        justify-content: center;
+                        border-radius: 5px;
+                        align-items: center;
+                        transition: 0.1s ease all;
+                        display: flex;
+                        border: 1px solid $primary;
+
+                        i {
+
+                            margin-right: 5px;
+                            font-size: 0.8rem;
+                            color: white;
+
+                        }
+
+                        h2 {
+
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                    &_delete:hover {
+
+                        background-color: $red;
+                        cursor: pointer;
+
+                    }
+
+                    &_spawn {
+
+                        background-color: $accent;
+                        justify-content: center;
+                        flex-direction: row;
+                        border-radius: 5px;
+                        align-items: center;
+                        transition: 0.1s ease all;
+                        display: flex;
+
+                        i {
+
+                            margin-right: 5px;
+                            font-size: 0.8rem;
+                            color: white;
+
+                        }
+
+                        h2 {
+
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                    &_spawn:hover {
+
+                        background-color: $accent-hovered;
+                        cursor: pointer;
+
+                    }
+
+                }
+
+            }
+
         }
 
         &_col:hover {
