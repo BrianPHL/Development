@@ -50,8 +50,8 @@ body {
 
         &_col {
 
-            grid-template-columns: 10px 1fr 10px;
-            grid-template-rows: 10px 1fr 10px;
+            grid-template-columns: 5px 1fr 5px;
+            grid-template-rows: 5px 1fr 5px;
             background-color: $primary;
             border-radius: 5px;
             transition: 0.1s ease all;
@@ -61,21 +61,52 @@ body {
 
             &_create {
 
-                place-items: center;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 30px;
                 grid-column: 2;
                 grid-row: 2;
+                row-gap: 5px;
                 display: grid;
                 height: 300px;
 
-                i {
+                &_btn {
 
-                    transition: 0.1s ease all;
-                    font-size: 1rem;
-                    color: white;
+                    place-items: center;
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    display: grid;
+                    border: 1px solid $primary;
+                    height: 100%;
+                    width: 100%;
+
+                    i {
+
+                        transition: 0.1s ease all;
+                        font-size: 1rem;
+                        color: white;
+
+                    }
+
+                    i:hover { cursor: pointer; color: $accent; }
 
                 }
 
-                i:hover { cursor: pointer; color: $accent; }
+                &_label {
+
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    place-items: center;
+                    border: 1px solid $primary;
+                    display: grid;
+
+                    label {
+
+                        font-size: 0.75rem;
+                        color: white;
+
+                    }
+
+                }
 
             }
 
