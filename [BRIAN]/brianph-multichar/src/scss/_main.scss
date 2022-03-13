@@ -143,12 +143,12 @@ body {
 
                 &_header {
 
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
                     background-color: $secondary;
-                    border-radius: 5px;
                     align-items: center;
                     grid-row: 1;
                     display: flex;
-                    border: 1px solid $primary;
 
                     h1 {
 
@@ -164,10 +164,8 @@ body {
                 &_info {
 
                     background-color: $secondary;
-                    border-radius: 5px;
                     overflow-y: auto;
                     grid-row: 2;
-                    border: 1px solid $primary;
 
                 }
 
@@ -183,11 +181,9 @@ body {
 
                         background-color: $secondary;
                         justify-content: center;
-                        border-radius: 5px;
                         align-items: center;
                         transition: 0.1s ease all;
                         display: flex;
-                        border: 1px solid $primary;
 
                         i {
 
@@ -216,10 +212,11 @@ body {
 
                     &_spawn {
 
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
                         background-color: $accent;
                         justify-content: center;
                         flex-direction: row;
-                        border-radius: 5px;
                         align-items: center;
                         transition: 0.1s ease all;
                         display: flex;
