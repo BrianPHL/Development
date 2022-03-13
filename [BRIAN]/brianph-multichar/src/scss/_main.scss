@@ -75,11 +75,11 @@ body {
 
                 &_placeholder {
 
-                    place-items: center;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
                     background-color: $secondary;
-                    border-radius: 5px;
+                    place-items: center;
                     display: grid;
-                    border: 1px solid $primary;
                     height: 100%;
                     width: 100%;
 
@@ -95,14 +95,14 @@ body {
 
                 &_btn {
 
+                    border-bottom-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
                     background-color: $accent;
                     justify-content: center;
                     flex-direction: row;
-                    border-radius: 5px;
                     align-items: center;
                     transition: 0.1s ease all;
                     display: flex;
-                    border: 1px solid $primary;
 
                     i {
 
