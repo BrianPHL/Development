@@ -73,7 +73,7 @@ body {
                 display: grid;
                 height: 300px;
 
-                &_btn {
+                &_placeholder {
 
                     place-items: center;
                     background-color: $secondary;
@@ -91,24 +91,41 @@ body {
 
                     }
 
-                    i:hover { cursor: pointer; color: $accent; }
-
                 }
 
-                &_label {
+                &_btn {
 
-                    background-color: $secondary;
+                    background-color: $accent;
+                    justify-content: center;
+                    flex-direction: row;
                     border-radius: 5px;
-                    place-items: center;
+                    align-items: center;
+                    transition: 0.1s ease all;
+                    display: flex;
                     border: 1px solid $primary;
-                    display: grid;
 
-                    label {
+                    i {
 
-                        font-size: 0.75rem;
+                        margin-right: 5px;
+                        font-size: 0.8rem;
                         color: white;
 
                     }
+
+                    h2 {
+
+                        font-weight: 500;
+                        font-size: 0.8rem;
+                        color: white;
+
+                    }
+
+                }
+
+                &_btn:hover {
+
+                    background-color: $accent-hovered;
+                    cursor: pointer;
 
                 }
 
@@ -141,6 +158,16 @@ body {
                         color: white;
 
                     }
+
+                }
+
+                &_info {
+
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    overflow-y: auto;
+                    grid-row: 2;
+                    border: 1px solid $primary;
 
                 }
 
