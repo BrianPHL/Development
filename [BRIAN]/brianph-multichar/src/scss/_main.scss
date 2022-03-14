@@ -50,7 +50,7 @@ body {
 .container {
 
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 1fr 300px;
+    grid-template-rows: 200px 1fr 200px;
     display: grid;
     height: 100%;
     width: 100%;
@@ -337,6 +337,25 @@ body {
                 }
 
             }
+
+        }
+
+    }
+
+    .char_crtn {
+
+        justify-items: right;
+        margin-right: 20px;
+        align-items: center;
+        grid-row: span 3;
+        display: grid;
+
+        &_panel {
+
+            background-color: $primary;
+            overflow-y: auto;
+            height: 95vh;
+            width: 350px;
 
         }
 
