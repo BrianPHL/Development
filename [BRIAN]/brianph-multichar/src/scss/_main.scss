@@ -75,7 +75,7 @@ body {
 
                 &_placeholder {
 
-                    border-top-right-radius: 5px;
+                    border-top-right-radius: 2.5px;
                     border-top-left-radius: 5px;
                     background-color: $secondary;
                     place-items: center;
@@ -95,8 +95,8 @@ body {
 
                 &_btn {
 
-                    border-bottom-right-radius: 5px;
-                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 2.5px;
+                    border-bottom-left-radius: 2.5px;
                     background-color: $accent;
                     justify-content: center;
                     flex-direction: row;
@@ -143,21 +143,48 @@ body {
 
                 &_header {
 
-                    border-top-right-radius: 5px;
-                    border-top-left-radius: 5px;
+                    grid-template-columns: 1fr 25px;
+                    border-top-right-radius: 2.5px;
+                    border-top-left-radius: 2.5px;
                     background-color: $secondary;
-                    align-items: center;
                     grid-row: 1;
-                    display: flex;
+                    display: grid;
 
-                    h1 {
+                    &_name {
 
-                        margin-left: 5px;
-                        font-weight: 600;
-                        font-size: 0.7rem;
-                        color: white;
+                        align-items: center;
+                        grid-column: 1;
+                        display: flex;
+
+                        h1 {
+
+                            margin-left: 10px;
+                            font-weight: 600;
+                            font-size: 0.7rem;
+                            color: white;
+
+                        }
 
                     }
+
+                    &_gender {
+
+                        justify-content: flex-end;
+                        align-items: center;
+                        grid-column: 2;
+                        display: flex;
+
+                        i {
+                        
+                            margin-right: 10px;
+                            font-size: 0.8rem;
+                            color: white;
+
+                        }
+
+                    }
+
+
 
                 }
 
@@ -212,8 +239,8 @@ body {
 
                     &_spawn {
 
-                        border-bottom-right-radius: 5px;
-                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 2.5px;
+                        border-bottom-left-radius: 2.5px;
                         background-color: $accent;
                         justify-content: center;
                         flex-direction: row;
