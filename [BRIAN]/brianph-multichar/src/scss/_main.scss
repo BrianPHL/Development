@@ -158,8 +158,9 @@ body {
 
                         h1 {
 
+                            text-transform: uppercase;
                             margin-left: 10px;
-                            font-weight: 600;
+                            font-weight: 700;
                             font-size: 0.7rem;
                             color: white;
 
@@ -188,13 +189,63 @@ body {
 
                 }
 
-                &_info {
-
+                &_infos {
+                                        
                     background-color: $secondary;
+                    scrollbar-width: none;
+                    flex-direction: column;
                     overflow-y: auto;
                     grid-row: 2;
+                    display: flex;
+                    height: 1fr;
+                    gap: 5px;
+
+                    &_info {
+
+                        grid-template-columns: 1fr 1fr;
+                        flex-shrink: 0;
+                        display: grid;
+                        height: 30px;
+
+                        &_label {
+
+                            align-items: center;
+                            display: flex;
+
+                            label {
+
+                                font-weight: 600;
+                                margin-left: 10px;
+                                font-size: 0.7rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                        &_value {
+
+                            justify-content: flex-end;
+                            align-items: center;
+                            display: flex;
+
+                            h3 {
+
+                                text-align: right;
+                                margin-right: 10px;
+                                font-weight: 400;
+                                font-size: 0.6rem;
+                                color: white;
+
+                            }
+
+                        }
+
+                    }
 
                 }
+
+                &_infos::-webkit-scrollbar { display: none; }
 
                 &_options {
 
