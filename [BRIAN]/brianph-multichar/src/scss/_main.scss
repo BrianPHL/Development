@@ -380,11 +380,96 @@ body {
 
             }
 
-            &_options {
+            &_infos {
 
                 background-color: $secondary;
+                flex-direction: column;
                 grid-column: 2;
                 grid-row: 4;
+                display: flex;
+                gap: 5px;
+                
+
+                &_info {
+
+                    grid-template-columns: 90px 1fr;
+                    flex-shrink: 0;
+                    display: grid;
+                    height: 30px;
+
+                    &_label {
+
+                        align-items: center;
+                        display: flex;
+
+                        label {
+
+                            font-weight: 600;
+                            margin-left: 10px;
+                            font-size: 0.7rem;
+                            color: white;
+
+                        }
+
+                    }
+
+                    &_value {
+
+                        align-items: center;
+                        display: flex;
+
+                        input {
+
+                            background-color: transparent;
+                            border: 0;
+                            border-bottom: 1px solid #FFFFFF80;
+                            color-scheme: dark;
+                            margin-right: 10px;
+                            font-weight: 500;
+                            transition: 0.1s ease all;
+                            font-size: 0.6rem;
+                            color: white;
+                            width: 100%;
+
+                        }   
+
+                        input:focus {
+
+                            border-bottom: 1px solid white;
+                            outline: none;
+
+                        }
+
+                        select {
+
+                            background-color: transparent;
+                            border: 0;
+                            border-bottom: 1px solid #ffffff80;
+                            margin-right: 10px;
+                            font-weight: 500;
+                            font-size: 0.6rem;
+                            color: white;
+                            width: 100%;
+
+
+
+                        }
+
+                        select:focus {
+
+                            outline: none;
+
+                        }
+
+                        option {
+
+                            background-color: $primary;
+
+                        }
+
+                    }
+
+                }
 
             }
 
