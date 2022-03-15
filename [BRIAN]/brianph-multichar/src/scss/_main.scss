@@ -390,9 +390,38 @@ body {
 
             &_btn {
 
-                background-color: $secondary;
+                border-bottom-right-radius: 2.5px;
+                border-bottom-left-radius: 2.5px;
+                background-color: $accent;
+                justify-content: center;
+                align-items: center;
                 grid-column: 2;
+                transition: 0.1s ease all;
                 grid-row: 6;
+                display: flex;
+
+                i {
+
+                    margin-right: 5px;
+                    font-size: 0.7rem;
+                    color: white;
+
+                }
+
+                h2 {
+
+                    font-weight: 500;
+                    font-size: 0.6rem;
+                    color: white;
+
+                }
+
+            }
+
+            &_btn:hover {
+
+                background-color: $accent-hovered;
+                cursor: pointer;
 
             }
 
