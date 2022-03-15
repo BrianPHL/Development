@@ -345,17 +345,45 @@ body {
     .char_crtn {
 
         justify-items: right;
-        margin-right: 20px;
         align-items: center;
         grid-row: span 3;
         display: grid;
 
         &_panel {
 
+            grid-template-columns: 5px 1fr 5px;
+            grid-template-rows: 5px 30px 5px 1fr 5px 30px 5px;
             background-color: $primary;
+            border-radius: 5px;
+            margin-right: 100px;
             overflow-y: auto;
-            height: 95vh;
-            width: 350px;
+            display: grid;
+            height: auto;
+            width: 250px;
+
+            &_header {
+
+                background-color: $secondary;
+                grid-column: 2;
+                grid-row: 2;
+
+            }
+
+            &_options {
+
+                background-color: $secondary;
+                grid-column: 2;
+                grid-row: 4;
+
+            }
+
+            &_btn {
+
+                background-color: $secondary;
+                grid-column: 2;
+                grid-row: 6;
+
+            }
 
         }
 
