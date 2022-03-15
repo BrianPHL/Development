@@ -363,6 +363,8 @@ body {
 
             &-header {
 
+                border-top-right-radius: 2.5px;
+                border-top-left-radius: 2.5px;
                 background-color: $secondary;
                 place-items: center;
                 grid-column: 2;
