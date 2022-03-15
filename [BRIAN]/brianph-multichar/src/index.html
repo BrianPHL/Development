@@ -18,10 +18,11 @@
 
 <body>
     
-    <div class="container" style="display: none;">
+    <div class="container">
+    <!-- <div class="container" style="display: none;"> -->
 
         <!-- ? Character Selection -->
-        <div class="char-sel">
+        <div class="char-sel" style="display: none;">
 
             <div class="char-sel-col">
 
@@ -33,7 +34,7 @@
 
                     </div>
 
-                    <div class="char-sel-col-create-btn">
+                    <div class="char-sel-col-create-btn charsel-create">
 
                         <i class="fa-solid fa-user-plus"></i> 
                         <h2>Create a Character</h2>
@@ -238,7 +239,7 @@
 
                     </div>
 
-                    <div class="char-sel-col-create-btn">
+                    <div class="char-sel-col-create-btn charsel-create">
 
                         <i class="fa-solid fa-user-plus"></i> 
                         <h2>Create a Character</h2>
@@ -443,7 +444,7 @@
 
                     </div>
 
-                    <div class="char-sel-col-create-btn">
+                    <div class="char-sel-col-create-btn charsel-create">
 
                         <i class="fa-solid fa-user-plus"></i> 
                         <h2>Create a Character</h2>
@@ -641,7 +642,7 @@
         </div>
 
         <!-- ? Character Creation -->
-        <div class="char-crtn" style="display: none;">
+        <div class="char-crtn">
 
             <div class="char-crtn-panel">
 
@@ -722,9 +723,19 @@
 
                 </div>
 
-                <div class="char-crtn-panel-btn">
+                <div class="char-crtn-panel-options">
                 
-                    <i class="fa-solid fa-check"></i> <h2>Proceed to clothing</h2>
+                    <div class="char-crtn-panel-options-delete">
+
+                        <i class="fa-solid fa-reply"></i> <h2>Return to selection</h2>
+
+                    </div>
+
+                    <div class="char-crtn-panel-options-spawn">
+
+                        <i class="fa-solid fa-shirt"></i> <h2>Proceed to clothing</h2>
+
+                    </div>
 
                 </div>
 
@@ -735,7 +746,7 @@
     </div>
     
     <script src="/lib/jquery/js/jquery.min.js"></script>
-    <script src="/src/js/init.js"></script>
+    <script src="/src/js/app.js"></script>
 
 </body>
 

@@ -1,5 +1,12 @@
 $(() => {
 
+    $('.charsel-create').on('click', () => {
+
+        $('.char-sel').hide()
+        $('.char-crtn').show()
+
+    })
+
     window.addEventListener('message', (event) => {
 
         const data = event.data
@@ -10,7 +17,7 @@ $(() => {
             if ( data.isEnabled == true ) {
 
                 console.log('inside addEventListener: "message"')
-                $('.container').fadeIn()
+                $('.container').show()
 
             }
 
@@ -18,4 +25,4 @@ $(() => {
 
     })
 
-})
+})  
