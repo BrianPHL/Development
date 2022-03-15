@@ -7,6 +7,13 @@ $(() => {
 
     })
 
+    $('#charcrtn-return').on('click', () => {
+
+        $('.char-crtn').hide()
+        $('.char-sel').show()
+
+    })
+
     window.addEventListener('message', (event) => {
 
         const data = event.data

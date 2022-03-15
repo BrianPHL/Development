@@ -484,7 +484,7 @@ body {
                 row-gap: 5px;
                 display: grid;
 
-                &-delete {
+                &-return {
 
                     background-color: $secondary;
                     justify-content: center;
@@ -510,14 +510,14 @@ body {
 
                 }
 
-                &-delete:hover {
+                &-return:hover {
 
                     background-color: $red;
                     cursor: pointer;
 
                 }
 
-                &-spawn {
+                &-proceed {
 
                     border-bottom-right-radius: 2.5px;
                     border-bottom-left-radius: 2.5px;
@@ -546,7 +546,7 @@ body {
 
                 }
 
-                &-spawn:hover {
+                &-proceed:hover {
 
                     background-color: $accent-hovered;
                     cursor: pointer;
