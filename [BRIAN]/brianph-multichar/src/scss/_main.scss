@@ -55,7 +55,7 @@ body {
     height: 100%;
     width: 100%;
 
-    .char_sel {
+    .char-sel {
 
         justify-content: center;
         flex-direction: row;
@@ -64,7 +64,7 @@ body {
         display: flex;
         gap: 25px;
 
-        &_col {
+        &-col {
 
             grid-template-columns: 5px 1fr 5px;
             grid-template-rows: 5px 1fr 5px;
@@ -75,7 +75,7 @@ body {
             height: auto;
             width: 250px;
 
-            &_create {
+            &-create {
 
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 30px;
@@ -85,7 +85,7 @@ body {
                 display: grid;
                 height: 300px;
 
-                &_placeholder {
+                &-placeholder {
 
                     border-top-right-radius: 2.5px;
                     border-top-left-radius: 5px;
@@ -105,7 +105,7 @@ body {
 
                 }
 
-                &_btn {
+                &-btn {
 
                     border-bottom-right-radius: 2.5px;
                     border-bottom-left-radius: 2.5px;
@@ -134,7 +134,7 @@ body {
 
                 }
 
-                &_btn:hover {
+                &-btn:hover {
 
                     background-color: $accent-hovered;
                     cursor: pointer;
@@ -143,7 +143,7 @@ body {
 
             }
 
-            &_view {
+            &-view {
 
                 grid-template-columns: 1fr;
                 grid-template-rows: 30px 1fr 65px;
@@ -153,7 +153,7 @@ body {
                 display: grid;
                 height: 300px;  
 
-                &_header {
+                &-header {
 
                     grid-template-columns: 1fr 25px;
                     border-top-right-radius: 2.5px;
@@ -162,7 +162,7 @@ body {
                     grid-row: 1;
                     display: grid;
 
-                    &_name {
+                    &-name {
 
                         align-items: center;
                         grid-column: 1;
@@ -180,7 +180,7 @@ body {
 
                     }
 
-                    &_gender {
+                    &-gender {
 
                         justify-content: flex-end;
                         align-items: center;
@@ -201,7 +201,7 @@ body {
 
                 }
 
-                &_infos {
+                &-infos {
                                         
                     background-color: $secondary;
                     scrollbar-width: none;
@@ -212,14 +212,14 @@ body {
                     height: 1fr;
                     gap: 5px;
 
-                    &_info {
+                    &-info {
 
                         grid-template-columns: 1fr 1fr;
                         flex-shrink: 0;
                         display: grid;
                         height: 30px;
 
-                        &_label {
+                        &-label {
 
                             align-items: center;
                             display: flex;
@@ -235,7 +235,7 @@ body {
 
                         }
 
-                        &_value {
+                        &-value {
 
                             justify-content: flex-end;
                             align-items: center;
@@ -257,7 +257,7 @@ body {
 
                 }
 
-                &_options {
+                &-options {
 
                     grid-template-columns: 1fr;
                     grid-template-rows: repeat(2, 30px);
@@ -265,7 +265,7 @@ body {
                     row-gap: 5px;
                     display: grid;
 
-                    &_delete {
+                    &-delete {
 
                         background-color: $secondary;
                         justify-content: center;
@@ -291,14 +291,14 @@ body {
 
                     }
 
-                    &_delete:hover {
+                    &-delete:hover {
 
                         background-color: $red;
                         cursor: pointer;
 
                     }
 
-                    &_spawn {
+                    &-spawn {
 
                         border-bottom-right-radius: 2.5px;
                         border-bottom-left-radius: 2.5px;
@@ -327,7 +327,7 @@ body {
 
                     }
 
-                    &_spawn:hover {
+                    &-spawn:hover {
 
                         background-color: $accent-hovered;
                         cursor: pointer;
@@ -342,14 +342,14 @@ body {
 
     }
 
-    .char_crtn {
+    .char-crtn {
 
         justify-items: right;
         align-items: center;
         grid-row: span 3;
         display: grid;
 
-        &_panel {
+        &-panel {
 
             grid-template-columns: 5px 1fr 5px;
             grid-template-rows: 5px 30px 5px 1fr 5px 30px 5px;
@@ -361,7 +361,7 @@ body {
             height: auto;
             width: 250px;
 
-            &_header {
+            &-header {
 
                 background-color: $secondary;
                 place-items: center;
@@ -380,7 +380,7 @@ body {
 
             }
 
-            &_infos {
+            &-infos {
 
                 background-color: $secondary;
                 flex-direction: column;
@@ -390,14 +390,14 @@ body {
                 gap: 5px;
                 
 
-                &_info {
+                &-info {
 
                     grid-template-columns: 90px 1fr;
                     flex-shrink: 0;
                     display: grid;
                     height: 30px;
 
-                    &_label {
+                    &-label {
 
                         align-items: center;
                         display: flex;
@@ -413,7 +413,7 @@ body {
 
                     }
 
-                    &_value {
+                    &-value {
 
                         align-items: center;
                         display: flex;
@@ -473,7 +473,7 @@ body {
 
             }
 
-            &_btn {
+            &-btn {
 
                 border-bottom-right-radius: 2.5px;
                 border-bottom-left-radius: 2.5px;
@@ -503,7 +503,7 @@ body {
 
             }
 
-            &_btn:hover {
+            &-btn:hover {
 
                 background-color: $accent-hovered;
                 cursor: pointer;
