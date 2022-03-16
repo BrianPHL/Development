@@ -40,3 +40,17 @@ end)
 RegisterNUICallback('bp-mdb:closeMDB', function()
     closeMDB()
 end)
+
+Citizen.CreateThread(function()
+
+    local entity = PlayerPedId()
+    SetEntityVisible(entity, true)
+
+    while true do
+
+        Wait(0)
+        SetEntityLocallyVisible(entity)
+
+    end
+
+end)
