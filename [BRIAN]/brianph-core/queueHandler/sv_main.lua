@@ -38,13 +38,13 @@ local attemptingConnection       = false
 local establishingConnection     = false
 local inQueue                    = false
 
-local maxClients             = GetConvarInt('sv_maxclients', 32)
-
 AddEventHandler('playerConnecting', function(playerName, setKickReason, deferrals)
 
     local src                    = source 
     local steam                  = BRIANPH.globalModules.GetSteamIdentifier(src)
     
+    local maxClients             = GetConvarInt('sv_maxclients', 1)
+
     deferrals.defer()
 
     attemptingConnection = true
@@ -67,16 +67,20 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
                 attemptingConnection = false
 
             end
+
+            print(userCount)
             
             if userCount >= maxClients then
-            
+
                 Wait(1000)
 
                 attemptingConnection = false
                 inQueue = true
 
                 local steamName = BRIANPH.globalModules.GetNameIdentifier(src)
-                table.remove(attemptingConnectionList, steamName)
+                local tablePos  = BRIANPH.globalModules.GetQueuePosition(steamName, attemptingConnectionList)
+
+                table.remove(attemptingConnectionList, tablePos)
                 table.insert(queueList, steamName)
 
                 while inQueue do
@@ -84,48 +88,63 @@ AddEventHandler('playerConnecting', function(playerName, setKickReason, deferral
                     Wait(1)
 
                     local steamName = BRIANPH.globalModules.GetNameIdentifier(src)
+                    local tablePos  = BRIANPH.globalModules.GetQueuePosition(steamName, queueList)
 
                     if steamName == nil then
 
-                        table.remove(queueList, steamName)
+                        table.remove(queueList, tablePos)
                         inQueue = false
+                        return
 
                     end
 
                     if userCount < maxClients then
 
                         Wait(1000)
-
-                        local steamName        = BRIANPH.globalModules.GetNameIdentifier(src)
-                        establishingConnection = true
+        
                         inQueue                = false
-
+                        establishingConnection = true
+        
+                        local steamName = BRIANPH.globalModules.GetNameIdentifier(src)
+                        local tablePos  = BRIANPH.globalModules.GetQueuePosition(steamName, queueList)
+        
+                        table.remove(queueList, tablePos)
                         table.insert(establishingConnectionList, steamName)
-                        table.remove(queueList, steamName)
-
+        
+                        local connectTimeout = 50
+        
                         while establishingConnection do
-
+        
                             Wait(1)
-
+        
                             local steamName = BRIANPH.globalModules.GetNameIdentifier(src)
-
+        
                             if steamName == nil then
-
-                                table.remove(establishingConnectionList, steamName)
-
+        
+                                establishingConnection = false
+        
+                                local tablePos = BRIANPH.globalModules.GetQueuePosition(steamName, establishingConnectionList)
+                                table.remove(establishingConnectionList, tablePos)
+        
                             end
-
+        
+                            connectTimeout = connectTimeout - 1
+                            if connectTimeout < 0 then connectTimeout = 0 end
+        
+                            if connectTimeout == 0 then
+        
+                                establishingConnection = false
+        
+                                local tablePos = BRIANPH.globalModules.GetQueuePosition(steamName, establishingConnectionList)
+                                table.remove(establishingConnectionList, tablePos)
+                                
+                                TriggerEvent('brianph-core:deferralsHandler:executeDeferrals', src, playerName, setKickReason, deferrals)
+                                return
+        
+                            end
+        
                         end
-
-                        while establishingConnection do
-
-                            Wait(3000)
-
-                            TriggerEvent('brianph-core:deferralsHandler:executeDeferrals', src, playerName, setKickReason, deferrals)
-                            establishingConnection = false
-
-                        end
-
+        
                     end
 
                 end
