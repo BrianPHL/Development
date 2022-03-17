@@ -8,6 +8,7 @@ Citizen.CreateThread(function()
         if isConnected then
 
             TriggerServerEvent('bp-core:connection:playerSpawned')
+            return
 
         end
 
