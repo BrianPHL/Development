@@ -28,3 +28,19 @@ end)
 AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
 end)
+
+Citizen.CreateThread(function()
+
+    while true do
+
+        Citizen.Wait(5000)
+
+        local establishingConn = json.encode(establishingConnList), establishingConnection
+        local playerQueueing   = json.encode(queueList), inQueue
+
+        print(establishingConn)
+        print(playerQueueing)
+
+    end
+
+end)
