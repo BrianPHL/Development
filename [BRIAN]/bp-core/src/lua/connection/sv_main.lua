@@ -18,3 +18,7 @@ AddEventHandler('playerDropped', function()
     )
 
 end)
+
+AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
+
+end)
