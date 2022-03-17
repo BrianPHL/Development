@@ -1,5 +1,10 @@
 local playerCount = 0
 
+local establishingConnection = false
+local inQueue                = false
+local establishingConnList   = {}
+local queueList              = {}
+
 RegisterServerEvent('bp-core:connection:playerSpawned')
 AddEventHandler('bp-core:connection:playerSpawned', function() 
     
@@ -18,6 +23,7 @@ AddEventHandler('playerDropped', function()
     )
 
 end)
+
 
 AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
