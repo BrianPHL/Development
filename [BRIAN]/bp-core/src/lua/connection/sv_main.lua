@@ -35,8 +35,8 @@ Citizen.CreateThread(function()
 
         Citizen.Wait(5000)
 
-        local establishingConn = json.encode(establishingConnList), establishingConnection
-        local playerQueueing   = json.encode(queueList), inQueue
+        local establishingConn = 'establishingConnection: ' .. json.encode(establishingConnList), establishingConnection
+        local playerQueueing   = 'playerQueueing' .. json.encode(queueList), inQueue
 
         print(establishingConn)
         print(playerQueueing)
