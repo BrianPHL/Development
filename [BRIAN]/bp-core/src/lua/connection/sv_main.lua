@@ -88,6 +88,25 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     end
 
+    local function userInsertDatabase(src)
+
+        local steamIdentifier = getSteamIdentifier(src)
+        local steamUsername   = getNameIdentifier(src)
+        local fivemLicense    = getLicenseIdentifier(src)
+
+        local args   = [[INSERT INTO core_users (steamUsername, steamIdentifier, fivemLicense) VALUES (@steamUsername, @steamIdentifier, @fivemLicense)]]
+        local params = {
+
+            ['@steamIdentifier'] = steamIdentifier,
+            ['@steamUsername']   = steamUsername,
+            ['@fivemLicense']    = fivemLicense
+
+        }
+
+        MySQL.insert(args, params)
+
+    end
+
     local function checkUserStatus(steamIdentifier)
 
         local args   = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
