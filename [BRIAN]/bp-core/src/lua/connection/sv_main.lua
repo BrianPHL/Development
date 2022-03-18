@@ -69,7 +69,6 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
                 local steamIdentifier = getSteamIdentifier(src)
                 local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
-
                 table.remove(attemptingConnList, tablePos)
 
                 local isInList = checkTableContent(steamIdentifier, attemptingConnList)
@@ -85,24 +84,6 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
             end
 
         end
-
-    end
-
-end)
-
-Citizen.CreateThread(function()
-
-    while true do
-
-        Citizen.Wait(5000)
-
-        local attemptingConn    = 'attemptingConnection: ' .. json.encode(attemptingConnList)
-        local establishingConn = 'establishingConnection: ' .. json.encode(establishingConnList)
-        local playerQueueing   = 'playerQueueing: ' .. json.encode(queueList)
-
-        print(attemptingConn, attemptingConnection)
-        print(establishingConn, establishingConnection)
-        print(playerQueueing, inQueue)
 
     end
 
