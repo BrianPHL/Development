@@ -49,8 +49,8 @@ function getNameIdentifier(playerSource)
 
 end
 
--- ? Grabs user position in queue
-function getQueuePosition(tableItem, tableName)
+-- ? Grabs position of a tableItem in the table
+function getTablePosition(tableItem, tableName)
 
     local queuePosition
 
@@ -65,5 +65,21 @@ function getQueuePosition(tableItem, tableName)
     end
 
     return queuePosition
+
+end
+
+function checkTableContent(tableItem, tableName)
+
+    for _, data in pairs(tableName) do
+
+        if data == tableItem then
+
+            return true
+
+        end
+
+    end
+
+    return false
 
 end
