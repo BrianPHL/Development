@@ -18,3 +18,11 @@ server_script 'src/lua/gameplay/sv_main.lua'
 --? User
 client_script 'src/lua/user/cl_main.lua'
 server_script 'src/lua/user/sv_main.lua'
+
+-- ? OxMySQL connection
+
+server_script '@oxmysql/lib/MySQL.lua'
+
+-- ? Dependencies
+
+    dependency 'oxmysql'
