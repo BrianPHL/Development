@@ -1,6 +1,6 @@
 {
   "name": "bp-core",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "bp-framework core resource",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
