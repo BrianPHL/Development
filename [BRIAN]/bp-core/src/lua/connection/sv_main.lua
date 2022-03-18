@@ -34,22 +34,90 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     deferrals.defer()
 
-    local function checkUserStatus()
+    local function userAttemptConnection()
 
-        local query  = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
+        attemptingConnection = true
+
+        if attemptingConnection then
+    
+            local steamIdentifier = getSteamIdentifier(src)
+            table.insert(attemptingConnList, steamIdentifier)
+    
+            local connectTimeout = 50
+    
+            while attemptingConnection do
+    
+                Wait(1)
+    
+                local steamIdentifier = getSteamIdentifier(src)
+                local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
+    
+                if not steamIdentifier then
+    
+                    table.remove(attemptingConnList, tablePos)
+                    attemptingConnection = false
+                    return
+    
+                end
+    
+                connectTimeout = connectTimeout - 1
+    
+                if connectTimeout < 0 then 
+                    connectTimeout = 0 
+                end
+    
+                if connectTimeout == 0 then
+    
+                    local steamIdentifier = getSteamIdentifier(src)
+                    local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
+                    table.remove(attemptingConnList, tablePos)
+    
+                    local isInList = checkTableContent(steamIdentifier, attemptingConnList)
+    
+                    if not isInList then
+    
+                        attemptingConnection = false
+    
+                    end
+    
+                end
+    
+            end
+    
+        end
+
+    end
+
+    local function checkUserStatus(steamIdentifier)
+
+        local args   = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
         local params = {['@steamIdentifier'] = steamIdentifier }
 
-        MySQL.query(query, params, function(queryResult)
-        
-            if next(queryResult) then 
-                
-                print('not nil')
-            
-            end
+        MySQL.query(args, params, function(queryResult)
 
             if not next(queryResult) then 
             
-                print('is nil')
+                userInsertDatabase(src)
+            
+            end
+        
+            if next(queryResult) then 
+                
+                for _, data in pairs(queryResult) do
+
+                    local userStatus = data.userStatus
+
+                    if userStatus ~= 'banned' then
+
+                        userAttemptConnection()
+
+                    else
+
+                        deferrals.done('You are banned.')
+
+                    end
+
+                end
             
             end
 
@@ -57,56 +125,6 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     end
 
-    checkUserStatus(steamName)
-
-    attemptingConnection = true
-
-    if attemptingConnection then
-
-        local steamIdentifier = getSteamIdentifier(src)
-        table.insert(attemptingConnList, steamIdentifier)
-
-        local connectTimeout = 50
-
-        while attemptingConnection do
-
-            Wait(1)
-
-            local steamIdentifier = getSteamIdentifier(src)
-            local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
-
-            if not steamIdentifier then
-
-                table.remove(attemptingConnList, tablePos)
-                attemptingConnection = false
-                return
-
-            end
-
-            connectTimeout = connectTimeout - 1
-
-            if connectTimeout < 0 then 
-                connectTimeout = 0 
-            end
-
-            if connectTimeout == 0 then
-
-                local steamIdentifier = getSteamIdentifier(src)
-                local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
-                table.remove(attemptingConnList, tablePos)
-
-                local isInList = checkTableContent(steamIdentifier, attemptingConnList)
-
-                if not isInList then
-
-                    attemptingConnection = false
-
-                end
-
-            end
-
-        end
-
-    end
+    checkUserStatus(steamIdentifier)
 
 end)
