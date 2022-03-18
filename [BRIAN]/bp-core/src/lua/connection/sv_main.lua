@@ -25,8 +25,7 @@ AddEventHandler('playerDropped', function()
     )
 
 end)
-
-
+ 
 AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     local src             = source
@@ -34,6 +33,31 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
     local maxPlayers      = GetConvarInt('sv_maxclients')
 
     deferrals.defer()
+
+    local function checkUserStatus()
+
+        local query  = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
+        local params = {['@steamIdentifier'] = steamIdentifier }
+
+        MySQL.query(query, params, function(queryResult)
+        
+            if next(queryResult) then 
+                
+                print('not nil')
+            
+            end
+
+            if not next(queryResult) then 
+            
+                print('is nil')
+            
+            end
+
+        end)
+
+    end
+
+    checkUserStatus(steamName)
 
     attemptingConnection = true
 
@@ -75,11 +99,9 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
                 if not isInList then
 
-
+                    attemptingConnection = false
 
                 end
-
-                break
 
             end
 
