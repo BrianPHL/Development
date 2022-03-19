@@ -109,6 +109,36 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
                     return
     
                 end
+
+                function connectionTransitionHandler()
+
+                    connectingCount = connectingCount - 1
+
+                    canConnect           = true
+
+                    local nameIdentifier = getNameIdentifier(src)
+                    local tablePos       = getTablePosition(nameIdentifier, attemptingConnList)
+                    table.remove(attemptingConnList, 1)
+        
+                    local isInList = checkTableContent(nameIdentifier, attemptingConnList)
+        
+                    while isInList do
+
+                        Wait(1)
+
+                    end
+    
+                    if playerCount >= maxPlayers then
+    
+                        userWaitQueue()
+    
+                    elseif playerCount <= maxPlayers then
+    
+                        userEstablishConnection()
+    
+                    end
+        
+                end
     
             end
     
