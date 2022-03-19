@@ -1,4 +1,6 @@
 local playerCount = 1
+local canConnect             = false
+local connectingCount        = 0
 
 local attemptingConnection   = false
 local establishingConnection = false
@@ -34,11 +36,12 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     deferrals.defer()
 
+    connectingCount = connectingCount + 1
+
     local function userEstablishConnection()
 
         Citizen.Wait(1)
 
-        print('triggered func userEstablishConnection()')
         deferrals.done()
         return
 
@@ -46,16 +49,20 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     local function userWaitQueue()
 
-        Citizen.Wait(1)
+        inQueue = true
 
-        print('triggered func userWaitQueue')
-        deferrals.update('bitch')
+        if inQueue then
+
+
+
+        end
 
     end
 
     local function userAttemptConnection()
 
         attemptingConnection = true
+        canConnect           = true
 
         if attemptingConnection then
 
@@ -84,59 +91,22 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
             userAttemptMsg()
 
-            table.insert(attemptingConnList, steamIdentifier)
-    
-            local connectTimeout = 50
+
+            table.insert(attemptingConnList, nameIdentifier)
     
             while attemptingConnection do
     
                 Wait(1)
     
-                local steamIdentifier = getSteamIdentifier(src)
-                local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
+                local nameIdentifier = getNameIdentifier(src)
+                local tablePos       = getTablePosition(nameIdentifier, attemptingConnList)
     
                 if not steamIdentifier then
     
                     table.remove(attemptingConnList, tablePos)
-                    attemptingConnection = false
+                    -- attemptingConnection = false
 
                     return
-    
-                end
-    
-                connectTimeout = connectTimeout - 1
-    
-                if connectTimeout < 0 then 
-                    connectTimeout = 0 
-                end
-    
-                if connectTimeout == 0 then
-    
-                    local steamIdentifier = getSteamIdentifier(src)
-                    local tablePos        = getTablePosition(steamIdentifier, attemptingConnList)
-                    table.remove(attemptingConnList, tablePos)
-    
-                    local isInList = checkTableContent(steamIdentifier, attemptingConnList)
-    
-                    if not isInList then
-
-                        print(playerCount .. '/' .. maxPlayers)
-    
-                        attemptingConnection = false
-
-                        if playerCount >= maxPlayers then
-
-                            userWaitQueue()
-                            print('has queue')
-
-                        elseif playerCount <= maxPlayers then
-
-                            userEstablishConnection()
-                            print('no queue')
-
-                        end
-    
-                    end
     
                 end
     
@@ -221,5 +191,58 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
     end
 
     checkUserStatus(steamIdentifier)
+
+end)
+
+Citizen.CreateThread(function()
+
+    local connectTimeout = 50
+
+    while true do
+
+        Citizen.Wait(1)
+
+        while canConnect do
+        
+            Citizen.Wait(1)
+
+            connectTimeout = connectTimeout - 1
+            if connectTimeout <= 0 then connectTimeout = 0 end
+
+            if connectTimeout == 0 then
+
+                connectionTransitionHandler()
+                connectTimeout = 50
+                
+                if connectingCount >= 1 then
+
+                    canConnect = true
+
+                elseif connectingCount == 0 then
+
+                    canConnect = false
+
+                end
+
+            end
+
+        end
+
+    end
+
+end)
+
+Citizen.CreateThread(function()
+    
+    while true do
+
+        Citizen.Wait(500)
+
+        print('Is player allowed to connect: ', canConnect)
+        print('Attempting connection: ' .. json.encode(attemptingConnList))
+        print('Establishing connection: ' .. json.encode(establishingConnList))
+        print('Player queueing: ' .. json.encode(queueList))
+
+    end
 
 end)
