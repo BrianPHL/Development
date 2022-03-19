@@ -54,6 +54,17 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
             userWelcomeMsg()
 
+            Citizen.Wait(1500)
+
+            local function userAttemptMsg()
+
+                local attemptConnMsg = 'Attempting to establish a connection'
+                deferrals.update(attemptConnMsg)
+
+            end
+
+            userAttemptMsg()
+
             table.insert(attemptingConnList, steamIdentifier)
     
             local connectTimeout = 50
@@ -96,12 +107,12 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
                         if playerCount >= maxPlayers then
 
-                            userWaitQueue()
+                            -- userWaitQueue()
                             print('has queue')
 
                         elseif playerCount <= maxPlayers then
 
-                            userEstablishConnection()
+                            -- userEstablishConnection()
                             print('no queue')
 
                         end
