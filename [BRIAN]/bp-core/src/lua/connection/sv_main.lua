@@ -34,6 +34,16 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     deferrals.defer()
 
+    local function userEstablishConnection()
+
+        Citizen.Wait(1)
+
+        print('triggered func userEstablishConnection()')
+        deferrals.done()
+        return
+
+    end
+
     local function userAttemptConnection()
 
         attemptingConnection = true
@@ -107,12 +117,12 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
                         if playerCount >= maxPlayers then
 
-                            -- userWaitQueue()
+                            userWaitQueue()
                             print('has queue')
 
                         elseif playerCount <= maxPlayers then
 
-                            -- userEstablishConnection()
+                            userEstablishConnection()
                             print('no queue')
 
                         end
