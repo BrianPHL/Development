@@ -1,4 +1,4 @@
-local playerCount = 0
+local playerCount = 1
 
 local attemptingConnection   = false
 local establishingConnection = false
@@ -56,6 +56,7 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
     
                     table.remove(attemptingConnList, tablePos)
                     attemptingConnection = false
+
                     return
     
                 end
@@ -75,20 +76,20 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
                     local isInList = checkTableContent(steamIdentifier, attemptingConnList)
     
                     if not isInList then
+
+                        print(playerCount .. '/' .. maxPlayers)
     
                         attemptingConnection = false
-
-                        if playerCount <= maxPlayers then
-
-                            userEstablishConnection()
-                            return
-
-                        end
 
                         if playerCount >= maxPlayers then
 
                             userWaitQueue()
-                            return
+                            print('has queue')
+
+                        elseif playerCount <= maxPlayers then
+
+                            userEstablishConnection()
+                            print('no queue')
 
                         end
     
