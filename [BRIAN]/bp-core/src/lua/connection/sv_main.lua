@@ -39,8 +39,21 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
         attemptingConnection = true
 
         if attemptingConnection then
-    
+
+            Citizen.Wait(1)
+
             local steamIdentifier = getSteamIdentifier(src)
+            local nameIdentifier = getNameIdentifier(src)
+
+            local function userWelcomeMsg()
+
+                local splashWelcomeMsg = '👋 Welcome ' .. nameIdentifier .. ' [' .. steamIdentifier .. ']'
+                deferrals.update(splashWelcomeMsg)
+
+            end
+
+            userWelcomeMsg()
+
             table.insert(attemptingConnList, steamIdentifier)
     
             local connectTimeout = 50
