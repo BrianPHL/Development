@@ -124,6 +124,23 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     local function checkUserStatus(steamIdentifier)
 
+        if not steamIdentifier then
+
+            Citizen.Wait(1)
+
+            local function missingSteamIdentifier()
+
+                local missingIdentifierMsg = 'Unfortunately, you have no steam identifier or an error has occured. Please be sure to have your Steam client open or online when connecting. Steam authentication is a requirement in order for you to connect.' 
+                deferrals.done(missingIdentifierMsg)
+
+            end
+
+            missingSteamIdentifier()
+
+            return
+
+        end
+
         local args   = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
         local params = {['@steamIdentifier'] = steamIdentifier }
 
