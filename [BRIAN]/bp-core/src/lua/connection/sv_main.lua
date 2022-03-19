@@ -77,6 +77,20 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
                     if not isInList then
     
                         attemptingConnection = false
+
+                        if playerCount <= maxPlayers then
+
+                            userEstablishConnection()
+                            return
+
+                        end
+
+                        if playerCount >= maxPlayers then
+
+                            userWaitQueue()
+                            return
+
+                        end
     
                     end
     
@@ -132,7 +146,8 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
                     else
 
-                        deferrals.done('You are banned.')
+                        -- TODO: In the future, make a temporary ban handler
+                        deferrals.done('You are banned from joining the server')
 
                     end
 
