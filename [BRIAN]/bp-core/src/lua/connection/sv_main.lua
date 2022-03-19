@@ -44,6 +44,15 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     end
 
+    local function userWaitQueue()
+
+        Citizen.Wait(1)
+
+        print('triggered func userWaitQueue')
+        deferrals.update('bitch')
+
+    end
+
     local function userAttemptConnection()
 
         attemptingConnection = true
