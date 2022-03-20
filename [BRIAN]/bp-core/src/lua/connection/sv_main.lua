@@ -1,16 +1,3 @@
--- local canConnect             = false
--- local connectingCount        = 0
--- local playerCount            = 0
-
--- local bataPaAkoKul           = true
-
--- local attemptingConnection   = false
--- local establishingConnection = false
--- local inQueue                = false
--- local attemptingConnList     = {}
--- local establishingConnList   = {}
--- local queueList              = {}
-
 local attemptingList        = {}
 
 local attemptingCount       = 0
