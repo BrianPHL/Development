@@ -98,6 +98,49 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
 end)
 
+Citizen.CreateThread(function()
+
+    local attemptTimeout = 10
+
+    while true do
+
+        Citizen.Wait(1)
+
+        while attemptConnection do
+
+            Citizen.Wait(500)
+
+            attemptTimeout = attemptTimeout - 1
+
+            if attemptTimeout < 0 then 
+                attemptTimeout = 0 
+            end
+
+            if attemptTimeout == 0 then
+
+                attemptTimeout = 10
+
+                if attemptingCount >= 1 then
+
+                    attemptingCount = attemptingCount - 1 
+                    canAttemptConnection = true
+                    attemptConnection = true
+                    
+                elseif attemptingCount == 0 then
+
+                    canAttemptConnection = false
+                    attemptConnection = false
+        
+                end
+
+            end
+
+        end
+
+    end
+
+end)
+
 -- Citizen.CreateThread(function()
 
 --     while attemptConnection do
