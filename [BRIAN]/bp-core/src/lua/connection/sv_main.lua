@@ -141,6 +141,22 @@ Citizen.CreateThread(function()
 
 end)
 
+Citizen.CreateThread(function()
+
+    while true do
+
+        Citizen.Wait(500)
+
+        print('attemptingCount: ' .. attemptingCount)
+        print('attemptingList: ' .. json.encode(attemptingList))
+        print('attemptConnection: ', attemptConnection)
+        print('canAttemptConnection: ', canAttemptConnection)
+        print('canAttemptConnection2: ', canAttemptConnection2)
+
+    end
+
+end)
+
 -- Citizen.CreateThread(function()
 
 --     while attemptConnection do
