@@ -1,18 +1,31 @@
-local playerCount = 1
-local canConnect             = false
-local connectingCount        = 0
+-- local canConnect             = false
+-- local connectingCount        = 0
+-- local playerCount            = 0
 
-local attemptingConnection   = false
-local establishingConnection = false
-local inQueue                = false
-local attemptingConnList     = {}
-local establishingConnList   = {}
-local queueList              = {}
+-- local bataPaAkoKul           = true
+
+-- local attemptingConnection   = false
+-- local establishingConnection = false
+-- local inQueue                = false
+-- local attemptingConnList     = {}
+-- local establishingConnList   = {}
+-- local queueList              = {}
+
+local attemptingList        = {}
+
+local attemptingCount       = 0
+local playerCount           = 0
+
+local canAttemptConnection  = false
+local attemptConnection     = false
+local canConnect            = true
+local canAttemptConnection2 = true
 
 RegisterServerEvent('bp-core:connection:playerSpawned')
 AddEventHandler('bp-core:connection:playerSpawned', function() 
     
-    playerCount = playerCount + 1
+    canConnect = true
+    playerCount  = playerCount + 1
     print(
         'Triggered server event:', 'bp-core:connection:playerSpawned'
     ) 
@@ -27,252 +40,323 @@ AddEventHandler('playerDropped', function()
     )
 
 end)
- 
-AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
-    local src             = source
-    local steamIdentifier = getSteamIdentifier(src)
-    local maxPlayers      = GetConvarInt('sv_maxclients')
+AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     deferrals.defer()
 
-    connectingCount = connectingCount + 1
+    local src             = source
+    local steamIdentifier = getSteamIdentifier(src)
+    local nameIdentifier  = getNameIdentifier(src)
 
-    local function userEstablishConnection()
+    Citizen.Wait(1)
+
+    deferrals.update('👋 Welcome ' .. nameIdentifier .. ' [' .. steamIdentifier .. ']')
+
+    table.insert(attemptingList, nameIdentifier)
+
+    attemptingCount   = attemptingCount + 1
+    attemptConnection = true
+
+    while not canAttemptConnection do
+
+        Wait(1)
+
+    end
+
+    while canAttemptConnection do
 
         Citizen.Wait(1)
 
+        while not canAttemptConnection2 do
+
+            Citizen.Wait(1)
+
+        end
+
+        Citizen.Wait(1)
+
+        canAttemptConnection2 = false
+    
+        local nameIdentifier = getNameIdentifier(src)
+        table.remove(attemptingList, 1)
+            
+        local inList = checkTableContent(nameIdentifier, attemptingList)
+                    
+        while inList do
+            
+            Wait(1)
+            
+        end
+            
+        Citizen.Wait(1)
+            
+        canAttemptConnection2 = true
         deferrals.done()
-        return
 
     end
 
-    local function userWaitQueue()
+end)
 
-        inQueue = true
+-- Citizen.CreateThread(function()
 
-        if inQueue then
+--     while attemptConnection do
+
+--         Citizen.Wait(10000)
+
+--         print('attemptConnection completed')
+
+--         local nameIdentifier = getNameIdentifier(src)
+--         local tablePos       = getTablePosition
+
+--     end
+
+-- end)
+ 
+-- AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
+
+--     local src             = source
+--     local steamIdentifier = getSteamIdentifier(src)
+--     local maxPlayers      = 64
+--     -- local maxPlayers      = GetConvarInt('sv_maxclients')
+
+--     deferrals.defer()
+
+--     connectingCount = connectingCount + 1
+
+--     local function userEstablishConnection()
+
+--         while not bataPaAkoKul do
+
+--             Wait(1)
+
+--         end
+
+--         Citizen.Wait(1)
+
+--         bataPaAkoKul = false
+--         deferrals.done()
+
+--     end
+
+--     local function userWaitQueue()
+
+--         print('a queue?!?! LOL')
+
+--     end
+
+--     local function userAttemptConnection()
+
+--         attemptingConnection = true
+--         canConnect           = true
+
+--         if attemptingConnection then
+
+--             Citizen.Wait(1)
+
+--             local steamIdentifier = getSteamIdentifier(src)
+--             local nameIdentifier = getNameIdentifier(src)
+
+--             local function userWelcomeMsg()
+
+--                 local splashWelcomeMsg = '👋 Welcome ' .. nameIdentifier .. ' [' .. steamIdentifier .. ']'
+--                 deferrals.update(splashWelcomeMsg)
+
+--             end
+
+--             userWelcomeMsg()
+
+--             Citizen.Wait(1500)
+
+--             local function userAttemptMsg()
+
+--                 local attemptConnMsg = 'Attempting to establish a connection'
+--                 deferrals.update(attemptConnMsg)
+
+--             end
+
+--             userAttemptMsg()
 
 
-
-        end
-
-    end
-
-    local function userAttemptConnection()
-
-        attemptingConnection = true
-        canConnect           = true
-
-        if attemptingConnection then
-
-            Citizen.Wait(1)
-
-            local steamIdentifier = getSteamIdentifier(src)
-            local nameIdentifier = getNameIdentifier(src)
-
-            local function userWelcomeMsg()
-
-                local splashWelcomeMsg = '👋 Welcome ' .. nameIdentifier .. ' [' .. steamIdentifier .. ']'
-                deferrals.update(splashWelcomeMsg)
-
-            end
-
-            userWelcomeMsg()
-
-            Citizen.Wait(1500)
-
-            local function userAttemptMsg()
-
-                local attemptConnMsg = 'Attempting to establish a connection'
-                deferrals.update(attemptConnMsg)
-
-            end
-
-            userAttemptMsg()
-
-
-            table.insert(attemptingConnList, nameIdentifier)
+--             table.insert(attemptingConnList, nameIdentifier)
     
-            while attemptingConnection do
+--             while attemptingConnection do
     
-                Wait(1)
+--                 Wait(1)
     
-                local nameIdentifier = getNameIdentifier(src)
-                local tablePos       = getTablePosition(nameIdentifier, attemptingConnList)
+--                 local nameIdentifier = getNameIdentifier(src)
+--                 local tablePos       = getTablePosition(nameIdentifier, attemptingConnList)
     
-                if not steamIdentifier then
+--                 if not nameIdentifier then
     
-                    table.remove(attemptingConnList, tablePos)
-                    -- attemptingConnection = false
-
-                    return
+--                     table.remove(attemptingConnList, tablePos)
     
-                end
+--                 end
 
-                function connectionTransitionHandler()
+--                 function connectionTransitionHandler()
 
-                    connectingCount = connectingCount - 1
+--                     connectingCount = connectingCount - 1
 
-                    canConnect           = true
+--                     canConnect           = true
 
-                    local nameIdentifier = getNameIdentifier(src)
-                    local tablePos       = getTablePosition(nameIdentifier, attemptingConnList)
-                    table.remove(attemptingConnList, 1)
+--                     local nameIdentifier = getNameIdentifier(src)
+--                     local tablePos       = getTablePosition(nameIdentifier, attemptingConnList)
+--                     table.remove(attemptingConnList, 1)
         
-                    local isInList = checkTableContent(nameIdentifier, attemptingConnList)
-        
-                    while isInList do
+--                     local isInList = checkTableContent(nameIdentifier, attemptingConnList)
 
-                        Wait(1)
-
-                    end
+--                     while isInList do
     
-                    if playerCount >= maxPlayers then
+--                         Wait(2500)
+
+--                     end
+
+--                     while playerCount >= maxPlayers do
+
+--                         Citizen.Wait(1)
+
+--                         userWaitQueue()
+
+--                     end
+                    
+--                     userEstablishConnection()
+
+--                 end
     
-                        userWaitQueue()
+--             end
     
-                    elseif playerCount <= maxPlayers then
-    
-                        userEstablishConnection()
-    
-                    end
-        
-                end
-    
-            end
-    
-        end
+--         end
 
-    end
+--     end
 
-    local function userInsertDatabase(src)
+--     local function userInsertDatabase(src)
 
-        local steamIdentifier = getSteamIdentifier(src)
-        local steamUsername   = getNameIdentifier(src)
-        local fivemLicense    = getLicenseIdentifier(src)
+--         local steamIdentifier = getSteamIdentifier(src)
+--         local steamUsername   = getNameIdentifier(src)
+--         local fivemLicense    = getLicenseIdentifier(src)
 
-        local args   = [[INSERT INTO core_users (steamUsername, steamIdentifier, fivemLicense) VALUES (@steamUsername, @steamIdentifier, @fivemLicense)]]
-        local params = {
+--         local args   = [[INSERT INTO core_users (steamUsername, steamIdentifier, fivemLicense) VALUES (@steamUsername, @steamIdentifier, @fivemLicense)]]
+--         local params = {
 
-            ['@steamIdentifier'] = steamIdentifier,
-            ['@steamUsername']   = steamUsername,
-            ['@fivemLicense']    = fivemLicense
+--             ['@steamIdentifier'] = steamIdentifier,
+--             ['@steamUsername']   = steamUsername,
+--             ['@fivemLicense']    = fivemLicense
 
-        }
+--         }
 
-        MySQL.insert(args, params)
+--         MySQL.insert(args, params)
 
-    end
+--     end
 
-    local function checkUserStatus(steamIdentifier)
+--     local function checkUserStatus(steamIdentifier)
 
-        if not steamIdentifier then
+--         if not steamIdentifier then
 
-            Citizen.Wait(1)
+--             Citizen.Wait(1)
 
-            local function missingSteamIdentifier()
+--             local function missingSteamIdentifier()
 
-                local missingIdentifierMsg = 'Unfortunately, you have no steam identifier or an error has occured. Please be sure to have your Steam client open or online when connecting. Steam authentication is a requirement in order for you to connect.' 
-                deferrals.done(missingIdentifierMsg)
+--                 local missingIdentifierMsg = 'Unfortunately, you have no steam identifier or an error has occured. Please be sure to have your Steam client open or online when connecting. Steam authentication is a requirement in order for you to connect.' 
+--                 deferrals.done(missingIdentifierMsg)
 
-            end
+--             end
 
-            missingSteamIdentifier()
+--             missingSteamIdentifier()
 
-            return
+--             return
 
-        end
+--         end
 
-        local args   = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
-        local params = {['@steamIdentifier'] = steamIdentifier }
+--         local args   = [[SELECT userStatus FROM core_users WHERE steamIdentifier = @steamIdentifier]]
+--         local params = {['@steamIdentifier'] = steamIdentifier }
 
-        MySQL.query(args, params, function(queryResult)
+--         MySQL.query(args, params, function(queryResult)
 
-            if not next(queryResult) then 
+--             if not next(queryResult) then 
             
-                userInsertDatabase(src)
+--                 userInsertDatabase(src)
             
-            end
+--             end
         
-            if next(queryResult) then 
+--             if next(queryResult) then 
                 
-                for _, data in pairs(queryResult) do
+--                 for _, data in pairs(queryResult) do
 
-                    local userStatus = data.userStatus
+--                     local userStatus = data.userStatus
 
-                    if userStatus ~= 'banned' then
+--                     if userStatus ~= 'banned' then
 
-                        userAttemptConnection()
+--                         userAttemptConnection()
 
-                    else
+--                     else
 
-                        -- TODO: In the future, make a temporary ban handler
-                        deferrals.done('You are banned from joining the server')
+--                         -- TODO: In the future, make a temporary ban handler
+--                         deferrals.done('You are banned from joining the server')
 
-                    end
+--                     end
 
-                end
+--                 end
             
-            end
+--             end
 
-        end)
+--         end)
 
-    end
+--     end
 
-    checkUserStatus(steamIdentifier)
+--     checkUserStatus(steamIdentifier)
 
-end)
+-- end)
 
-Citizen.CreateThread(function()
+-- Citizen.CreateThread(function()
 
-    local connectTimeout = 50
+--     local connectTimeout = 100
 
-    while true do
+--     while true do
 
-        Citizen.Wait(1)
+--         Citizen.Wait(1)
 
-        while canConnect do
+--         while canConnect do
         
-            Citizen.Wait(1)
+--             Citizen.Wait(1)
 
-            connectTimeout = connectTimeout - 1
-            if connectTimeout <= 0 then connectTimeout = 0 end
+--             connectTimeout = connectTimeout - 1
+--             if connectTimeout <= 0 then connectTimeout = 0 end
 
-            if connectTimeout == 0 then
+--             if connectTimeout == 0 then
 
-                connectionTransitionHandler()
-                connectTimeout = 50
+--                 connectionTransitionHandler()
+--                 connectTimeout = 200
                 
-                if connectingCount >= 1 then
+--                 if connectingCount > 0 then
 
-                    canConnect = true
+--                     canConnect = true
 
-                elseif connectingCount == 0 then
+--                 elseif connectingCount == 0 then
 
-                    canConnect = false
+--                     canConnect = false
 
-                end
+--                 end
 
-            end
+--             end
 
-        end
+--         end
 
-    end
+--     end
 
-end)
+-- end)
 
-Citizen.CreateThread(function()
+-- Citizen.CreateThread(function()
     
-    while true do
+--     while true do
 
-        Citizen.Wait(500)
+--         Citizen.Wait(500)
 
-        print('Is player allowed to connect: ', canConnect)
-        print('Attempting connection: ' .. json.encode(attemptingConnList))
-        print('Establishing connection: ' .. json.encode(establishingConnList))
-        print('Player queueing: ' .. json.encode(queueList))
+--         print(bataPaAkoKul)
+--         -- print('Is player allowed to connect: ', canConnect)
+--         -- print('Attempting connection: ' .. json.encode(attemptingConnList))
+--         -- print('Establishing connection: ' .. json.encode(establishingConnList))
+--         -- print('Player queueing: ' .. json.encode(queueList))
 
-    end
+--     end
 
-end)
+-- end)
