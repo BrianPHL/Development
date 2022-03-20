@@ -28,6 +28,12 @@ AddEventHandler('playerDropped', function()
 
 end)
 
+function userRemoveTable()
+
+    table.remove(attemptingList, 1)
+
+end
+
 AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
 
     deferrals.defer()
@@ -54,32 +60,19 @@ AddEventHandler('playerConnecting', function(playerName, kickReason, deferrals)
     while canAttemptConnection do
 
         Citizen.Wait(1)
-
-        while not canAttemptConnection2 do
-
-            Citizen.Wait(1)
-
-        end
-
-        Citizen.Wait(1)
-
-        canAttemptConnection2 = false
     
         local nameIdentifier = getNameIdentifier(src)
-        table.remove(attemptingList, 1)
+
+        local inList = checkTableContent(nameIdentifier, attemptingList)  
+        print(inList)
+        while inList do Citizen.Wait(1) end
+
+        if not inList then
             
-        local inList = checkTableContent(nameIdentifier, attemptingList)
-                    
-        while inList do
-            
-            Wait(1)
-            
+            Citizen.Wait(1)
+            deferrals.done('CONNECTION ESTABLISHED')
+
         end
-            
-        Citizen.Wait(1)
-            
-        canAttemptConnection2 = true
-        deferrals.done()
 
     end
 
@@ -87,7 +80,7 @@ end)
 
 Citizen.CreateThread(function()
 
-    local attemptTimeout = 10
+    local attemptTimeout = 50
 
     while true do
 
@@ -95,7 +88,7 @@ Citizen.CreateThread(function()
 
         while attemptConnection do
 
-            Citizen.Wait(500)
+            Citizen.Wait(1)
 
             attemptTimeout = attemptTimeout - 1
 
@@ -105,14 +98,16 @@ Citizen.CreateThread(function()
 
             if attemptTimeout == 0 then
 
-                attemptTimeout = 10
+                attemptTimeout = 50
 
                 if attemptingCount >= 1 then
 
                     attemptingCount = attemptingCount - 1 
                     canAttemptConnection = true
                     attemptConnection = true
-                    
+
+                    userRemoveTable()
+
                 elseif attemptingCount == 0 then
 
                     canAttemptConnection = false
