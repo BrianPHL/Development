@@ -1,11 +1,18 @@
 local decode = json.decode
 local encode = json.encode
 
-BP = {
+Connection = {
     Players    = {},
     Connecting = {},
     Queue      = {}
 }
+
+CreateThread(function()
+    while true do
+        Wait(2500)
+        print(encode(Connection.Players))
+    end
+end)
 
 AddEventHandler('playerConnecting', function(_, _, deferrals)
 
@@ -38,12 +45,12 @@ RegisterServerEvent('bp-core:playerConnected')
 AddEventHandler('bp-core:playerConnected', function()
 
     local src        = source
-    local srcMatch   = BP.Players[src]
+    local srcMatch   = Connection.Players[src]
     local playerName = BP.getNameIdentifier(src)
 
     if not srcMatch then
 
-        BP.Players[src] = true
+        Connection.Players[src] = true
         print('(bp-core): ' .. playerName .. ' successfully connected')
 
     end
@@ -53,7 +60,7 @@ end)
 AddEventHandler('playerDropped', function()
 
     local src        = source
-    local srcMatch   = BP.Players[src]
+    local srcMatch   = Connection.Players[src]
     local playerName = BP.getNameIdentifier(src)
 
     if srcMatch then
@@ -61,7 +68,7 @@ AddEventHandler('playerDropped', function()
         -- TODO: add a function that saves the player's info
         -- TODO: last loc, bank bal, cash bal, items, & appearance
 
-        BP.Players[src] = nil
+        Connection.Players[src] = nil
         print('(bp-core): ' .. playerName .. ' quit or disconnected')
 
     end

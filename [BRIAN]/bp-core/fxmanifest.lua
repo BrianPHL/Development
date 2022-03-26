@@ -11,8 +11,11 @@ server_script '@oxmysql/lib/MySQL.lua'
 client_script 'src/sh_prefix.lua'
 server_script 'src/sh_prefix.lua'
 
+-- Modules
+client_script 'src/modules/sh_connection.lua'
+server_script 'src/modules/sh_connection.lua'
+
 -- Connection handler
-server_script 'src/connection/sv_modules.lua'
 server_script 'src/connection/sv_main.lua'
 client_script 'src/connection/cl_main.lua'
 
