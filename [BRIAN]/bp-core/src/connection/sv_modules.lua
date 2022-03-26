@@ -1,4 +1,4 @@
-function BPX.getSteamIdentifier(src)
+function BP.getSteamIdentifier(src)
 
     local getIdentifier = GetPlayerIdentifiers(src)
     local steam
@@ -12,7 +12,7 @@ function BPX.getSteamIdentifier(src)
     return steam
 end
 
-function BPX.getLicenseIdentifier(src)
+function BP.getLicenseIdentifier(src)
 
     local getIdentifier = GetPlayerIdentifiers(src)
     local license
@@ -26,14 +26,14 @@ function BPX.getLicenseIdentifier(src)
     return license
 end
 
-function BPX.getNameIdentifier(src)
+function BP.getNameIdentifier(src)
     username = GetPlayerName(src)
     return username
 end
 
 -- ? Queue functions
 
-function BPX.getQueuePosition(userName, queueList)
+function BP.getQueuePosition(userName, queueList)
 
     local queuePosition
 
@@ -45,7 +45,7 @@ function BPX.getQueuePosition(userName, queueList)
     return queuePosition
 end
 
-function BPX.getQueueLength(queueList)
+function BP.getQueueLength(queueList)
 
     local queueLength = #queueList
 

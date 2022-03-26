@@ -7,9 +7,9 @@ author 'BrianPHL'
 -- Oxmysql
 server_script '@oxmysql/lib/MySQL.lua'
 
--- BPX prefix
-client_script 'src/sh_bpx.lua'
-server_script 'src/sh_bpx.lua'
+-- BP prefix
+client_script 'src/sh_prefix.lua'
+server_script 'src/sh_prefix.lua'
 
 -- Connection handler
 server_script 'src/connection/sv_modules.lua'

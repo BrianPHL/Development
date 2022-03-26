@@ -1,1 +1,1 @@
-BPX = BPX or {}
+BP = BP or {}
