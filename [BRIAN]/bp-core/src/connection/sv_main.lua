@@ -45,7 +45,23 @@ AddEventHandler('playerConnecting', function(_, _, deferrals)
     deferrals.update(defUpdate)
     Wait(3000)
 
+    local function insertPlayer()
 
+        local query  = [[INSERT INTO core_users (steamUsername, steamIdentifier, fivemLicense) VALUES (@steamUsername, @steamIdentifier, @fivemLicense)]]
+        local params = {
+            ['@steamUsername']   = playerName,
+            ['@steamIdentifier'] = playerSteam,
+            ['@fivemLicense']    = playerLicense
+        }
+
+        MySQL.insert(query, params)
+
+        deferrals.update(defAccepted)
+        Wait(3000)
+
+        deferrals.done()
+
+    end
 
     local function checkPlayer()
 
