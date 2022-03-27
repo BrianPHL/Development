@@ -45,6 +45,45 @@ AddEventHandler('playerConnecting', function(_, _, deferrals)
     deferrals.update(defUpdate)
     Wait(3000)
 
+
+
+    local function checkPlayer()
+
+        local query  = [[SELECT * FROM core_users WHERE steamIdentifier = @steamIdentifier]]
+        local params = {['@steamIdentifier'] = playerSteam }
+
+        MySQL.query(query, params, function(queryResult)
+
+            if next(queryResult) ~= nil then
+
+                for _, data in pairs(queryResult) do
+
+                    local userStatus = data.userStatus
+                    
+                    if userStatus ~= 'banned' then
+
+                        deferrals.update(defAccepted)
+                        Wait(3000)
+
+                        deferrals.done()
+
+                    end
+
+                    deferrals.done(defBanned)
+                    return
+
+                end
+
+            end
+
+            insertPlayer()
+
+        end)
+
+    end
+
+    checkPlayer()
+
 end)
 
 RegisterServerEvent('bp-core:playerConnected')
