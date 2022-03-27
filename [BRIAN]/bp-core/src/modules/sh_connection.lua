@@ -45,9 +45,9 @@ BP.getTablePosition = function(givenTable, givenValue)
     return tablePosition
 end
 
-BP.getQueueLength = function(queueList)
+BP.getTableLength = function(givenTable)
 
-    local queueLength = #queueList
-    return queueLength
+    local tableLength = #givenTable
+    return tableLength
 
 end
