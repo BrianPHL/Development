@@ -27,28 +27,27 @@ BP.getLicenseIdentifier = function(src)
 end
 
 BP.getNameIdentifier = function(src)
-    print('name identifier triggered')
     local username = GetPlayerName(src)
     return username
 end
 
 -- ? Queue functions
 
-BP.getQueuePosition = function(userName, queueList)
+BP.getTablePosition = function(givenTable, givenValue)
 
-    local queuePosition
+    local tablePosition
 
-    for index, values in ipairs(queueList) do
-        if values == userName then
-            queuePosition = index
+    for index, values in ipairs(givenTable) do
+        if values == givenValue then
+            tablePosition = index
         end
     end
-    return queuePosition
+    return tablePosition
 end
 
 BP.getQueueLength = function(queueList)
 
     local queueLength = #queueList
     return queueLength
-    
+
 end
