@@ -18,26 +18,32 @@ AddEventHandler('playerConnecting', function(_, _, deferrals)
 
     deferrals.defer()
     
-    local src         = source
-    local playerName  = BP.getNameIdentifier(src)
-    local playerSteam = BP.getSteamIdentifier(src)
-    local defWelcome  = '(bp-core): 👋 Welcome ' .. playerName .. '[ ' .. playerSteam .. ' ]'
+    local src           = source
+    local playerName    = BP.getNameIdentifier(src)
+    local playerSteam   = BP.getSteamIdentifier(src)
+    local playerLicense = BP.getLicenseIdentifier(src)
+
+    local defWelcome    = '👋 Welcome ' .. playerName .. ' [' .. playerSteam .. ']'
+    local defNoSteam    = '🔴 No Steam identifier detected. Please check if your Steam client is running'
+    local defUpdate     = '🟡 Verifying your identifier status in our database'
+    local defBanned     = '🔴 You have been banned from connecting to the server'
+    local defAccepted   = '🟢 Identifier status successfully validated! Enjoy ' .. playerName 
 
     Wait(1)
-    deferrals.update(defWelcome)
 
-    Wait(1000)
+    deferrals.update(defWelcome)
+    Wait(2000)
 
     if not playerSteam then
 
-        local defNoSteam = '(bp-core): No Steam identifier detected. Please check if your Steam client is running'
         deferrals.done(defNoSteam)
         CancelEvent()
         return
 
     end
-
-    deferrals.done()
+    
+    deferrals.update(defUpdate)
+    Wait(3000)
 
 end)
 
